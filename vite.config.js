@@ -1,13 +1,50 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// GitHub Pages project site: https://technomantraindia-lang.github.io/cathodpower/
+const pagesBase = '/cathodpower/'
+const isGitHubPages =
+  process.env.GITHUB_PAGES === 'true' || process.env.GITHUB_ACTIONS === 'true'
+
+/**
+ * Prefix absolute /images, /fonts, /video… URLs with the Vite base path so
+ * public assets resolve under /cathodpower/ on GitHub Pages.
+ */
+function prefixPublicAssets(base) {
+  if (!base || base === '/') return null
+
+  const prefix = base.endsWith('/') ? base.slice(0, -1) : base
+  const pathGroup =
+    '(?:images|fonts|video|datasheets|models|favicon\\.png|NEW%20PRODUCT%20IMAGES|NEW PRODUCT IMAGES)'
+  const quoted = new RegExp(`([\`'"=(])/(${pathGroup})`, 'g')
+  const cssUrl = new RegExp(`url\\(\\s*/(${pathGroup})`, 'g')
+
+  return {
+    name: 'prefix-public-assets',
+    transform(code, id) {
+      if (id.includes('node_modules')) return null
+      if (!/\.(css|jsx|js|tsx|ts)$/.test(id)) return null
+
+      const next = code
+        .replace(cssUrl, `url(${prefix}/$1`)
+        .replace(quoted, `$1${prefix}/$2`)
+
+      return next === code ? null : next
+    },
+  }
+}
+
 export default defineConfig({
+  // Local `npm run dev` stays at `/`; production / GH Pages use the repo subpath.
+  base: isGitHubPages ? pagesBase : '/',
+
   plugins: [
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
+    prefixPublicAssets(isGitHubPages ? pagesBase : '/'),
   ],
 
   server: {
