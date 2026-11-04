@@ -1,0 +1,558 @@
+/* ===============================
+   RESET & GLOBAL FONT
+================================= */
+@font-face {
+  font-family: "auluo";
+  src: url("/fonts/Inter-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-ui: "auluo", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   HEADER
+================================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 60px;
+
+  z-index: 9999;
+
+  background: transparent;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 0.6;
+}
+
+/* ===============================
+   HERO FULLSCREEN VIDEO (LEGACY)
+================================= */
+body:not(:has(.emergena-home)) .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+body:not(:has(.emergena-home)) .hero-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 1;
+}
+
+/* ===============================
+   GENERIC SECTIONS (LEGACY)
+================================= */
+body:not(:has(.emergena-home)) .section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: white;
+}
+/* ===============================
+   ABOUT TIMELINE SECTION
+================================= */
+/* ===============================
+   ABOUT TIMELINE SECTION
+================================= */
+/* ===============================
+   ABOUT CINEMATIC TIMELINE
+================================ */
+
+/* =========================================
+   11/10 CINEMATIC MOUNTAIN TIMELINE
+========================================= */
+/* ===============================
+   ABOUT MOUNTAIN SECTION
+================================= */
+
+.aboutMountain {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Dark cinematic overlay */
+.aboutOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.18) 85%
+  );
+  z-index: 1;
+}
+
+/* Container */
+.aboutContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+
+/* ===============================
+   SVG TIMELINE
+================================= */
+
+.timelineSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Real dotted line (never becomes solid) */
+.timelineDottedPath {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 4 10; /* perfect dotted */
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
+}
+
+/* Mask path (reveals dotted line) */
+.timelineMaskPath {
+  fill: none;
+  stroke: white;
+  stroke-width: 12; /* thick so reveal looks clean */
+  stroke-linecap: round;
+}
+
+/* SVG dots (perfectly connected) */
+.timelineCircle {
+  fill: #ffffff;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.6));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* ===============================
+   TIMELINE TEXT ITEMS
+================================= */
+
+.timelineItem {
+  position: absolute;
+  max-width: 300px;
+  color: #ffffff;
+  padding-left: 22px; /* space from dot */
+  z-index: 3; /* always above line */
+}
+
+/* Hidden anchor used for measuring positions */
+.timelineDotAnchor {
+  position: absolute;
+  left: 0;
+  top: 12px; /* line connection point */
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+}
+
+/* Year */
+.timelineYear {
+  font-size: clamp(26px, 2vw, 32px);
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+/* Description */
+.timelineText {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 6px;
+  padding-right: 12px;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1024px) {
+  .timelineItem {
+    max-width: 240px;
+  }
+
+  .timelineYear {
+    font-size: 22px;
+  }
+
+  .timelineText {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineItem {
+    max-width: 200px;
+  }
+
+  .timelineYear {
+    font-size: 18px;
+  }
+
+  .timelineText {
+    font-size: 12px;
+  }
+}
+/* SECTION */
+.ci-section {
+  position: relative;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.ci-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* CURVE */
+.ci-curve {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* TRACK */
+.ci-track {
+  display: flex;
+}
+
+/* PANEL */
+.ci-panel {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* CONTENT */
+.ci-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT */
+.ci-left {
+  width: 45%;
+}
+
+.ci-number {
+  font-size: 14px;
+  color: #f97316;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.ci-left h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.ci-left p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* RIGHT */
+.ci-right {
+  width: 50%;
+}
+
+.ci-right img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+/*our solutions */
+
+/* ===============================
+   OUR SOLUTIONS SECTION
+================================ */
+
+.solutions-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Background */
+.solutions-bg {
+  position: absolute;
+  inset: -250px;
+  background: url("/src/assets/images/forest.jpg") center/cover no-repeat;
+  background-image: image-set(
+    url("/src/assets/images/forest.webp") type("image/webp"),
+    url("/src/assets/images/forest.jpg") type("image/jpeg")
+  );
+  z-index: 0;
+  will-change: transform;
+}
+
+.solutions-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* ===============================
+   CENTER TITLE
+================================ */
+
+.solutions-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  line-height: 1.05;  
+  pointer-events: none;
+}
+
+.solutions-title span {
+  display: block;
+  font-size: 500px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+/* ===============================
+   SLIDES STRUCTURE
+================================ */
+
+.slides-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.slides-track {
+  position: absolute;
+  width: 100%;
+}
+
+/* Each slide full viewport */
+.solution-slide {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 140px;
+}
+
+/* Alternate alignment */
+.solution-slide.right {
+  justify-content: flex-end;
+}
+
+.solution-slide.left {
+  justify-content: flex-start;
+}
+
+/* ===============================
+   CARD STYLE (BIGGER PREMIUM)
+================================ */
+
+.solution-card {
+  width: 600px;
+  padding: 32px;
+  border-radius: 28px;
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(18, 70, 40, 0.92),
+    rgba(18, 70, 40, 0.75)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.4s ease;
+}
+
+/* Image */
+.solution-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+
+/* Title */
+.solution-card h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Description */
+.solution-card p {
+  font-size: 16px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+/* Number indicator */
+.solution-card span {
+  font-size: 14px;
+  opacity: 0.75;
+  display: block;
+  margin-top: 12px;
+}
+
+/* ===============================
+   RESPONSIVE (SAFE)
+================================ */
+
+@media (max-width: 1200px) {
+  .solution-card {
+    width: 500px;
+  }
+
+  .solutions-title span {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solution-slide {
+    justify-content: center !important;
+    padding: 0 20px;
+  }
+
+  .solution-card {
+    width: 100%;
+  }
+
+  .solutions-title span {
+    font-size: 48px;
+  }
+}
+
+
+/* Use the locally-preloaded Inter variable font — no external request needed */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  max-width: 100%;
+}
+
+body:not(:has(.emergena-home)) {
+  overflow-x: hidden;
+}
+
+.emergena-home {
+  overflow-x: clip;
+  width: 100%;
+}
+
+/* ===============================
+  PERFORMANCE (SAFE / NON-VISUAL)
+================================= */
+
+/* Skip layout/paint for below-the-fold sections until needed. */
+.perf-cv {
+  content-visibility: auto;
+  /* Slightly larger intrinsic height reduces "catch-up" reflow jank on fast scroll. */
+  contain-intrinsic-size: 1px 1600px;
+}
+
+/* Respect reduced-motion preference without changing default feel. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}

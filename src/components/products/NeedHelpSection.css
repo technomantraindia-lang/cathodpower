@@ -1,0 +1,206 @@
+.nh2 {
+  background: #fff;
+  padding: 68px 0 90px;
+}
+
+.nh2__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ✅ Title + grid initial hidden state */
+.nh2__title,
+.nh2__grid {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* ✅ When section becomes visible */
+.nh2.is-visible .nh2__title {
+  animation: nhTitleIn 650ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.nh2.is-visible .nh2__grid {
+  animation: nhGridIn 650ms cubic-bezier(.2,.8,.2,1) forwards;
+  animation-delay: 120ms;
+}
+
+/* Title */
+.nh2__title {
+  text-align: center;
+  margin: 0 0 30px;
+  font-size: clamp(30px, 3vw, 48px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #161616;
+}
+
+/* grid */
+.nh2__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* card base */
+.nh2Card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+
+  background: linear-gradient(180deg, #fbfbfb, #f6f6f6);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  will-change: transform;
+
+  /* ✅ hidden until section visible */
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* ✅ Card animation only when section is visible */
+.nh2.is-visible .nh2Card {
+  animation: nhCardIn 650ms cubic-bezier(.2,.8,.2,1) forwards;
+  animation-delay: calc(var(--i) * 110ms + 220ms);
+}
+
+.nh2Card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+  border-color: rgba(0, 0, 0, 0.10);
+}
+
+/* icon badge */
+.nh2Card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.04);
+  color: #1c1c1c;
+  flex: 0 0 auto;
+}
+
+/* text */
+.nh2Card__text {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.nh2Card__h {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nh2Card__p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.60);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* arrow */
+.nh2Card__chev {
+  margin-left: auto;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.35);
+  transform: translateX(0);
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.nh2Card:hover .nh2Card__chev {
+  transform: translateX(4px);
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* accent card */
+.nh2Card.is-accent {
+  background: linear-gradient(180deg, #fff9ea, #ffffff);
+  border-color: rgba(243, 178, 0, 0.28);
+  box-shadow: 0 14px 40px rgba(243, 178, 0, 0.12);
+}
+
+.nh2Card.is-accent .nh2Card__icon {
+  background: rgba(243, 178, 0, 0.18);
+  color: #b17100;
+}
+
+.nh2Card.is-accent .nh2Card__h {
+  color: #f18f01;
+}
+
+/* subtle shine on accent hover */
+.nh2Card.is-accent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: radial-gradient(600px 180px at 20% 0%, rgba(243,178,0,0.20), transparent 55%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.nh2Card.is-accent:hover::after {
+  opacity: 1;
+}
+
+/* keyframes */
+@keyframes nhTitleIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nhGridIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nhCardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .nh2__grid { grid-template-columns: 1fr; }
+  .nh2Card__p, .nh2Card__h { white-space: normal; }
+}
+
+@media (max-width: 600px) {
+  .nh2 { padding: 52px 0 64px; }
+  .nh2__grid { gap: 14px; }
+  .nh2Card { padding: 16px 16px; gap: 12px; }
+  .nh2Card__h { font-size: 16px; }
+  .nh2Card__icon { width: 40px; height: 40px; border-radius: 12px; }
+}
+
+@media (max-width: 480px) {
+  .nh2 { padding: 40px 0 52px; }
+  .nh2Card { padding: 14px 14px; gap: 10px; }
+  .nh2Card__h { font-size: 15px; }
+  .nh2Card__p { font-size: 12px; }
+  .nh2Card__icon { width: 36px; height: 36px; border-radius: 10px; }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nh2__title,
+  .nh2__grid,
+  .nh2Card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

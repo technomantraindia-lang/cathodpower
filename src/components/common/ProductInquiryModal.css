@@ -1,0 +1,224 @@
+.pi-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.pi-modal {
+  --pi-accent: #ff6a00;
+  --pi-accent-2: #ff8a2a;
+  width: 560px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px 40px 32px;
+  position: relative;
+  animation: piFadeIn 0.34s cubic-bezier(0.2, 0.9, 0.2, 1);
+  box-shadow:
+    0 55px 140px rgba(0, 0, 0, 0.36),
+    0 16px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.pi-modal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 106, 0, 0.14), transparent 56%),
+    radial-gradient(circle at 0% 100%, rgba(255, 138, 42, 0.08), transparent 55%);
+  pointer-events: none;
+}
+
+.pi-modal > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pi-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(17, 17, 17, 0.8);
+  opacity: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.pi-modal-close:hover {
+  transform: scale(1.06);
+  background: #ffffff;
+  border-color: rgba(255, 106, 0, 0.25);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pi-modal-title {
+  font-size: 28px;
+  font-weight: 750;
+  margin: 6px 0 8px;
+  text-align: center;
+  color: #111;
+  letter-spacing: -0.03em;
+}
+
+.pi-modal-subtitle {
+  margin: 0 0 22px;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.pi-modal-subtitle strong {
+  color: #111;
+  font-weight: 700;
+}
+
+.pi-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pi-row {
+  display: flex;
+  gap: 12px;
+}
+
+.pi-modal input,
+.pi-modal textarea {
+  flex: 1;
+  padding: 13px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  font-size: 14px;
+  outline: none;
+  background: rgba(250, 250, 250, 0.92);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.pi-modal input::placeholder,
+.pi-modal textarea::placeholder {
+  color: rgba(17, 17, 17, 0.32);
+}
+
+.pi-full {
+  width: 100%;
+}
+
+.pi-modal input:focus,
+.pi-modal textarea:focus {
+  border-color: rgba(255, 106, 0, 0.55);
+  background: #ffffff;
+  box-shadow:
+    0 0 0 4px rgba(255, 106, 0, 0.13),
+    0 16px 36px rgba(17, 17, 17, 0.08);
+}
+
+.pi-modal textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.pi-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.pi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  padding: 13px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.pi-btn__icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+}
+
+.pi-btn__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pi-btn__label {
+  letter-spacing: 0.01em;
+}
+
+.pi-btn:active {
+  transform: translateY(1px);
+}
+
+.pi-btn--solid {
+  background: linear-gradient(135deg, var(--pi-accent), var(--pi-accent-2));
+  color: white;
+  box-shadow: 0 16px 38px rgba(255, 106, 0, 0.28);
+}
+
+.pi-btn--solid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(255, 106, 0, 0.36);
+}
+
+.pi-btn--ghost {
+  background: rgba(17, 17, 17, 0.06);
+  color: #111;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.pi-btn--ghost:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes piFadeIn {
+  from {
+    transform: translateY(6px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .pi-modal {
+    width: min(92vw, 520px);
+    padding: 28px 18px 22px;
+    border-radius: 16px;
+  }
+  .pi-modal-title {
+    font-size: 20px;
+  }
+  .pi-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pi-actions {
+    grid-template-columns: 1fr;
+  }
+}
+

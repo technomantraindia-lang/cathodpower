@@ -1,0 +1,247 @@
+/* Newsletter band (two-column: image + form) — used on C&I, Downloads, etc. */
+
+.nlb {
+  padding: 64px 80px;
+  background: var(--bg-canvas, #f7f7f5);
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+}
+
+@media (max-width: 1280px) {
+  .nlb {
+    padding: 64px 40px;
+  }
+}
+
+.nlb__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b1919 0%, #142922 60%, #1a382e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  min-height: 360px;
+}
+
+.nlb__image {
+  min-height: 360px;
+  position: relative;
+}
+
+.nlb__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.nlb__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 60%, rgba(11, 25, 25, 0.6) 100%);
+}
+
+.nlb__content {
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.nlb__eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a9fd80;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nlb__eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a9fd80;
+}
+
+.nlb__title {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 28px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.nlb__form {
+  display: flex;
+  gap: 0;
+  max-width: 440px;
+  margin-bottom: 16px;
+}
+
+.nlb__input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 20px;
+  font-size: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-right: none;
+  border-radius: 999px 0 0 999px;
+  outline: none;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nlb__input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.nlb__input:focus {
+  border-color: #ff6a00;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nlb__btn {
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0 999px 999px 0;
+  background: #ff6a00;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.nlb__btn:hover {
+  background: #ff7a18;
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.4);
+}
+
+.nlb__btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.nlb__btn:disabled:hover {
+  background: #ff6a00;
+  box-shadow: none;
+}
+
+.nlb__feedback {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: -8px 0 12px;
+  max-width: 420px;
+}
+
+.nlb__feedback--success {
+  color: #a9fd80;
+}
+
+.nlb__feedback--error {
+  color: #ff8577;
+}
+
+.nlb__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+}
+
+.nlb__consent input {
+  margin-top: 2px;
+  accent-color: #ff6a00;
+}
+
+.nlb__consent a {
+  color: #a9fd80;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .nlb__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .nlb__image {
+    min-height: 0;
+    order: 0;
+  }
+
+  .nlb__image img {
+    min-height: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nlb {
+    padding: 0 24px 48px;
+  }
+
+  .nlb__content {
+    padding: 36px 24px;
+  }
+
+  .nlb__form {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .nlb__input {
+    border-radius: 999px;
+    border-right: 1.5px solid #ddd;
+  }
+
+  .nlb__btn {
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nlb {
+    padding: 0 16px 40px;
+  }
+
+  .nlb__inner {
+    border-radius: 14px;
+  }
+
+  .nlb__content {
+    padding: 28px 18px;
+  }
+
+  .nlb__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .nlb__form {
+    max-width: 100%;
+  }
+
+  .nlb__consent {
+    font-size: 11px;
+  }
+}

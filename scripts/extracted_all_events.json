@@ -1,0 +1,1443 @@
+[
+  {
+    "id": "i-c2a1c85e",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-ef8c580c"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-4069e1e4",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-2b13cf7c"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-5f23ffac",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-6dc34d50"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-4b6e5990",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:click",
+        {
+          "control": "togglePlayReverse",
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "faq-list"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-138ac376"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-238b2d80",
+    "scope": {
+      "type": "component",
+      "componentId": "b10041db-fe37-8d40-ed58-78d0c5bf8846"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "link-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-b911c677"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-21d47df2",
+    "scope": {
+      "type": "component",
+      "componentId": "b10041db-fe37-8d40-ed58-78d0c5bf8846"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "control": "restart",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "link-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-a2682537"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-9c54d579",
+    "scope": {
+      "type": "component",
+      "componentId": "64ed5bad-e92c-6189-68d8-25dcd07cf55f",
+      "variants": [
+        "base",
+        "068bec56-eb6a-67a3-bc0b-e7bf2919c909"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "button-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "button-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-2fb7568c"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-24734286",
+    "scope": {
+      "type": "component",
+      "componentId": "64ed5bad-e92c-6189-68d8-25dcd07cf55f",
+      "variants": [
+        "3c4ebf71-bf7d-51e4-aaf8-51d9d17171fd"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "button-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "button-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-f8f973b6"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-75b39b76",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top 5%",
+            "end": "bottom top",
+            "scrub": 1,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "main-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-002ed7c8"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-874f0061",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:click",
+        {
+          "control": "restart",
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "play-button-video"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:click",
+        {
+          "control": "togglePlayReverse",
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "bg-overlay-video"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-84704455"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-41a53d10",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top center",
+            "end": "bottom center",
+            "scrub": 1.5,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "process-scroll"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-ec29d4d4"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "tiny"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-35b1a298",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "team-card"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-892c4a37"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-ee562097",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "control": "restart",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "team-card"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-9eac6220"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-b7acc128",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "link-blog-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "link-blog-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-04275d86"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-055c76f6",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top 75%",
+            "end": "bottom 65%",
+            "scrub": 1,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "cta-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-1ce67fc3"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-82465f62",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:click",
+        {
+          "control": "togglePlayReverse",
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "circle-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-be092390"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-f834f1dd",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "our-story-content"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-64634e4d"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-c65a651d",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "vision-mission-content"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-5876cb21"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-991d5b64",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:click",
+        {
+          "control": "togglePlayReverse",
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "faq-dropdown"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-598e6944"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-32e1b869",
+    "scope": {
+      "type": "site"
+    },
+    "triggers": [
+      [
+        "wf:click",
+        {
+          "control": "togglePlayReverse",
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "benefits-block"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-ce978116"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "small",
+          "medium",
+          "main"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-035c5ac4",
+    "scope": {
+      "type": "component",
+      "componentId": "cc6a9ace-5f24-7f9d-6621-ce178aae231a"
+    },
+    "triggers": [
+      [
+        "wf:click",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "close-banner"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-3d5d5257"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-4811e57a",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:load",
+        {
+          "control": "play",
+          "controlType": "load"
+        }
+      ]
+    ],
+    "timelineIds": [
+      "t-28b06bdc"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "tiny",
+          "small"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-9214403e",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef",
+        "6a6c5073ec27fe59b8a3d59d"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "solutions-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-b41a1c11"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-7b3e8119",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef",
+        "6a6c5073ec27fe59b8a3d59d"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "solution-card-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "solution-card-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-6221c4f4"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-5c46eb4e",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom center",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "about-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-cf9c9a75"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-9d7bd46f",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top center",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "principles-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-7a0af10b"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-43ff806f",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef",
+        "6a61892fb8ce2c363d95e4d0"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top 75%",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "projects-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-71880a11"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-30fc650a",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:hover",
+        {
+          "controlType": "standard"
+        },
+        [
+          "wf:class",
+          [
+            "project-item"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ],
+      [
+        "wf:hover",
+        {
+          "control": "reverse",
+          "controlType": "standard",
+          "pluginConfig": {
+            "type": "mouseleave",
+            "hover": "each"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "project-item"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-19bf233a"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-82ab4de4",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top 75%",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "process-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-2300f6de"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-57ed6ea1",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef",
+        "6a619793ff52a9ed58204748"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top 70%",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "team-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-2c7acecb"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "tiny"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-7516d125",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top 75%",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "faq-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-8d17090f"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-202f2786",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "blog-content-wrapper"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-59483fb8"
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-d6661992",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:load",
+        {
+          "control": "play",
+          "controlType": "load"
+        }
+      ]
+    ],
+    "timelineIds": [
+      "t-e7640191"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "medium",
+          "main",
+          "tiny"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-f6b9c193",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:load",
+        {
+          "control": "play",
+          "controlType": "load"
+        }
+      ]
+    ],
+    "timelineIds": [
+      "t-76f7d205"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "medium",
+          "main",
+          "small"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-a0a7b983",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom center",
+            "scrub": 1,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "usp-home-scroll"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-6f3f6be4"
+    ],
+    "conditionalPlayback": [
+      {
+        "type": "breakpoint",
+        "behavior": "dont-animate",
+        "breakpoints": [
+          "tiny"
+        ]
+      }
+    ],
+    "deleted": false
+  },
+  {
+    "id": "i-8408bb7c",
+    "scope": {
+      "type": "pages",
+      "value": [
+        "6a5822d57261e1efcb1a65ef"
+      ]
+    },
+    "triggers": [
+      [
+        "wf:scroll",
+        {
+          "controlType": "scroll",
+          "scrollTriggerConfig": {
+            "clamp": true,
+            "start": "top bottom",
+            "end": "bottom top",
+            "scrub": null,
+            "enter": "play",
+            "leave": "none",
+            "enterBack": "none",
+            "leaveBack": "none"
+          }
+        },
+        [
+          "wf:class",
+          [
+            "usp-home-wrap"
+          ],
+          {
+            "relationship": "none",
+            "firstMatchOnly": false
+          }
+        ]
+      ]
+    ],
+    "timelineIds": [
+      "t-02c7ef0e"
+    ],
+    "deleted": false
+  }
+]

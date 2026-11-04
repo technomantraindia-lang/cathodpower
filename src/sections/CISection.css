@@ -1,0 +1,272 @@
+/* ===============================
+   CI BANNER
+================================= */
+
+.ci-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+
+/* Overlays */
+.ci-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.50) 55%,
+    rgba(0, 0, 0, 0.20) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ci-banner-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Inner wrapper */
+.ci-banner-inner {
+  position: relative !important;
+  z-index: 10 !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 80px !important;
+  display: block !important;
+}
+
+/* Content block */
+.ci-banner-content {
+  max-width: 780px;
+}
+
+/* Eyebrow */
+.ci-banner-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px !important;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f97316;
+  margin-bottom: 28px;
+}
+
+.ci-banner-eyebrow-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f97316;
+  flex-shrink: 0;
+}
+
+/* Heading — MUCH BIGGER */
+.ci-banner-heading {
+  font-size: 110px !important;
+  font-weight: 700 !important;
+  line-height: 1.05 !important;
+  color: #ffffff !important;
+  margin-bottom: 36px !important;
+  letter-spacing: -2px !important;
+}
+
+/* Subtitle */
+.ci-banner-sub {
+  font-size: 28px !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  margin-bottom: 56px !important;
+  max-width: 700px;
+}
+
+/* Buttons row */
+.ci-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Primary button */
+.ci-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 50px !important;
+  background: #ffffff;
+  color: #111111;
+  font-size: 20px !important;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ci-banner-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.ci-banner-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #f97316;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+/* Ghost button */
+.ci-banner-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 17px 34px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-size: 16px !important;
+  font-weight: 500;
+  border-radius: 50px;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+.ci-banner-btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Bottom fade */
+.ci-banner-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.35));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1280px) {
+  .ci-banner-heading {
+    font-size: 86px !important;
+  }
+
+  .ci-banner-sub {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ci-banner-inner {
+    padding: 0 48px !important;
+  }
+
+  .ci-banner-heading {
+    font-size: 74px !important;
+  }
+
+  .ci-banner-sub {
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ci-banner-heading {
+    font-size: 52px !important;
+  }
+
+  .ci-banner-sub {
+    font-size: 18px !important;
+  }
+  .ci-banner-btn {
+    font-size: 16px !important;
+    padding: 14px 30px !important;
+  }
+  .ci-banner-btn-ghost {
+    font-size: 16px !important;
+    padding: 14px 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ci-banner-inner {
+    padding: 0 28px !important;
+  }
+
+  .ci-banner-heading {
+    font-size: 42px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .ci-banner-sub {
+    font-size: 16px !important;
+  }
+
+  .ci-banner-content {
+    max-width: 100%;
+  }
+
+  .ci-banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ci-banner-btn,
+  .ci-banner-btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ci-banner-inner {
+    padding: 0 16px !important;
+  }
+
+  .ci-banner-heading {
+    font-size: 32px !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .ci-banner-sub {
+    font-size: 14px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .ci-banner-eyebrow {
+    font-size: 12px !important;
+  }
+
+  .ci-banner-btn {
+    font-size: 14px !important;
+    padding: 14px 24px !important;
+  }
+
+  .ci-banner-btn-ghost {
+    font-size: 14px !important;
+    padding: 14px 24px !important;
+  }
+}

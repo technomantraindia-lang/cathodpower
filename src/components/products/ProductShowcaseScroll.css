@@ -1,0 +1,200 @@
+/* ===== SECTION ===== */
+
+.cleanOrbit {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+.cleanOrbit__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cleanOrbit__heading {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+/* ===== LAYOUT ===== */
+
+.cleanOrbit__stage {
+  display: grid;
+  grid-template-columns: 240px 1fr 380px;
+  gap: 40px;
+  align-items: center;
+  position: sticky;
+  top: 24px;
+  height: calc(100vh - 48px);
+}
+
+/* ===== NAV ===== */
+
+.cleanOrbit__navItem {
+  margin-bottom: 20px;
+  font-weight: 600;
+  opacity: 0.4;
+  transition: 0.3s ease;
+}
+
+.cleanOrbit__navItem.is-active {
+  opacity: 1;
+  transform: translateX(6px);
+}
+
+/* ===== CENTER ORBIT ===== */
+
+.cleanOrbit__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cleanOrbit__orbit {
+  position: relative;
+  width: 420px;
+  height: 420px;
+}
+
+/* Orbit ring */
+.cleanOrbit__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+}
+
+/* Rotator */
+.cleanOrbit__rotator {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.15s linear;
+}
+
+/* Chip wrapper */
+.cleanOrbit__chipWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+/* Chip */
+.cleanOrbit__chip {
+  position: absolute;
+  left: 50%;
+  transform-origin: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #f3f3f3;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.cleanOrbit__chip.is-active {
+  opacity: 1;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== PRODUCT CENTER ===== */
+
+.cleanOrbit__product {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* FIXED IMAGE SCALING */
+.cleanOrbit__img {
+  position: absolute;
+
+  max-width: 75%;
+  max-height: 75%;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.cleanOrbit__img.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== RIGHT CARD ===== */
+
+.cleanOrbit__right {
+  display: flex;
+  align-items: center;
+}
+
+.cleanOrbitCard {
+  padding: 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.cleanOrbitCard__badge {
+  background: #e6f3f1;
+  color: #1a7f6e;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+/* ===== SCROLL SPACE ===== */
+
+.cleanOrbit__scrollSpace {
+  height: 220vh;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .cleanOrbit__stage {
+    grid-template-columns: 1fr;
+    height: auto;
+    position: static;
+    gap: 32px;
+  }
+  .cleanOrbit__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .cleanOrbit__navItem { margin-bottom: 0; }
+  .cleanOrbit__orbit { width: 320px; height: 320px; }
+  .cleanOrbit__center { justify-content: center; }
+  .cleanOrbit__scrollSpace { height: 0; }
+}
+
+@media (max-width: 768px) {
+  .cleanOrbit { padding: 60px 0; }
+  .cleanOrbit__heading { font-size: 28px; margin-bottom: 32px; }
+  .cleanOrbit__orbit { width: 260px; height: 260px; }
+  .cleanOrbit__right { padding-top: 16px; }
+  .cleanOrbitCard { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .cleanOrbit__heading { font-size: 22px; margin-bottom: 24px; }
+  .cleanOrbit__orbit { width: 220px; height: 220px; }
+  .cleanOrbit__nav { display: none; }
+  .cleanOrbit__chip { font-size: 11px; padding: 6px 12px; }
+}

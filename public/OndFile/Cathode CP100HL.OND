@@ -1,0 +1,90 @@
+PVObject_=pvGInverter
+  Comment=Cathode Power Pvt Ltd.	CP100HL	Manufacturer 2024
+  Version=7.2
+  ParObj1=2024
+  Flags=$00340570
+
+  PVObject_Commercial=pvCommercial
+    Comment=www.cathodepower.com
+    Flags=$0041
+    Manufacturer=Cathode Power Pvt Ltd.
+    Model=CP100HL
+    DataSource=Manufacturer 2024
+    YearBeg=2024
+    Width=1.040
+    Height=0.700
+    Depth=0.350
+    Weight=85.000
+    NPieces=100
+    PriceDate=09/05/24 17:41
+    Remarks, Count=3
+      Str_1=16 kHz, IGBT
+      Str_2=-25 - +60°C, IP 66:  outdoor installation
+      Str_3
+    End of Remarks
+  End of PVObject pvCommercial
+  Transfo=Without
+
+  Converter=TConverter
+    PNomConv=100.000
+    PMaxOUT=110.000
+    VOutConv=400.0
+    VMppMin=180
+    VMPPMax=1000
+    VmppNom=600.0
+    Vmpp_PMax=200.0
+    VAbsMax=1100
+    PSeuil=1000.0
+    EfficMax=98.55
+    EfficEuro=98.20
+    FResNorm=3.00
+    ModeOper=MPPT
+    CompPMax=Lim
+    CompVMax=Lim
+    MonoTri=Tri
+    ModeAffEnum=Efficf_PIn
+    UnitAffEnum=kW
+    PNomDC=100.000
+    PMaxDC=150.000
+    IDCMax=0.0
+    IMaxDC=234.0
+    INomAC=151.5
+    IMaxAC=166.7
+    TPNom=45.0
+    TPMax=40.0
+    TPLim1=60.0
+    PInEffMax =60000.000
+    PThreshEff=267.6
+    HasdefaultPThresh=False
+
+    ProfilPIO=TCubicProfile
+      NPtsMax=11
+      NPtsEff=8
+      LastCompile=$008D
+      Mode=1
+      Point_1=1000,0
+      Point_2=3000,2721
+      Point_3=5000,4712
+      Point_4=10000,9685
+      Point_5=20000,19616
+      Point_6=30000,29526
+      Point_7=60000,59130
+      Point_8=100000,98308
+      Point_9=0,0
+      Point_10=0,0
+      Point_11=0,0
+    End of TCubicProfile
+  End of TConverter
+  NbInputs=18
+  NbMPPT=9
+  TanPhiMin=-0.750
+  TanPhiMax=0.750
+  NbMSInterne=2
+  MasterSlave=No_M_S
+  IsolSurvey =Yes
+  DC_Switch=Yes
+  AC_Switch=Yes
+  DiscAdjust=Yes
+  ENS_Protec=No
+  MS_Thresh=0.8
+End of PVObject pvGInverter

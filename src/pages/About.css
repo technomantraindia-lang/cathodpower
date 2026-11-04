@@ -1,0 +1,298 @@
+.about-page {
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  background: var(--bg-canvas, #f7f7f5);
+  color: #142922;
+  overflow-x: hidden;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+  font-weight: 500;
+}
+
+/* ── HERO BANNER ───────────────────────────────────── */
+.about-hero {
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 52vw, 640px);
+  /* Preferred new factory banner: /images/about/about-factory-banner.webp
+     Recommended size: 1920×800 (min 1600×700, retina 2560×1067), ~2.4:1 */
+  background:
+    image-set(
+      url("/images/about/about-factory-banner.webp") type("image/webp"),
+      url("/images/about/about-factory-banner.jpeg") type("image/jpeg")
+    )
+    center/cover no-repeat;
+  background-color: #0b1919;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 140px 80px 80px;
+  overflow: hidden;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(11, 25, 25, 0.94) 0%,
+    rgba(20, 41, 34, 0.86) 50%,
+    rgba(11, 25, 25, 0.55) 100%
+  );
+  z-index: 1;
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ff6a00;
+  margin-bottom: 18px;
+}
+
+.about-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff6a00;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.9);
+}
+
+.about-hero h1 {
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 500;
+  line-height: 1.14;
+  color: #ffffff;
+  margin: 0 0 18px;
+  letter-spacing: -0.025em;
+}
+
+.about-hero p.about-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+  max-width: 640px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+/* ── CONTENT SECTION ─────────────────────────────────── */
+.about-section {
+  padding: 100px 80px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.about-section--after-milestones {
+  padding-top: 72px;
+}
+
+.about-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.about-story h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #142922;
+  margin: 0 0 20px;
+  letter-spacing: -0.025em;
+}
+
+.about-story p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #475e55;
+  margin: 0 0 20px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.about-image-card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(20, 41, 34, 0.1);
+  border: 1px solid rgba(20, 41, 34, 0.08);
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── STATS ROW ───────────────────────────────────────── */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 90px;
+}
+
+.about-stat-card {
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 41, 34, 0.08);
+  box-shadow: 0 10px 30px rgba(20, 41, 34, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(20, 41, 34, 0.08);
+  border-color: rgba(255, 106, 0, 0.25);
+}
+
+.about-stat-num {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ff6a00;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.about-stat-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #142922;
+  margin-bottom: 6px;
+}
+
+.about-stat-desc {
+  font-size: 13px;
+  color: #617970;
+  line-height: 1.6;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+/* ── PILLARS SECTION ─────────────────────────────────── */
+.about-pillars {
+  background: linear-gradient(135deg, #0b1919 0%, #142922 60%, #1e3d3e 100%);
+  border-radius: 28px;
+  padding: 64px 60px;
+  color: #ffffff;
+  margin-bottom: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.about-pillars-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.about-pillars-header h2 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 14px;
+  letter-spacing: -0.025em;
+}
+
+.about-pillars-header p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.about-pillar-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 32px 28px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about-pillar-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a9fd80;
+  margin-bottom: 12px;
+}
+
+.about-pillar-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.about-pillar-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  margin: 0;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-hero {
+    padding: 120px 40px 60px;
+  }
+  .about-section {
+    padding: 70px 40px;
+  }
+  .about-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-pillars {
+    padding: 48px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: 100px 20px 50px;
+    min-height: 380px;
+  }
+  .about-section {
+    padding: 50px 20px;
+  }
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

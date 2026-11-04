@@ -1,0 +1,72 @@
+:root {
+  --color-forest: #142922;
+  --color-teal-dark: #0b1919;
+  --color-card-teal: #2d5254;
+  --color-orange: #ff6a00;
+  --color-orange-hover: #ff7a18;
+  --color-lime: #a9fd80;
+  --bg-canvas: #f7f7f5;
+  --bg-card: #ffffff;
+  --text-primary: #142922;
+  --text-muted: #475e55;
+  --border-light: rgba(20, 41, 34, 0.08);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --font-primary: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  font-family: var(--font-primary);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+  position: relative;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+.emergena-subpage-wrap {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  min-height: 80vh;
+  position: relative;
+  width: 100%;
+}
+
+
+/* Mask reveal container */
+.mask {
+  overflow: hidden;
+}
+
+/* Motion blur class */
+.blur-motion {
+  filter: blur(12px);
+  transition: filter 0.3s ease;
+  will-change: filter;
+}
+
+/* Subtle noise texture */
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 4;
+}

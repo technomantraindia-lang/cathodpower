@@ -1,0 +1,219 @@
+/* ── VisionCardsSection — full-width stacking cards ───────────────────── */
+
+.vc-section {
+  background: var(--bg-canvas, #f7f7f5);
+  padding: 0 0 40px;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+}
+
+/* ── Stack container ─────────────────────────────────────────────────── */
+.vc-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Base card ───────────────────────────────────────────────────────── */
+.vc-card {
+  position: sticky;
+  width: 100%;
+  height: 420px;
+  overflow: clip;          /* clip keeps sticky working, unlike overflow:hidden */
+  margin-bottom: 20px;
+  border-radius: 0;        /* full-width = no rounded edges */
+}
+
+/* Sticky stacking — flush with viewport top (no gap) */
+.vc-card--1 { top: env(safe-area-inset-top, 0px); z-index: 1; }
+.vc-card--2 { top: env(safe-area-inset-top, 0px); z-index: 2; }
+.vc-card--3 { top: env(safe-area-inset-top, 0px); z-index: 3; }
+
+/* ── Background image ────────────────────────────────────────────────── */
+.vc-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.vc-card:hover .vc-card__bg {
+  transform: scale(1.03);
+}
+
+/* ── Dark overlay ────────────────────────────────────────────────────── */
+.vc-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 25, 25, 0.72) 0%, rgba(20, 41, 34, 0.58) 100%);
+  transition: background 0.4s ease;
+}
+
+.vc-card:hover .vc-card__overlay {
+  background: linear-gradient(135deg, rgba(11, 25, 25, 0.60) 0%, rgba(20, 41, 34, 0.45) 100%);
+}
+
+/* ── Content row ─────────────────────────────────────────────────────── */
+.vc-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 0 10%;
+}
+
+/* LEFT — number + big word */
+.vc-card__left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vc-card__num {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff6a00;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vc-card__word {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(48px, 5.5vw, 80px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Divider */
+.vc-card__content::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* RIGHT — title + description */
+.vc-card__right {
+  flex: 1;
+  max-width: 560px;
+}
+
+.vc-card__title {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(18px, 1.8vw, 26px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+
+.vc-card__desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Laptop (narrow) ─────────────────────────────────────────────────── */
+@media (max-width: 1280px) {
+  .vc-card__content {
+    gap: clamp(32px, 4vw, 60px);
+    padding: 0 7%;
+  }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .vc-card {
+    height: auto;
+    min-height: 340px;
+  }
+
+  .vc-card--1 { top: env(safe-area-inset-top, 0px); }
+  .vc-card--2 { top: env(safe-area-inset-top, 0px); }
+  .vc-card--3 { top: env(safe-area-inset-top, 0px); }
+
+  .vc-card__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 5%;
+  }
+
+  .vc-card__content::after {
+    display: none;
+  }
+
+  .vc-card__word {
+    white-space: normal;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .vc-section {
+    padding: 0 0 32px;
+  }
+
+  .vc-card {
+    min-height: 300px;
+    margin-bottom: 16px;
+  }
+
+  .vc-card--1 { top: env(safe-area-inset-top, 0px); }
+  .vc-card--2 { top: env(safe-area-inset-top, 0px); }
+  .vc-card--3 { top: env(safe-area-inset-top, 0px); }
+
+  .vc-card__title {
+    font-size: clamp(17px, 2.2vw, 24px);
+  }
+}
+
+@media (max-width: 600px) {
+  .vc-section {
+    padding: 0 0 32px;
+  }
+
+  .vc-card {
+    min-height: 280px;
+  }
+
+  .vc-card__word {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .vc-card__desc {
+    font-size: 13px;
+  }
+}
+
+/* Short viewports (landscape phone / small laptop) */
+@media (max-height: 520px) and (max-width: 1024px) {
+  .vc-card {
+    min-height: 220px;
+  }
+
+  .vc-card__content {
+    padding: 24px 5%;
+  }
+}
+
+/* C&I page: remove end-gap before next section */
+.ci-page .vc-section {
+  padding-bottom: 0;
+}
+
+.ci-page .vc-card:last-child {
+  margin-bottom: 0;
+}

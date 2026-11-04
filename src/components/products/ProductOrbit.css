@@ -1,0 +1,169 @@
+/* Orbit container */
+.orbitWrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+perspective:1200px;
+}
+
+/* MAIN ORBIT RING */
+.orbitCircle{
+
+position:relative;
+width:420px;
+height:420px;
+
+border-radius:50%;
+
+/* visible ring */
+border:2px solid rgba(255,153,0,0.25);
+
+/* subtle gradient */
+background:
+radial-gradient(circle at center,
+rgba(255,153,0,0.05) 0%,
+rgba(255,153,0,0.03) 40%,
+transparent 70%
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:visible;
+
+}
+
+/* glowing rotating aura */
+.orbitGlow{
+
+position:absolute;
+width:520px;
+height:520px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(255,153,0,0.18) 0%,
+rgba(255,153,0,0.08) 40%,
+transparent 70%
+);
+
+filter:blur(30px);
+
+animation:orbitGlowRotate 14s linear infinite;
+
+z-index:0;
+
+}
+
+/* slow glow rotation */
+@keyframes orbitGlowRotate{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+}
+
+/* orbit labels */
+.orbitItem{
+
+position:absolute;
+
+background:white;
+
+padding:10px 18px;
+
+border-radius:22px;
+
+font-size:13px;
+font-weight:500;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+transition:all .35s ease;
+
+z-index:3;
+
+}
+
+.orbitItem.active{
+
+background:#ff9900;
+color:white;
+
+box-shadow:
+0 10px 25px rgba(255,153,0,0.4);
+
+}
+
+.orbitItem:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 20px rgba(255,153,0,0.6),
+0 0 40px rgba(255,153,0,0.4);
+
+}
+
+/* center inverter */
+.orbitCenter{
+position:absolute;
+z-index:2;
+}
+
+.orbitCenter img{
+width:230px;
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+}
+
+@media (max-width: 768px) {
+  .orbitWrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  .orbitCircle {
+    width: 300px;
+    height: 300px;
+  }
+  .orbitGlow {
+    width: 380px;
+    height: 380px;
+  }
+  .orbitCenter img {
+    width: 160px;
+  }
+  .orbitItem {
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbitCircle {
+    width: 240px;
+    height: 240px;
+  }
+  .orbitGlow {
+    width: 300px;
+    height: 300px;
+  }
+  .orbitCenter img {
+    width: 120px;
+  }
+  .orbitItem {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 16px;
+  }
+}

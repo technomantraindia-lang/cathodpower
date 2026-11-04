@@ -1,0 +1,355 @@
+[
+  {
+    "id": "t-ef8c580c",
+    "targets": [
+      "single-principal-wrap"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-2b13cf7c",
+    "targets": [],
+    "actionCount": 2
+  },
+  {
+    "id": "t-6dc34d50",
+    "targets": [],
+    "actionCount": 1
+  },
+  {
+    "id": "t-138ac376",
+    "targets": [
+      "faq-answer",
+      "icon-show-faq"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-b911c677",
+    "targets": [
+      "menu-line"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-a2682537",
+    "targets": [
+      "menu-line"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-2fb7568c",
+    "targets": [
+      "bg-primary-btn",
+      "primary-text-wrap"
+    ],
+    "actionCount": 3
+  },
+  {
+    "id": "t-f8f973b6",
+    "targets": [
+      "bg-primary-btn",
+      "primary-text-wrap"
+    ],
+    "actionCount": 3
+  },
+  {
+    "id": "t-002ed7c8",
+    "targets": [
+      "circle-wrap",
+      "navmenu-floating-wrap"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-84704455",
+    "targets": [
+      "popup-video",
+      "popup-video-wrapper",
+      "bg-overlay-video",
+      "menu-navbar-floating"
+    ],
+    "actionCount": 4
+  },
+  {
+    "id": "t-ec29d4d4",
+    "targets": [
+      "single-process-wrap",
+      "process-title-section",
+      "process-title._1",
+      "img-process-wrap._1",
+      "process-title._2",
+      "process-step._02",
+      "img-process-wrap._2",
+      "process-title._3",
+      "process-step._03",
+      "img-process-wrap._3",
+      "process-title._4",
+      "process-step._04",
+      "img-process-wrap._4",
+      "usp-section"
+    ],
+    "actionCount": 16
+  },
+  {
+    "id": "t-892c4a37",
+    "targets": [
+      "border-line-team",
+      "img-team-wrap"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-9eac6220",
+    "targets": [
+      "border-line-team",
+      "img-team-wrap"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-04275d86",
+    "targets": [
+      "blog-category-wrap",
+      "gradient-wrap.blog-image"
+    ],
+    "actionCount": 3
+  },
+  {
+    "id": "t-1ce67fc3",
+    "targets": [
+      "tag-title-wrap",
+      "cta-btn-wrap",
+      "video-card-wrap"
+    ],
+    "actionCount": 3
+  },
+  {
+    "id": "t-be092390",
+    "targets": [
+      "navmenu-floating-wrap",
+      "hamburger-icon",
+      "close-icon"
+    ],
+    "actionCount": 4
+  },
+  {
+    "id": "t-64634e4d",
+    "targets": [
+      "element-wrap",
+      "title-our-story",
+      "img-our-story",
+      "block-our-story.dark-green",
+      "block-our-story.whitesmoke",
+      "block-our-story.accent"
+    ],
+    "actionCount": 5
+  },
+  {
+    "id": "t-5876cb21",
+    "targets": [
+      "element-wrap",
+      "title-section-wrap",
+      "text-subtitle-wrap.vision",
+      "cta-wrapper-vision",
+      "card-vision"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-598e6944",
+    "targets": [
+      "dropdown-list",
+      "faq-icon-wrap"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-ce978116",
+    "targets": [
+      "dropdown-list"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-3d5d5257",
+    "targets": [
+      "promotion-banner.left"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-28b06bdc",
+    "targets": [
+      "navbar-line",
+      "logo-brand-wrapper",
+      "navbar-menus",
+      "menu-button",
+      "wrapper-image-background",
+      "gradient-wrap.hero",
+      "title-wrap.white",
+      "description-wrap.hero",
+      "cta-hero-wrap",
+      "logo-wrap-overflow"
+    ],
+    "actionCount": 12
+  },
+  {
+    "id": "t-b41a1c11",
+    "targets": [
+      "element-wrap",
+      "title-wrap.center",
+      "description-wrap.center",
+      "border-card-solution",
+      "bg-card-solutions",
+      "solution-image",
+      "solution-number",
+      "title-solution-card",
+      "description-solution"
+    ],
+    "actionCount": 5
+  },
+  {
+    "id": "t-6221c4f4",
+    "targets": [
+      "bg-card-solutions",
+      "description-solution",
+      "solution-image",
+      "solution-number"
+    ],
+    "actionCount": 4
+  },
+  {
+    "id": "t-cf9c9a75",
+    "targets": [
+      "top-content-wrap.about-section",
+      "separator-line",
+      "bg-counter",
+      "icon-counter-wrap",
+      "counter-item"
+    ],
+    "actionCount": 5
+  },
+  {
+    "id": "t-7a0af10b",
+    "targets": [
+      "element-wrap",
+      "title-wrap",
+      "img-card-middle"
+    ],
+    "actionCount": 5
+  },
+  {
+    "id": "t-71880a11",
+    "targets": [
+      "element-wrap",
+      "ttitle-testimonials-section",
+      "title-wrap.white",
+      "principles-wrap",
+      "img-card-middle"
+    ],
+    "actionCount": 5
+  },
+  {
+    "id": "t-19bf233a",
+    "targets": [
+      "project-number",
+      "client-image"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-2300f6de",
+    "targets": [
+      "element-wrap",
+      "title-wrap.center",
+      "description-wrap.center"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-2c7acecb",
+    "targets": [
+      "element-wrap",
+      "title-wrap",
+      "btn-wrap",
+      "img-team-wrap",
+      "team-name",
+      "team-role"
+    ],
+    "actionCount": 3
+  },
+  {
+    "id": "t-8d17090f",
+    "targets": [
+      "element-wrap",
+      "title-wrap.center",
+      "description-wrap.center"
+    ],
+    "actionCount": 1
+  },
+  {
+    "id": "t-59483fb8",
+    "targets": [
+      "element-wrap",
+      "title-wrap",
+      "right-content-wrap.blog"
+    ],
+    "actionCount": 2
+  },
+  {
+    "id": "t-e7640191",
+    "targets": [
+      "navbar-line",
+      "logo-brand-wrapper",
+      "navbar-menus",
+      "menu-button",
+      "wrapper-image-background",
+      "gradient-wrap.hero",
+      "title-wrap.white",
+      "description-wrap.hero",
+      "cta-hero-wrap",
+      "logo-wrap-overflow"
+    ],
+    "actionCount": 12
+  },
+  {
+    "id": "t-76f7d205",
+    "targets": [
+      "navbar-line",
+      "logo-brand-wrapper",
+      "navbar-menus",
+      "menu-button",
+      "wrapper-image-background",
+      "gradient-wrap.hero",
+      "title-wrap.white",
+      "description-wrap.hero",
+      "cta-hero-wrap",
+      "logo-wrap-overflow"
+    ],
+    "actionCount": 12
+  },
+  {
+    "id": "t-6f3f6be4",
+    "targets": [
+      "usp-stats",
+      "line-usp",
+      "usp-card.left-up",
+      "usp-card.left-bottom",
+      "usp-card.right-bottom",
+      "usp-card.right-up",
+      "usp-card"
+    ],
+    "actionCount": 19
+  },
+  {
+    "id": "t-02c7ef0e",
+    "targets": [
+      "img-usp-overflow",
+      "line-usp",
+      "usp-stats"
+    ],
+    "actionCount": 3
+  }
+]

@@ -1,0 +1,386 @@
+[
+  {
+    "frac": 0,
+    "scrollY": 3874,
+    "headerTransform": "translate3d(0px, -5.3266%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": 280,
+        "cardTransform": "translate3d(0px, -5.3266%, 0px)",
+        "titleTransform": "translate(0px, 0%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": 631,
+        "cardTransform": "translate3d(0px, -5.3266%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 982,
+        "cardTransform": "translate3d(0px, -5.3266%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 1333,
+        "cardTransform": "translate3d(0px, -5.3266%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 0.15,
+    "scrollY": 4115,
+    "headerTransform": "translate3d(0px, -16.2018%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": 102,
+        "cardTransform": "translate3d(0px, -16.2018%, 0px)",
+        "titleTransform": "translate3d(0px, 29.0304%, 0px)",
+        "titleOpacity": "0.7968",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 14.5152%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": 453,
+        "cardTransform": "translate3d(0px, -16.2018%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 804,
+        "cardTransform": "translate3d(0px, -16.2018%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 1155,
+        "cardTransform": "translate3d(0px, -16.2018%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 0.3,
+    "scrollY": 4357,
+    "headerTransform": "translate3d(0px, -26.9984%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": 66,
+        "cardTransform": "translate3d(0px, -26.9984%, 0px)",
+        "titleTransform": "translate3d(0px, 67.0344%, 0px)",
+        "titleOpacity": "0.5308",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 33.5172%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": 417,
+        "cardTransform": "translate3d(0px, -26.9984%, 0px)",
+        "titleTransform": "translate3d(0px, -77.9312%, 0px)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0.3941",
+        "imgWrapTransform": "translate3d(0px, 5.5172%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 768,
+        "cardTransform": "translate3d(0px, -26.9984%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 1119,
+        "cardTransform": "translate3d(0px, -26.9984%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 0.45,
+    "scrollY": 4598,
+    "headerTransform": "translate3d(0px, -38.1526%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": 30,
+        "cardTransform": "translate3d(0px, -38.1526%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0.3",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": 381,
+        "cardTransform": "translate3d(0px, -38.1526%, 0px)",
+        "titleTransform": "translate3d(0px, 0.5944%, 0px)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 25.1486%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 732,
+        "cardTransform": "translate3d(0px, -38.1526%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 1083,
+        "cardTransform": "translate3d(0px, -38.1526%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 0.6,
+    "scrollY": 4840,
+    "headerTransform": "translate3d(0px, -49.5269%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": -83,
+        "cardTransform": "translate3d(0px, -49.5269%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0.3",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": 268,
+        "cardTransform": "translate3d(0px, -49.5269%, 0px)",
+        "titleTransform": "translate3d(0px, 80.6696%, 0px)",
+        "titleOpacity": "0.2416",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 45.1674%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 619,
+        "cardTransform": "translate3d(0px, -49.5269%, 0px)",
+        "titleTransform": "translate3d(0px, -55.3304%, 0px)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0.7977",
+        "imgWrapTransform": "translate3d(0px, 11.1674%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 970,
+        "cardTransform": "translate3d(0px, -49.5269%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 0.75,
+    "scrollY": 5081,
+    "headerTransform": "translate3d(0px, -60.8725%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": -361,
+        "cardTransform": "translate3d(0px, -60.8725%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0.3",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": -10,
+        "cardTransform": "translate3d(0px, -60.8725%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 341,
+        "cardTransform": "translate3d(0px, -60.8725%, 0px)",
+        "titleTransform": "translate3d(0px, 24.5424%, 0px)",
+        "titleOpacity": "0.9432",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 31.1356%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 692,
+        "cardTransform": "translate3d(0px, -60.8725%, 0px)",
+        "titleTransform": "translate(0px, -100%)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0",
+        "imgWrapTransform": "translate(0px, 0%) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 0.9,
+    "scrollY": 5323,
+    "headerTransform": "translate3d(0px, -72.3907%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": -641,
+        "cardTransform": "translate3d(0px, -72.3907%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0.3",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": -290,
+        "cardTransform": "translate3d(0px, -72.3907%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": 61,
+        "cardTransform": "translate3d(0px, -72.3907%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 412,
+        "cardTransform": "translate3d(0px, -72.3907%, 0px)",
+        "titleTransform": "translate3d(0px, -54.3696%, 0px)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "0.8148",
+        "imgWrapTransform": "translate3d(0px, 11.4076%, 0px) scale(1.5, 1.5)"
+      }
+    ]
+  },
+  {
+    "frac": 1,
+    "scrollY": 5484,
+    "headerTransform": "translate3d(0px, -80.0933%, 0px)",
+    "headerOpacity": "1",
+    "cards": [
+      {
+        "idx": 0,
+        "top": -827,
+        "cardTransform": "translate3d(0px, -80.0933%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0.3",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 1,
+        "top": -476,
+        "cardTransform": "translate3d(0px, -80.0933%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 2,
+        "top": -125,
+        "cardTransform": "translate3d(0px, -80.0933%, 0px)",
+        "titleTransform": "translate3d(0px, 100%, 0px)",
+        "titleOpacity": "0",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 50%, 0px) scale(1.5, 1.5)"
+      },
+      {
+        "idx": 3,
+        "top": 226,
+        "cardTransform": "translate3d(0px, -80.0933%, 0px)",
+        "titleTransform": "translate3d(0px, -0.1432%, 0px)",
+        "titleOpacity": "1",
+        "titleWrapTransform": "",
+        "stepOpacity": "1",
+        "imgWrapTransform": "translate3d(0px, 24.9642%, 0px) scale(1.5, 1.5)"
+      }
+    ]
+  }
+]

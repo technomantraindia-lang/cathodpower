@@ -1,0 +1,191 @@
+.ci-page {
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  background: var(--bg-canvas, #f7f7f5);
+  color: var(--text-primary, #142922);
+  min-height: 100vh;
+}
+
+/* Section Headings - Home Page Typography Parity */
+.ci-page h1,
+.ci-page h2,
+.ci-page .os-title,
+.ci-page .vc-card__word,
+.ci-page .nlb__title {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+.ci-page .os-title {
+  font-weight: 500 !important;
+}
+
+.ci-page .vc-card__word {
+  font-weight: 500 !important;
+  letter-spacing: -0.025em;
+}
+
+.ci-page .vc-card__title {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.015em;
+}
+
+/* HERO */
+.ci-hero {
+  height: 70vh;
+  background: url("../assets/images/commercial.jpg") center/cover no-repeat;
+  background-image: image-set(
+    url("../assets/images/commercial.webp") type("image/webp"),
+    url("../assets/images/commercial.jpg") type("image/jpeg")
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ci-hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.ci-hero-overlay h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.ci-hero-overlay p {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* COMMON */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+/* ABOUT */
+.ci-about {
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.ci-about h2 {
+  margin-bottom: 20px;
+}
+
+/* BENEFITS */
+.ci-benefits {
+  background: #ffffff;
+}
+
+.ci-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.ci-card {
+  background: #f5f7fa;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.ci-card:hover {
+  transform: translateY(-8px);
+}
+
+/* HIGHLIGHT */
+.ci-highlight {
+  background: #f5f7fa;
+}
+
+.ci-highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.ci-highlight-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* CTA */
+.ci-cta {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.ci-cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #ff6a00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .ci-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ci-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ci-hero-overlay h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ci-hero { height: auto; min-height: 50vh; }
+  .ci-hero-overlay h1 { font-size: 32px; }
+  .ci-hero-overlay p { font-size: 15px; margin-top: 14px; }
+  .container { padding: 60px 16px; }
+  .ci-card { padding: 22px; }
+  .ci-cta { padding: 60px 16px; }
+  .ci-cta h2 { font-size: 26px; }
+}
+
+@media (max-width: 600px) {
+  .ci-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ci-hero-overlay h1 { font-size: 26px; }
+  .ci-hero-overlay p { font-size: 14px; }
+  .container { padding: 48px 14px; }
+  .ci-card { padding: 18px; }
+  .ci-card h3 { font-size: 16px; }
+  .ci-cta { padding: 48px 14px; }
+  .ci-cta h2 { font-size: 22px; }
+  .ci-cta-btn { padding: 12px 24px; font-size: 14px; }
+}
+
+@media (max-width: 360px) {
+  .ci-hero-overlay h1 { font-size: 22px; }
+  .container { padding: 36px 12px; }
+}

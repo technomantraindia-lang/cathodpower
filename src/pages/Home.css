@@ -1,0 +1,11 @@
+/* ===================================================
+   HOME PAGE CONTAINER — CLEAN LIGHT THEME
+   =================================================== */
+
+.home-page-container {
+  background: #ffffff;
+  color: #0f172a;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}

@@ -1,0 +1,203 @@
+{
+  "headings": [
+    {
+      "tag": "H3",
+      "className": "",
+      "text": "Hybrid Inverters"
+    },
+    {
+      "tag": "SECTION",
+      "className": "cp-header__megaShowcase",
+      "text": "Single Phase HybridCP-3.0-HYBD3 kWCP-3.6-HYBD3.6 kWCP-4.0-HYBD4 kWAll Products"
+    },
+    {
+      "tag": "SECTION",
+      "className": "cp-header__megaShowcase",
+      "text": "Three Phase HybridCP-5.0-3HYBD5 kWCP-6.0-3HYBD6 kWCP-7.0-3HYBD7 kWAll Products"
+    },
+    {
+      "tag": "H3",
+      "className": "",
+      "text": "Micro Inverters"
+    },
+    {
+      "tag": "SECTION",
+      "className": "cp-header__megaShowcase",
+      "text": "Micro Inverter ProductsCP-MI-300300 WCP-MI-500500 WCP-MI-800800 WAll Products"
+    },
+    {
+      "tag": "SECTION",
+      "className": "cp-about",
+      "text": "ABOUT CATHODE POWER\n\nPowering\nIndia's Clean\nEnergy Future\n\nDiscover our journey\n\nFOUNDED\n2021\n\nIncorporated on 21st October with a bold vision to make clean energy accessible across India.\n\nGROWTH\n2022\n\nEstablished in-house manufacturing and launched our first product range of solar inverters.\n\nEXPA"
+    },
+    {
+      "tag": "H2",
+      "className": "cp-hero-title",
+      "text": "Powering\nIndia's Clean\nEnergy Future"
+    },
+    {
+      "tag": "SECTION",
+      "className": "vc-section perf-cv",
+      "text": "01\nGreener.\nFlexible & Scalable for Any Scenario\n\nSeamlessly integrates with grid-tied, microgrid, solar-storage-charging, and solar-storage-diesel systems, ensuring uninterrupted power for diverse business needs.\n\n02\nSustainable.\nAI-Driven Efficiency & Cost Savings\n\nOptimizes energy use with AI-pow"
+    },
+    {
+      "tag": "DIV",
+      "className": "vc-card vc-card--1",
+      "text": "01\nGreener.\nFlexible & Scalable for Any Scenario\n\nSeamlessly integrates with grid-tied, microgrid, solar-storage-charging, and solar-storage-diesel systems, ensuring uninterrupted power for diverse business needs."
+    },
+    {
+      "tag": "H2",
+      "className": "vc-card__word",
+      "text": "Greener."
+    },
+    {
+      "tag": "H3",
+      "className": "vc-card__title",
+      "text": "Flexible & Scalable for Any Scenario"
+    },
+    {
+      "tag": "DIV",
+      "className": "vc-card vc-card--2",
+      "text": "02\nSustainable.\nAI-Driven Efficiency & Cost Savings\n\nOptimizes energy use with AI-powered weather forecasting, load analysis, and dynamic tariff tracking, automatically adjusting to maximize efficiency and reduce electricity costs."
+    },
+    {
+      "tag": "H2",
+      "className": "vc-card__word",
+      "text": "Sustainable."
+    },
+    {
+      "tag": "H3",
+      "className": "vc-card__title",
+      "text": "AI-Driven Efficiency & Cost Savings"
+    },
+    {
+      "tag": "DIV",
+      "className": "vc-card vc-card--3",
+      "text": "03\nTomorrow.\nReliable & Secure Energy Management\n\nEquipped with advanced battery protection, real-time monitoring, and intelligent fault diagnostics, delivering stable, secure, and long-term energy reliability for businesses."
+    },
+    {
+      "tag": "H2",
+      "className": "vc-card__word",
+      "text": "Tomorrow."
+    },
+    {
+      "tag": "H3",
+      "className": "vc-card__title",
+      "text": "Reliable & Secure Energy Management"
+    },
+    {
+      "tag": "SECTION",
+      "className": "pf-section",
+      "text": "OUR PRODUCT RANGE\n\nTypes Of Solar Inverters We Offer\n\nEngineered for every rooftop — grid-tied, hybrid storage, and micro-inverter systems built for Indian conditions.\n\nOngrid Inverter\nHybrid Inverter\nMicro Inverter\nONGRID INVERTER\n\nHigh-efficiency grid-tied solar inverter built for residential and "
+    },
+    {
+      "tag": "H2",
+      "className": "pf-title",
+      "text": "Types Of Solar Inverters We Offer"
+    },
+    {
+      "tag": "H3",
+      "className": "pf-product-type",
+      "text": "ONGRID INVERTER"
+    },
+    {
+      "tag": "H3",
+      "className": "cp-footer__ctaHeading",
+      "text": "Ready to get efficient?"
+    }
+  ],
+  "imgs": [
+    {
+      "src": "https://cathodepower.com/assets/png/Cathode-Power-Logo-White-New-BAy0r61W.png",
+      "alt": "Cathode Power"
+    },
+    {
+      "src": "https://cathodepower.com/assets/png/CATHODE-POWER-REGISTER-LOGO-CMrFunB2.png",
+      "alt": "Cathode Power"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/1-CCEPi1nU.webp",
+      "alt": "CP-2300L"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/1-CCEPi1nU.webp",
+      "alt": "CP-3000L"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/1-CCEPi1nU.webp",
+      "alt": "CP-3400L"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/15-kw-(3)-CS5yhuPn.webp",
+      "alt": "CP-04HL"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/15-kw-(3)-CS5yhuPn.webp",
+      "alt": "CP-05HL"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/15-kw-(3)-CS5yhuPn.webp",
+      "alt": "CP-06HL"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Hybrid%20Single%20phase-CemGdAMp.webp",
+      "alt": "CP-3.0-HYBD"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Hybrid%20Single%20phase-CemGdAMp.webp",
+      "alt": "CP-3.6-HYBD"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Hybrid%20Single%20phase-CemGdAMp.webp",
+      "alt": "CP-4.0-HYBD"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Hybrid%203%20phase-DpyHl5ep.webp",
+      "alt": "CP-5.0-3HYBD"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Hybrid%203%20phase-DpyHl5ep.webp",
+      "alt": "CP-6.0-3HYBD"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Hybrid%203%20phase-DpyHl5ep.webp",
+      "alt": "CP-7.0-3HYBD"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Micro%20Inverters-DyRGpMdP.webp",
+      "alt": "CP-MI-300"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Micro%20Inverters-DyRGpMdP.webp",
+      "alt": "CP-MI-500"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/Micro%20Inverters-DyRGpMdP.webp",
+      "alt": "CP-MI-800"
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/forest-C03rKvvq.webp",
+      "alt": "Greener."
+    },
+    {
+      "src": "https://cathodepower.com/images/newimages/An_ultra_realistic_202604231257.webp",
+      "alt": "Sustainable."
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/mountain-DDLGs0Qc.webp",
+      "alt": "Tomorrow."
+    },
+    {
+      "src": "https://cathodepower.com/assets/webp/1-CCEPi1nU.webp",
+      "alt": "Ongrid Inverter"
+    },
+    {
+      "src": "https://cathodepower.com/images/solar-view-mockup-1.png",
+      "alt": "Cathode Power monitoring app mockup"
+    },
+    {
+      "src": "https://cathodepower.com/assets/png/CATHODE-POWER-REGISTER-LOGO-CMrFunB2.png",
+      "alt": "Cathode Power"
+    }
+  ]
+}

@@ -1,0 +1,1279 @@
+/* ==========================================================================
+   AUTHENTIC EMERGENA INTERACTION & ANIMATION OVERRIDES
+   ========================================================================== */
+
+/* 1. Solution Cards Hover & Transitions (Webflow t-6221c4f4) */
+.emergena-home .solution-card-wrap {
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.emergena-home .solution-card-wrap:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.emergena-home .solution-card-wrap .bg-card-solutions {
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .solution-card-wrap:hover .bg-card-solutions {
+  background-color: #d7ff53 !important;
+}
+.emergena-home .solution-card-wrap .description-solution {
+  transition: color 0.4s ease;
+}
+.emergena-home .solution-card-wrap:hover .description-solution {
+  color: #1a332e !important;
+}
+.emergena-home .solution-card-wrap .solution-image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .solution-card-wrap:hover .solution-image img {
+  transform: scale(1.08);
+}
+.emergena-home .solution-card-wrap:hover .solution-number {
+  background-color: #fff !important;
+}
+
+/* 2. Success Stories Hover (Webflow t-19bf233a) */
+.emergena-home .project-item {
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .project-item .client-image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .project-item:hover .client-image img {
+  transform: scale(1.08);
+}
+
+/* 3. Field Notes Journal Hover (Webflow t-04275d86) */
+.emergena-home .link-blog-wrap {
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .link-blog-wrap:hover {
+  transform: translateY(-5px);
+}
+.emergena-home .link-blog-wrap:hover .blog-category-wrap {
+  background-color: #d7ff53 !important;
+  color: #1a332e !important;
+}
+.emergena-home .link-blog-wrap .blog-image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .link-blog-wrap:hover .blog-image img {
+  transform: scale(1.06);
+}
+
+/* 4. Trailing Cursor Styles (Webflow Script 13) */
+.emergena-cursor-wrap {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+}
+.cursor-core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(215, 255, 83, 0.65);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+.cursor-pointer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d7ff53;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+/* 5. Guiding standards / Principles Card Hover */
+.emergena-home .single-principal-wrap {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.emergena-home .single-principal-wrap:hover {
+  transform: translateY(-4px);
+}
+
+/* 6. Video Preview Card & Play Button Hover (Webflow t-1ce67fc3) */
+.emergena-home .video-card-wrap {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .video-card-wrap:hover {
+  transform: scale(1.03);
+}
+.emergena-home .play-button-video {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+.emergena-home .video-card-wrap:hover .play-button-video {
+  transform: scale(1.12);
+  background-color: #d7ff53;
+  color: #1a332e;
+}
+
+/* 7. Button Hover Micro-interactions */
+.emergena-home .button-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.emergena-home .button-wrap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* 8. Hero Learn More Button */
+.emergena-home .button-wrap.hero-cta {
+  background-color: #ffffff !important;
+  color: #142922 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.emergena-home .button-wrap.hero-cta:hover {
+  background-color: #d7ff53 !important;
+  color: #142922 !important;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(215, 255, 83, 0.28);
+}
+
+/* 9. Emergena Live Data USP Interactive Polish & Title Height Fix */
+.emergena-home .main-section.usp {
+  overflow: visible !important;
+}
+
+.emergena-home .title-change {
+  width: 100% !important;
+  min-height: 120px !important;
+  height: clamp(120px, 9.5vw, 170px) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+
+.emergena-home .usp-section-title {
+  width: clamp(500px, 42vw, 720px) !important;
+  max-width: 90vw !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.emergena-home .usp-title-wrap {
+  width: 100% !important;
+  height: 100% !important;
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  will-change: transform, opacity;
+}
+
+.emergena-home .usp-title-wrap .text-xl {
+  margin: 0 !important;
+  line-height: 1.15 !important;
+  padding-bottom: 4px !important;
+  text-align: center !important;
+  font-family: var(--_typography---font--heading-font, "Instrument Sans", sans-serif) !important;
+  color: var(--_colors---core-neutral-color--dark-green, #1e3d3e) !important;
+}
+
+@media (min-width: 992px) {
+  .emergena-home .usp-home-scroll {
+    height: 300vh !important;
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    overflow: visible !important;
+  }
+  .emergena-home .usp-home {
+    height: 100vh !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: sticky !important;
+    top: 0 !important;
+    overflow: visible !important;
+    z-index: 5 !important;
+  }
+  .emergena-home .usp-home-wrap {
+    height: 85vh !important;
+    width: 100% !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+.emergena-home .usp-card {
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+.emergena-home .usp-card:hover {
+  filter: drop-shadow(0 14px 32px rgba(20, 41, 34, 0.12));
+}
+.emergena-home .usp-card:hover .img-usp {
+  transform: scale(1.08);
+}
+.emergena-home .usp-card:hover .stats-number-wrap {
+  transform: scale(1.03);
+}
+.emergena-home .img-usp {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.emergena-home .stats-number-wrap {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emergena-home .usp-stats {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+  will-change: transform, opacity;
+}
+.emergena-home .usp-card:hover .usp-stats {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+.emergena-home .line-usp {
+  border-bottom: 1px dashed rgba(30, 61, 62, 0.35) !important;
+  will-change: transform, opacity;
+}
+
+/* ============================================================
+   11. Footer Interactive Animations & Hover States
+   ============================================================ */
+.emergena-home .main-section.footer {
+  background-color: var(--_colors---core-neutral-color--whitesmoke, #e8ebeb);
+}
+
+.emergena-home .quick-links {
+  transition: color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.emergena-home .link-quick-links:hover .quick-links,
+.emergena-home .link-utilities:not(.link-social):hover .quick-links {
+  color: var(--_colors---core-neutral-color--green, #1e3d3e);
+  transform: translateX(2px);
+}
+
+.emergena-home .link-utilities.link-social {
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease;
+}
+
+.emergena-home .link-utilities.link-social:hover {
+  background-color: var(--_colors---core-neutral-color--accent, #d7ff53);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.emergena-home .link-utilities.link-social:active {
+  transform: translateY(0);
+}
+
+.emergena-home .cta-subsribe {
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.emergena-home .cta-subsribe:hover {
+  background-color: var(--_colors---core-neutral-color--accent, #d7ff53);
+  color: #1a332e;
+}
+
+.emergena-home .cta-subsribe:active {
+  transform: scale(0.97);
+}
+
+.emergena-home .field-subscribe:focus {
+  border-color: #1e3d3e !important;
+  outline: none;
+}
+
+.emergena-home .credit-link {
+  transition: color 0.2s ease;
+}
+
+/* ============================================================
+   12. Process Section — Authentic Webflow Parity
+   ============================================================ */
+
+/* ── Section Container ── */
+.emergena-home .main-section.process-section {
+  padding-bottom: var(--_sizes---no-space, 0);
+  background-color: var(--_colors---core-neutral-color--whitesmoke, #f4f6f6);
+  position: relative;
+  overflow: visible;
+}
+
+.emergena-home .main-container.process-section {
+  flex-flow: column;
+  display: flex;
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: var(--_sizes---container--container-padding-horizontal, 4vw);
+  padding-right: var(--_sizes---container--container-padding-horizontal, 4vw);
+}
+
+/* ── Scroll Track (height: 300vh for smooth scrub) ── */
+.emergena-home .process-scroll {
+  height: 210vh;
+  position: relative;
+  top: 0;
+}
+
+.emergena-home .process-scroll.secondary {
+  height: 300vh;
+  position: relative;
+}
+
+/* ── Sticky Content Wrapper (pinned in viewport center) ── */
+.emergena-home .process-content-wrapper {
+  grid-column-gap: var(--_sizes---gap--s-gap, 3.1vw);
+  grid-row-gap: var(--_sizes---gap--s-gap, 3.1vw);
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+/* ── Header: Tag, Title, Description ── */
+.emergena-home .process-title-section {
+  grid-column-gap: var(--_sizes---gap--xxxs-gap, 1.55vw);
+  grid-row-gap: var(--_sizes---gap--xxxs-gap, 1.55vw);
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  max-width: 680px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto 1.5vw;
+  will-change: transform, opacity;
+}
+
+.emergena-home .process-title-section .text-xl {
+  margin: 0;
+  color: var(--_colors---core-neutral-color--dark-green, #173832);
+}
+
+.emergena-home .process-title-section .description-wrap {
+  margin-top: 6px;
+  color: var(--_colors---core-neutral-color--dark-grey, #5a7171);
+}
+
+/* ── Bottom Content Wrap (holds cards list) ── */
+.emergena-home .process-section .bottom-content-wrap {
+  width: 100%;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+  position: relative;
+}
+
+/* ── Process List Wrap (scrolls upward through viewport) ── */
+.emergena-home .process-list-wrap {
+  grid-column-gap: var(--_sizes---gap--xxxs-gap, 1.55vw);
+  grid-row-gap: var(--_sizes---gap--xxxs-gap, 1.55vw);
+  flex-flow: column;
+  display: flex;
+  width: 100%;
+  position: relative;
+  will-change: transform;
+}
+
+/* ── Single Process Wrap (Card) ── */
+.emergena-home .single-process-wrap {
+  width: 100%;
+  padding: var(--_sizes---gap--xxxs-gap, 1.55vw);
+  grid-column-gap: var(--_sizes---gap--sm-gap, 3.5vw);
+  grid-row-gap: var(--_sizes---gap--sm-gap, 3.5vw);
+  border-radius: var(--_sizes---radius--md-radius, 1vw);
+  background-color: var(--_colors---core-neutral-color--white, #ffffff);
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: stretch;
+  display: flex;
+  position: relative;
+  overflow: clip;
+  box-sizing: border-box;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+}
+
+/* ── Step Number Column ── */
+.emergena-home .number-process {
+  grid-column-gap: var(--_sizes---gap--tiny-gap, 1vw);
+  grid-row-gap: var(--_sizes---gap--tiny-gap, 1vw);
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emergena-home .number-process.right-border {
+  border-right: 1px solid var(--_colors---core-neutral-color--whitesmoke, #e9ecef);
+}
+
+.emergena-home .number-process.left-border {
+  border-left: 1px solid var(--_colors---core-neutral-color--whitesmoke, #e9ecef);
+}
+
+.emergena-home .process-step {
+  color: var(--_colors---core-neutral-color--dark-green, #173832);
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 1.25em;
+  letter-spacing: -0.01em;
+}
+
+/* ── Center Title Column ── */
+.emergena-home .process-title {
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emergena-home .process-title._1 {
+  pointer-events: none;
+}
+
+.emergena-home .process-title-wrap {
+  grid-column-gap: var(--_sizes---gap--xxxs-gap, 12px);
+  grid-row-gap: var(--_sizes---gap--xxxs-gap, 12px);
+  pointer-events: auto;
+  text-align: center;
+  flex-flow: column;
+  display: flex;
+  padding: 12px 24px;
+  will-change: transform;
+}
+
+.emergena-home .process-titles {
+  color: var(--_colors---border-color--border-primary, #325850);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.emergena-home .desc-process-card {
+  color: var(--_colors---text-color--text-secondary, #333333);
+}
+
+.emergena-home .process-step-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--_colors---core-neutral-color--dark-green, #173832);
+  font-size: clamp(1.4rem, 2vw, 2.25rem);
+  line-height: 1.15em;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+/* ── Image Column ── */
+.emergena-home .process-img-desc {
+  grid-column-gap: var(--_sizes---gap--md-gap, 4vw);
+  grid-row-gap: var(--_sizes---gap--md-gap, 4vw);
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.emergena-home .process-img-desc.flip {
+  flex-flow: row-reverse;
+  width: 25%;
+}
+
+.emergena-home .process-image {
+  border-radius: var(--_sizes---radius--md-radius, 1vw);
+  width: 100%;
+  height: 20vw;
+  overflow: clip;
+  position: relative;
+}
+
+.emergena-home .img-process-wrap {
+  box-sizing: border-box;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--_sizes---radius--md-radius, 1vw);
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  will-change: transform;
+}
+
+.emergena-home .img-process {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* ── Mobile Swipe Indicator (hidden on desktop) ── */
+.emergena-home .swipe-indicator-wrap {
+  display: none;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVE (Max Width 991px)
+   ════════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 991px) {
+  .emergena-home .process-scroll,
+  .emergena-home .process-scroll.secondary {
+    height: auto !important;
+    position: static !important;
+  }
+
+  .emergena-home .process-content-wrapper {
+    position: static !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .emergena-home .process-title-section {
+    width: 100%;
+    margin-bottom: 32px;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .emergena-home .process-list-wrap {
+    flex-flow: column;
+    gap: 20px;
+    transform: none !important;
+  }
+
+  .emergena-home .single-process-wrap {
+    flex-flow: column;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .emergena-home .number-process {
+    width: 100%;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 12px;
+    justify-content: flex-start;
+  }
+
+  .emergena-home .number-process.left-border {
+    order: -9999;
+  }
+
+  .emergena-home .process-title {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .emergena-home .process-title-wrap {
+    text-align: left;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .emergena-home .process-img-desc,
+  .emergena-home .process-img-desc.flip {
+    width: 100%;
+  }
+
+  .emergena-home .process-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+/* ==========================================================================
+   CATHODE POWER HERO TOP NAVBAR - FIXED & PROPER
+   ========================================================================== */
+
+.emergena-home .cp-hero-nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.24s ease, backdrop-filter 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.emergena-home .cp-hero-nav-bar.cp-hero-nav-bar--mega-open {
+  background: rgba(7, 13, 16, 0.98) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  z-index: 1200 !important;
+}
+
+.emergena-home .cp-hero-nav-mega-wrap {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.emergena-home .cp-hero-nav-bar .cp-header__megaWrap,
+.emergena-home .cp-hero-nav-bar .cp-minimal-megaWrap {
+  z-index: 1250 !important;
+  width: min(1180px, calc(100vw - 36px)) !important;
+}
+
+.emergena-home .cp-hero-nav-bar .cp-header__megaWrap.open,
+.emergena-home .cp-hero-nav-bar .cp-minimal-megaWrap.open {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Mega Menu Headings Typography Override inside Emergena Home */
+.emergena-home .cp-header__megaWrap .cp-header__megaIntroTop h2,
+.emergena-home .cp-header__megaWrap .cp-header__megaIntroHeading {
+  margin: 0 0 7px 0 !important;
+  font-family: 'Instrument Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  text-transform: none !important;
+}
+
+.emergena-home .cp-header__megaWrap .cp-header__megaIntroTop p {
+  margin: 0 !important;
+  font-family: 'Instrument Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 12.5px !important;
+  color: #64748b !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+}
+
+.emergena-home .cp-header__megaWrap .cp-header__megaContentTop h3,
+.emergena-home .cp-header__megaWrap .cp-header__megaPanelHeading {
+  margin: 0 !important;
+  font-family: 'Instrument Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+  text-transform: none !important;
+}
+
+.emergena-home .cp-hero-nav-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(36px, 3.5vw, 64px);
+  height: 90px;
+  padding: 0 clamp(28px, 4vw, 72px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emergena-home .cp-hero-nav-line {
+  position: absolute;
+  bottom: 0;
+  left: clamp(28px, 4vw, 72px);
+  right: clamp(28px, 4vw, 72px);
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.emergena-home .cp-hero-nav-left,
+.emergena-home .cp-hero-nav-right {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 36px !important;
+  min-width: 0;
+}
+
+.emergena-home .cp-hero-nav-left {
+  justify-content: flex-end;
+  justify-self: end;
+}
+
+.emergena-home .cp-hero-nav-right {
+  justify-content: flex-start;
+  justify-self: stretch;
+  width: 100%;
+}
+
+.emergena-home .cp-hero-nav-right .cp-hero-btn-container {
+  margin-left: auto !important;
+  flex-shrink: 0;
+}
+
+.emergena-home .cp-hero-nav-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  justify-self: center;
+  z-index: 2;
+}
+
+.emergena-home .cp-hero-nav-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.emergena-home .cp-hero-nav-logo-wrap:hover .cp-hero-nav-logo-img {
+  transform: scale(1.02);
+}
+
+.emergena-home .cp-hero-nav-menus {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 28px !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.emergena-home .cp-hero-nav-list {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.emergena-home .cp-hero-nav-link {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  gap: 6px !important;
+  position: relative !important;
+  padding: 8px 0 !important;
+  color: #ffffff !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2px !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  transition: color 0.2s ease, background-color 0.2s ease !important;
+}
+
+.emergena-home .cp-hero-nav-link:hover {
+  color: #ff6a00 !important;
+  background-color: transparent !important;
+}
+
+.emergena-home .cp-hero-nav-link.active {
+  font-weight: 600 !important;
+  color: #ffffff !important;
+}
+
+.emergena-home .cp-hero-nav-link-underline {
+  position: absolute;
+  bottom: 0px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background-color: #ff6a00;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.emergena-home .cp-hero-dropdown-wrapper {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.emergena-home .cp-hero-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  background-color: rgba(9, 14, 18, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 1000;
+}
+
+.emergena-home .cp-hero-dropdown-item {
+  display: block !important;
+  color: #ffffff !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  text-decoration: none !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+  transition: background-color 0.18s ease, color 0.18s ease !important;
+}
+
+.emergena-home .cp-hero-dropdown-item:hover {
+  background-color: rgba(255, 106, 0, 0.16) !important;
+  color: #ff6a00 !important;
+}
+
+/* ── PROPER GET QUOTE BUTTON (CLEAN & PERFECT) ── */
+.emergena-home .cp-hero-btn-container {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.emergena-home .cp-hero-get-quote-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  max-height: 38px !important;
+  padding: 0 22px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #22727f, #2f8f9d) !important;
+  background-color: #22727f !important;
+  border: 1px solid transparent !important;
+  color: #ffffff !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.4px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  box-shadow: 0 4px 14px rgba(34, 114, 127, 0.28) !important;
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.emergena-home .cp-hero-get-quote-btn:hover {
+  background: linear-gradient(135deg, #1a5f6a, #22727f) !important;
+  background-color: #1a5f6a !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 20px rgba(34, 114, 127, 0.4) !important;
+  transform: translateY(-1.5px) !important;
+  color: #ffffff !important;
+}
+
+
+
+/* ==========================================================================
+   CATHODE POWER PRODUCT SLIDER SHOWCASE (Replaces Case Studies)
+   ========================================================================== */
+
+/* Category Tabs (Sync with Webflow slider) - Pixel Perfect Segmented Pills */
+.emergena-home .emergena-product-tabs-wrap {
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin: 20px 0 32px !important;
+  width: 100% !important;
+}
+
+.emergena-home .emergena-product-tabs {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: rgba(18, 40, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  height: 48px !important;
+  box-sizing: border-box !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.18) !important;
+}
+
+.emergena-home .emergena-product-tab {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  position: relative !important;
+  height: 38px !important;
+  padding: 0 24px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.emergena-home .emergena-product-tab:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.emergena-home .emergena-product-tab.active {
+  background: linear-gradient(135deg, #ff7b00 0%, #ff8c1a 100%) !important;
+  background-color: #ff7b00 !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(255, 123, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  font-weight: 600 !important;
+}
+
+
+/* Clean Studio Background for Product Image (Preserving exact Emergena box layout) */
+.emergena-home #stories .img-tag-stories {
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03), 0 10px 28px rgba(0, 0, 0, 0.15) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.emergena-home #stories .project-number {
+  background-color: #0b1919 !important;
+}
+
+.emergena-home #stories .tag-project {
+  color: #ffffff !important;
+}
+
+.emergena-home #stories .client-image {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+}
+
+.emergena-home #stories .client-image img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 82% !important;
+  max-height: 82% !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 14px 28px rgba(15, 23, 42, 0.15)) !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.emergena-home #stories .project-item:hover .client-image img {
+  transform: scale(1.05) translateY(-4px) !important;
+}
+
+/* Ensure the button matches Emergena theme with smooth hover */
+.emergena-home #stories .button-wrap {
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS (<= 1024px, <= 768px, <= 640px, <= 480px, <= 360px)
+   ========================================================================== */
+
+/* ── 1. FLOATING ACTION NAVIGATION (All Pages & Home) ─────────────────── */
+.cp-nav-floating-container {
+  top: 22px;
+  right: 28px;
+}
+
+.cp-nav-floating-btn {
+  width: 52px;
+  height: 52px;
+}
+
+.cp-nav-floating-panel {
+  width: 350px;
+}
+
+@media (max-width: 1024px) {
+  .cp-nav-floating-container {
+    top: 13px !important;
+    right: 18px !important;
+  }
+
+  .cp-nav-floating-btn {
+    width: 44px !important;
+    height: 44px !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .cp-nav-floating-panel {
+    width: min(340px, calc(100vw - 32px)) !important;
+    max-height: calc(100vh - 28px) !important;
+    padding: 20px 20px 24px !important;
+    border-radius: 22px !important;
+  }
+
+  /* ── 2. HOME HERO TOP NAVIGATION (<= 1024px) ── */
+  .emergena-home .cp-hero-nav-menus,
+  .emergena-home .cp-hero-nav-left,
+  .emergena-home .cp-hero-nav-right {
+    display: none !important;
+  }
+
+  .emergena-home .cp-hero-nav-container {
+    display: flex !important;
+    justify-content: center !important;
+    height: 70px !important;
+    padding: 0 20px !important;
+  }
+
+  .emergena-home .cp-hero-nav-logo-img {
+    height: 38px !important;
+    max-width: 180px !important;
+  }
+
+  .emergena-home .cp-hero-nav-line {
+    left: 20px !important;
+    right: 20px !important;
+  }
+}
+
+/* Mid desktops: slightly tighter fixed gaps */
+@media (min-width: 1025px) and (max-width: 1320px) {
+  .emergena-home .cp-hero-nav-container {
+    column-gap: 32px;
+  }
+
+  .emergena-home .cp-hero-nav-left,
+  .emergena-home .cp-hero-nav-right {
+    gap: 26px !important;
+  }
+
+  .emergena-home .cp-hero-nav-link {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero bottom overlay content */
+  .emergena-home .bottom-content-wrap.vertical.hero {
+    bottom: 28px !important;
+    padding: 0 20px !important;
+  }
+
+  .emergena-home .bottom-content-wrap.vertical.hero .title-wrap h1 {
+    font-size: clamp(28px, 6.5vw, 48px) !important;
+    line-height: 1.12 !important;
+  }
+
+  .emergena-home .bottom-content-wrap.vertical.hero .description-wrap .text-sm {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .emergena-home .button-wrap.hero-cta {
+    padding: 12px 28px !important;
+    font-size: 13px !important;
+  }
+
+  /* Solutions / Greener section cards */
+  .emergena-home .solutions-content-wrapper {
+    gap: 32px !important;
+  }
+
+  .emergena-home .top-content-wrap.solutions h2 {
+    font-size: clamp(24px, 5.5vw, 36px) !important;
+  }
+
+  .emergena-home .about-scroll .desc-about-company h2 {
+    font-size: clamp(20px, 4.8vw, 32px) !important;
+    line-height: 1.35 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Product Slider Showcase Tabs (Touch-scrollable pills) */
+  .emergena-home .emergena-product-tabs-wrap {
+    overflow-x: auto !important;
+    max-width: 100% !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .emergena-home .emergena-product-tabs-wrap::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .emergena-home .emergena-product-tabs {
+    height: 42px !important;
+    padding: 3px !important;
+    gap: 3px !important;
+  }
+
+  .emergena-home .emergena-product-tab {
+    height: 34px !important;
+    padding: 0 16px !important;
+    font-size: 12.5px !important;
+  }
+
+  /* Product showcase card in stories */
+  .emergena-home #stories .project-item {
+    margin-bottom: 24px !important;
+  }
+
+  .emergena-home #stories .img-tag-stories {
+    min-height: 240px !important;
+    height: 260px !important;
+  }
+
+  .emergena-home #stories .client-image img {
+    max-width: 90% !important;
+    max-height: 90% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cp-nav-floating-container {
+    top: 13px !important;
+    right: 14px !important;
+  }
+
+  .cp-nav-floating-btn {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .cp-nav-floating-panel {
+    width: calc(100vw - 28px) !important;
+    max-height: calc(100vh - 24px) !important;
+    padding: 16px 16px 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .emergena-home .cp-hero-nav-container {
+    padding: 0 16px !important;
+  }
+
+  .emergena-home .cp-hero-nav-logo-img {
+    height: 35px !important;
+    max-width: 155px !important;
+  }
+
+  .emergena-home .cp-hero-nav-line {
+    left: 16px !important;
+    right: 16px !important;
+  }
+
+  .emergena-home .bottom-content-wrap.vertical.hero {
+    bottom: 20px !important;
+    padding: 0 16px !important;
+  }
+
+  .emergena-home .bottom-content-wrap.vertical.hero .title-wrap h1 {
+    font-size: clamp(25px, 7.5vw, 36px) !important;
+  }
+
+  /* Footer responsiveness on mobile phones */
+  .emergena-home .logo-brand.footer img {
+    height: 52px !important;
+    max-width: 220px !important;
+  }
+
+  .emergena-home .form-footer-wrapper {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .emergena-home .field-subscribe {
+    width: 100% !important;
+  }
+
+  .emergena-home .cta-subsribe {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .emergena-home .cp-hero-nav-logo-img {
+    height: 32px !important;
+    max-width: 140px !important;
+  }
+
+  .cp-nav-floating-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+
+
+
+

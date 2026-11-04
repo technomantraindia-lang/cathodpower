@@ -1,0 +1,227 @@
+/* ===================================================
+   TECH 3D CORE SECTION — CLEAN LIGHT THEME
+   =================================================== */
+
+.t3d-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  background: #f8fafc;
+  color: #0f172a;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.t3d-section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 119, 0, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.t3d-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+  position: relative;
+  z-index: 2;
+}
+
+.t3d-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 64px auto;
+}
+
+.t3d-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ea580c;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.t3d-title {
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.t3d-title span {
+  background: linear-gradient(135deg, #ff6b00, #0284c7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.t3d-desc {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.65;
+}
+
+/* Two-column layout */
+.t3d-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+/* Tabs list */
+.t3d-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.t3d-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  position: relative;
+}
+
+.t3d-tab:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
+}
+
+.t3d-tab.is-active {
+  background: #ffffff;
+  border-color: #ea580c;
+  border-left: 4px solid #ea580c;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 0 20px rgba(234, 88, 12, 0.08);
+}
+
+.t3d-tab-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.t3d-tab-num {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #ea580c;
+}
+
+.t3d-tab-spec {
+  font-size: 0.76rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #ea580c;
+  font-weight: 700;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+}
+
+.t3d-tab-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.t3d-tab-body {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+/* 3D Visual Box */
+.t3d-stage {
+  position: relative;
+  width: 100%;
+  height: clamp(430px, 45vw, 530px);
+  border-radius: 26px;
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08), inset 0 0 0 1px #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.t3d-stage-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.t3d-stage-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0284c7;
+}
+
+.t3d-stage-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.t3d-stage-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 9px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #334155;
+  font-weight: 600;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.t3d-stage-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 6px #16a34a;
+}
+
+@media (max-width: 1024px) {
+  .t3d-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .t3d-stage {
+    height: 400px;
+  }
+}

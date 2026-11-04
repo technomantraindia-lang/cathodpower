@@ -1,0 +1,203 @@
+.emergena-home .cp-why {
+  --why-green: #22727f;
+  --why-green-soft: #2f8f9d;
+  --why-bg: #ffffff;
+  --why-text: #1e3d3e;
+  --why-muted: #5b6b64;
+  --why-num: rgba(30, 61, 62, 0.28);
+
+  position: relative;
+  background-color: var(--why-bg);
+  padding: clamp(72px, 9vw, 110px) 0;
+  overflow: hidden;
+}
+
+.emergena-home .cp-why__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3.5vw, 56px);
+}
+
+.emergena-home .cp-why__header {
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.emergena-home .cp-why__eyebrow {
+  margin: 0 0 12px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--why-green-soft);
+}
+
+.emergena-home .cp-why__title,
+.emergena-home .cp-why__title.text-xl {
+  margin: 0 !important;
+  font-family: var(--_typography---font--heading-font, "Instrument Sans", sans-serif) !important;
+  font-size: var(--_typography---text-xl--xl-text-size, 3.25rem) !important;
+  font-weight: var(--_typography---font-weight--400, 400) !important;
+  line-height: var(--_typography---text-xl--xl-text-line-height, 1.15em) !important;
+  letter-spacing: var(--_typography---text-xl--xl-text-letter-spacing, -0.15rem) !important;
+  color: var(--why-text) !important;
+  text-transform: none !important;
+}
+
+.emergena-home .cp-why__title span {
+  color: var(--why-green-soft);
+}
+
+.emergena-home .cp-why__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.emergena-home .cp-why__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(22px, 3vw, 32px);
+}
+
+.emergena-home .cp-why__point {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px 20px;
+  align-items: start;
+}
+
+.emergena-home .cp-why__num {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(28px, 2.4vw, 36px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--why-num);
+  padding-top: 2px;
+}
+
+.emergena-home .cp-why__point-title {
+  margin: 0 0 8px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(18px, 1.4vw, 22px);
+  font-weight: 600;
+  color: var(--why-text);
+  letter-spacing: -0.02em;
+}
+
+.emergena-home .cp-why__point-text {
+  margin: 0;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.6;
+  color: var(--why-muted);
+  max-width: 42ch;
+}
+
+.emergena-home .cp-why__visual {
+  position: relative;
+  min-height: clamp(420px, 52vw, 640px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 2vw, 24px) clamp(8px, 1.5vw, 16px);
+  overflow: visible;
+}
+
+.emergena-home .cp-why__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  width: min(78%, 440px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--why-green);
+  z-index: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  will-change: transform, background-color;
+  animation:
+    cp-why-circle-zoom 4.5s ease-in-out infinite,
+    cp-why-circle-color 7s ease-in-out infinite;
+}
+
+@keyframes cp-why-circle-zoom {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes cp-why-circle-color {
+  0%,
+  100% {
+    background-color: #22727f;
+  }
+  33% {
+    background-color: #2f8f9d;
+  }
+  66% {
+    background-color: #1a5c67;
+  }
+}
+
+.emergena-home .cp-why__image {
+  position: relative;
+  z-index: 1;
+  width: min(96%, 560px);
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  transform: translate(-20%, 14%);
+  filter: drop-shadow(0 24px 40px rgba(20, 41, 34, 0.22));
+}
+
+@media (max-width: 980px) {
+  .emergena-home .cp-why__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergena-home .cp-why__visual {
+    order: -1;
+    min-height: 400px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .emergena-home .cp-why__circle {
+    width: min(82%, 320px);
+  }
+
+  .emergena-home .cp-why__image {
+    width: min(92%, 420px);
+    margin: 0;
+    transform: translate(-16%, 10%);
+  }
+}
+
+@media (max-width: 640px) {
+  .emergena-home .cp-why {
+    padding: 56px 0 64px;
+  }
+
+  .emergena-home .cp-why__point {
+    gap: 12px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emergena-home .cp-why__circle {
+    animation: none;
+    will-change: auto;
+  }
+}

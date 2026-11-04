@@ -1,0 +1,190 @@
+/* ==========================================================================
+   InverterExploded3DSection - Pure 3D Inverter Viewer (Zero Content Clutter)
+   ========================================================================== */
+
+.inv3d-section {
+  position: relative;
+  width: 100%;
+  padding: 60px 24px;
+  background-color: #07100b;
+  background-image: 
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(169, 253, 128, 0.06), transparent 75%),
+    linear-gradient(180deg, #050b07 0%, #0a140f 100%);
+  color: #f1f5f9;
+  font-family: "Instrument Sans", "Manrope", "Inter", sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.inv3d-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* 3D Viewport Box - Full Width & Clean */
+.inv3d-viewport {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  min-height: 580px;
+  background: radial-gradient(circle at 50% 45%, #102218 0%, #060e0a 85%);
+  border: 1px solid rgba(169, 253, 128, 0.16);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 32px 72px -16px rgba(0, 0, 0, 0.8);
+}
+
+/* Floating Top Controls Toolbar */
+.inv3d-top-bar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.inv3d-top-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.inv3d-pill-btn {
+  padding: 10px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(8, 18, 12, 0.82);
+  backdrop-filter: blur(14px);
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inv3d-pill-btn:hover {
+  background: rgba(169, 253, 128, 0.12);
+  border-color: rgba(169, 253, 128, 0.35);
+  color: #ffffff;
+}
+
+.inv3d-pill-btn.is-active {
+  background: rgba(169, 253, 128, 0.18);
+  border-color: #a9fd80;
+  color: #a9fd80;
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(169, 253, 128, 0.25);
+}
+
+/* Floating Bottom Explode HUD */
+.inv3d-bottom-hud {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(540px, calc(100% - 40px));
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 22px;
+  background: rgba(6, 14, 10, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(169, 253, 128, 0.28);
+  border-radius: 9999px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.inv3d-hud-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a9fd80;
+  white-space: nowrap;
+}
+
+.inv3d-hud-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+  cursor: pointer;
+  accent-color: #a9fd80;
+}
+
+.inv3d-hud-val {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 44px;
+  text-align: right;
+}
+
+/* Orbit Drag Hint */
+.inv3d-hint {
+  position: absolute;
+  bottom: 26px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #64748b;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.inv3d-hint svg {
+  width: 14px;
+  height: 14px;
+  color: #a9fd80;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .inv3d-section {
+    padding: 30px 12px;
+  }
+
+  .inv3d-viewport {
+    height: 520px;
+    min-height: 460px;
+    border-radius: 20px;
+  }
+
+  .inv3d-top-bar {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    gap: 8px;
+  }
+
+  .inv3d-pill-btn {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+
+  .inv3d-hint {
+    display: none;
+  }
+
+  .inv3d-bottom-hud {
+    bottom: 14px;
+    padding: 10px 16px;
+  }
+}

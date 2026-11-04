@@ -1,0 +1,1054 @@
+/* ════════════════════════════════════════════════════════════════
+   Monitoring Page — Emergena design system
+   Accent: #ff6a00  |  Text: #142922 / #475e55  |  BG: #f7f7f5
+ ════════════════════════════════════════════════════════════════ */
+
+.moni {
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  color: #142922;
+  background: var(--bg-canvas, #f7f7f5);
+}
+
+/* ── 1. HERO ──────────────────────────────────────────────────── */
+
+.moni-hero {
+  background: var(--bg-canvas, #f7f7f5);
+  padding: 100px 10% 80px;
+  overflow: hidden;
+}
+
+.moni-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.moni-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(20, 41, 34, 0.06);
+  border: 1px solid rgba(20, 41, 34, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ff6a00;
+  margin-bottom: 24px;
+}
+
+.moni-hero__h1 {
+  font-size: clamp(36px, 4.2vw, 60px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #142922;
+  margin: 0 0 20px;
+  letter-spacing: -0.025em;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+}
+
+.moni-hero__desc {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #475e55;
+  max-width: 480px;
+  margin: 0 0 36px;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.moni-hero__ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.moni-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+}
+
+.moni-hero__btn--primary {
+  background: #ff6a00;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.35);
+}
+.moni-hero__btn--primary:hover {
+  background: #ff7a18;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 106, 0, 0.45);
+}
+
+.moni-hero__btn--ghost {
+  border: 1.5px solid rgba(20, 41, 34, 0.15);
+  color: #142922;
+  background: #ffffff;
+}
+.moni-hero__btn--ghost:hover {
+  border-color: #ff6a00;
+  color: #ff6a00;
+  transform: translateY(-2px);
+}
+
+.moni-hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.moni-hero__glow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,123,0,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.moni-hero__phone {
+  width: 100%;
+  max-width: 380px;
+  object-fit: contain;
+  filter: drop-shadow(0 40px 60px rgba(0,0,0,0.15));
+}
+
+/* ── 2. TRUST BAR ─────────────────────────────────────────────── */
+
+.moni-trust {
+  background: #f8f8f8;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 20px 10%;
+}
+
+.moni-trust__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.moni-trust__store {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.moni-trust__store:hover { border-color: #bbb; }
+
+.moni-trust__sep {
+  width: 1px;
+  height: 28px;
+  background: #ddd;
+}
+
+.moni-trust__stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.moni-trust__val {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+.moni-trust__lbl {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ── 3. FEATURES ─────────────────────────────────────────────── */
+
+.moni-feat {
+  padding: 56px 5% 72px;
+  background: linear-gradient(180deg, #fbf9f6 0%, #f0ebe4 50%, #faf8f5 100%);
+  position: relative;
+  overflow: visible;
+}
+
+.moni-feat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      ellipse 80% 50% at 15% 20%,
+      rgba(255, 123, 0, 0.07) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 90% 70%,
+      rgba(255, 140, 60, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.moni-feat > * {
+  position: relative;
+  z-index: 1;
+}
+
+.moni-feat__hdr {
+  text-align: center;
+  margin-bottom: 56px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moni-feat__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff7b00;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.moni-feat__title {
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.moni-feat__sub {
+  font-size: 16px;
+  color: #777;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Scroll-driven shuffle deck: ScrollTrigger `pin` + short scroll distance (no 200vh+ empty column) */
+.moni-feat__scroll {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.moni-feat__pin {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  will-change: transform;
+}
+
+.moni-feat__split {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.2fr);
+  gap: clamp(24px, 4vw, 56px);
+  /* Vertically center the card stack with the text column (no top-heavy gap) */
+  align-items: center;
+  width: 100%;
+}
+
+.moni-feat__side {
+  padding-top: 8px;
+  max-width: 520px;
+}
+
+.moni-feat__title--left,
+.moni-feat__sub--left {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.moni-feat__sub--left {
+  max-width: 42ch;
+  margin-bottom: 28px;
+}
+
+.moni-feat__side-active {
+  margin-bottom: 28px;
+  padding: 20px 20px 20px 22px;
+  border-left: 4px solid #ff7b00;
+  background: linear-gradient(90deg, rgba(255, 123, 0, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 0 16px 16px 0;
+}
+
+.moni-feat__side-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  background: linear-gradient(145deg, #fff4eb 0%, #ffe0cc 100%);
+  border: 1px solid rgba(255, 123, 0, 0.2);
+  border-radius: 14px;
+  color: #ff7b00;
+  box-shadow: 0 2px 8px rgba(255, 123, 0, 0.12);
+}
+
+.moni-feat__side-ico svg {
+  width: 22px;
+  height: 22px;
+}
+
+.moni-feat__side-h {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.moni-feat__side-p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+.moni-feat__step-tally {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #ff7b00;
+  margin: 0;
+}
+
+.moni-feat__step-tally-sep {
+  margin: 0 0.25em;
+  opacity: 0.6;
+}
+
+.moni-feat__index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+}
+
+.moni-feat__index-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.2s, color 0.2s;
+}
+.moni-feat__index-item:last-child {
+  border-bottom: 0;
+}
+
+.moni-feat__index-item.is-active {
+  background: rgba(255, 123, 0, 0.1);
+  color: #111;
+  font-weight: 600;
+}
+
+.moni-feat__index-num {
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #aaa;
+  min-width: 1.5rem;
+}
+.moni-feat__index-item.is-active .moni-feat__index-num {
+  color: #ff7b00;
+}
+
+.moni-feat__index-t {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Right column: no outer frame — only deck + dots, centered in the row */
+.moni-feat__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-height: 0;
+  overflow: visible;
+}
+
+.moni-feat__stage .moni-feat__deck,
+.moni-feat__stage .moni-feat__dots {
+  position: relative;
+  z-index: 1;
+}
+
+.moni-feat__deck {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  min-height: 360px;
+  perspective: 1200px;
+}
+
+.moni-feat__card--deck {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  will-change: transform, z-index;
+  transform-origin: center top;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.moni-feat__card--viz-only {
+  padding: 0;
+  display: block;
+  background: #f5f2ee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.moni-feat__card--viz-only.moni-feat__card--stack .moni-feat__card-viz--solo {
+  min-height: 240px;
+  align-items: center;
+  justify-content: center;
+}
+.moni-feat__card--viz-only .moni-feat__card-viz--solo {
+  display: flex;
+  align-items: flex-end;
+  min-height: 200px;
+  width: 100%;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  box-sizing: border-box;
+}
+
+.moni-feat__card--viz-only:hover {
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.12);
+}
+
+.moni-feat__dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  z-index: 1;
+  position: relative;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .moni-feat__split {
+    gap: clamp(20px, 3vw, 40px);
+  }
+
+  .moni-feat__title {
+    font-size: clamp(26px, 2.8vw, 42px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .moni-feat__split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .moni-feat__side {
+    max-width: none;
+  }
+  .moni-feat__title--left,
+  .moni-feat__sub--left {
+    text-align: left;
+  }
+
+  .moni-feat__deck {
+    min-height: 320px;
+    max-width: min(520px, 100%);
+  }
+
+  .moni-feat__card--deck {
+    max-width: min(520px, 100%);
+  }
+
+  .moni-feat__pin {
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .moni-feat {
+    padding: 48px clamp(16px, 4vw, 24px) 56px;
+  }
+
+  .moni-feat__hdr {
+    margin-bottom: 40px;
+  }
+
+  .moni-feat__title--left {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+
+  .moni-feat__sub--left {
+    font-size: 15px;
+    margin-bottom: 22px;
+  }
+
+  .moni-feat__side-active {
+    padding: 16px 16px 16px 18px;
+  }
+
+  .moni-feat__index-item {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .moni-feat__deck {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .moni-feat {
+    padding: 40px 14px 48px;
+  }
+
+  .moni-feat__eyebrow {
+    font-size: 12px;
+  }
+
+  .moni-feat__side-h {
+    font-size: 1.15rem;
+  }
+
+  .moni-feat__side-p {
+    font-size: 14px;
+  }
+
+  .moni-feat__deck {
+    min-height: 260px;
+  }
+
+  .moni-feat__dots {
+    margin-top: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+}
+
+.moni-feat__dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: width 0.3s, background 0.3s, border-radius 0.3s;
+}
+
+.moni-feat__dot.is-active {
+  width: 24px;
+  border-radius: 99px;
+  background: #ff7b00;
+}
+
+.moni-feat__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* One flex grid: every card = same width (1/3 of row). Row 2 has two cards centered, same size as top row. */
+.moni-feat__grid {
+  --moni-feat-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--moni-feat-gap);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.moni-feat__grid .moni-feat__card {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: calc((100% - 2 * var(--moni-feat-gap)) / 3);
+  max-width: calc((100% - 2 * var(--moni-feat-gap)) / 3);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 28px 28px 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.moni-feat__grid .moni-feat__card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+}
+
+.moni-feat__card-h {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.moni-feat__h-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #fff4eb 0%, #ffe0cc 100%);
+  border: 1px solid rgba(255, 123, 0, 0.18);
+  border-radius: 12px;
+  color: #ff7b00;
+  box-shadow: 0 2px 8px rgba(255, 123, 0, 0.1);
+}
+
+.moni-feat__h-ico svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.moni-feat__h-text {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+.moni-feat__card-p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0 0 22px;
+}
+.moni-feat__card-viz {
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  background: #fff;
+  min-height: 130px;
+  display: flex;
+  align-items: flex-end;
+}
+.moni-feat__card--stack .moni-feat__card-viz {
+  min-height: 200px;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── FEATURE VISUALS ─────────────────────────────────────────── */
+
+.fv { width: 100%; padding: 16px; }
+
+/* Live monitoring */
+.fv--line { display: flex; flex-direction: column; gap: 10px; }
+
+.fv__live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff7b00;
+}
+.fv__pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ff7b00;
+  animation: fv-pulse 1.5s ease-in-out infinite;
+}
+@keyframes fv-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+.fv__svg { width: 100%; height: auto; display: block; }
+
+.fv__row { display: flex; align-items: center; gap: 12px; }
+.fv__metric { display: flex; align-items: baseline; gap: 4px; }
+.fv__big { font-size: 28px; font-weight: 700; color: #111; }
+.fv__unit { font-size: 13px; color: #888; }
+.fv__badge {
+  font-size: 12px; font-weight: 600;
+  padding: 3px 10px; border-radius: 20px;
+}
+.fv__badge--up { background: #e8f8ee; color: #1a8a3c; }
+
+/* Bar chart */
+.fv--bar { display: flex; flex-direction: column; gap: 12px; padding-bottom: 0; }
+.fv__bars {
+  display: flex; align-items: flex-end;
+  gap: 6px; height: 90px;
+}
+.fv__bar-col {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 5px;
+  height: 100%; justify-content: flex-end;
+}
+.fv__bar {
+  width: 100%; background: #e8e8e8;
+  border-radius: 4px 4px 0 0;
+}
+.fv__bar--hi { background: #ff7b00; }
+.fv__day { font-size: 10px; color: #aaa; }
+.fv__note { font-size: 12px; color: #888; padding: 0 0 16px; }
+.fv__note strong { color: #111; }
+
+/* Remote control */
+.fv--ctrl { display: flex; flex-direction: column; gap: 10px; padding: 18px; }
+.fv__ctrl-row {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  font-size: 13px; color: #333;
+  padding: 10px 14px;
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+.fv__toggle {
+  width: 38px; height: 22px;
+  border-radius: 11px; background: #ccc;
+  position: relative; transition: background 0.2s; flex-shrink: 0;
+}
+.fv__toggle--on { background: #ff7b00; }
+.fv__toggle-knob {
+  position: absolute; top: 3px; left: 3px;
+  width: 16px; height: 16px;
+  background: #fff; border-radius: 50%;
+  transition: left 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.fv__toggle--on .fv__toggle-knob { left: 19px; }
+
+/* Alerts */
+.fv--alerts { display: flex; flex-direction: column; gap: 8px; padding: 16px; }
+.fv__alert {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 14px; border-radius: 10px; font-size: 12px;
+}
+.fv__alert--ok   { background: #e8f8ee; color: #1a6b35; }
+.fv__alert--warn { background: #fff3e0; color: #b45000; }
+.fv__alert--info { background: #eef2ff; color: #3b52c9; }
+.fv__alert-icon { font-weight: 700; font-size: 13px; width: 18px; text-align: center; }
+.fv__alert-text { flex: 1; font-weight: 500; }
+.fv__alert-time { font-size: 11px; opacity: 0.7; }
+
+/* Energy score */
+.fv--score { display: flex; justify-content: center; align-items: center; padding: 24px; }
+.fv--score svg { width: 130px; height: 130px; }
+
+/* ── 4. HOW IT WORKS ─────────────────────────────────────────── */
+
+.moni-how {
+  padding: 100px 10% 160px;
+  background: #f8f8f8;
+}
+
+.moni-how__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 36% 60%;
+  gap: 80px;
+  align-items: start;
+}
+
+.moni-how__left {
+  position: sticky;
+  top: 100px;
+}
+
+.moni-how__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 18px;
+  border-radius: 30px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.moni-how__h2 {
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.moni-how__right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.moni-step {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px;
+  position: sticky;
+  overflow: clip;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Progressive sticky top — cards stack on scroll, separated initially */
+.moni-step:nth-child(1) { top: 90px;  z-index: 1; }
+.moni-step:nth-child(2) { top: 108px; z-index: 2; }
+.moni-step:nth-child(3) { top: 126px; z-index: 3; }
+
+.moni-step:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+.moni-step--exp { padding-bottom: 0; }
+
+.moni-step__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.moni-step__icon {
+  width: 44px; height: 44px;
+  border-radius: 50%; background: #ff7b00;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.moni-step__copy h3 {
+  font-size: 18px; font-weight: 700;
+  color: #111; margin: 0 0 6px;
+}
+.moni-step__copy p {
+  font-size: 14px; color: #666;
+  line-height: 1.65; margin: 0;
+}
+.moni-step__viz {
+  margin-top: 20px;
+  background: #f8f8f8;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  padding: 18px 18px 0;
+}
+.moni-step__num {
+  position: absolute; bottom: 14px; right: 20px;
+  font-size: 12px; color: #ccc; font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Step chart visuals */
+.sv-viz { width: 100%; }
+.sv-tooltip {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #fff; border: 1px solid #eee; border-radius: 10px;
+  padding: 6px 14px; margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.sv-tooltip__val { font-size: 14px; font-weight: 700; color: #111; }
+.sv-tooltip__lbl { font-size: 12px; color: #999; }
+.sv-svg { width: 100%; height: auto; display: block; }
+
+/* ── 5. FAQ ──────────────────────────────────────────────────── */
+
+.moni-faq {
+  padding: 100px 10%;
+  background: #fff;
+}
+
+.moni-faq__hdr {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.moni-faq__eyebrow {
+  display: inline-block;
+  font-size: 13px; font-weight: 600;
+  color: #ff7b00; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+
+.moni-faq__title {
+  font-size: clamp(26px, 3vw, 44px);
+  font-weight: 700; color: #111; margin: 0;
+}
+
+.moni-faq__list {
+  max-width: 780px;
+  margin: 0 auto;
+  border: 1px solid #ebebeb;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.moni-faq__item { border-bottom: 1px solid #ebebeb; }
+.moni-faq__item:last-child { border-bottom: none; }
+
+.moni-faq__q {
+  width: 100%; display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 22px 26px; background: none; border: none;
+  cursor: pointer; font-size: 15px; font-weight: 500;
+  color: #111; text-align: left;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.moni-faq__q:hover { background: #fafafa; }
+
+.moni-faq__chevron {
+  width: 20px; height: 20px; flex-shrink: 0;
+  color: #999; transition: transform 0.3s ease;
+}
+.moni-faq__item.is-open .moni-faq__chevron { transform: rotate(180deg); }
+
+.moni-faq__ans {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 26px;
+}
+.moni-faq__item.is-open .moni-faq__ans {
+  max-height: 200px;
+  padding: 0 26px 22px;
+}
+.moni-faq__ans p {
+  font-size: 14px; color: #666;
+  line-height: 1.75; margin: 0;
+}
+
+/* ── 6. SUPPORT ──────────────────────────────────────────────── */
+
+.moni-support {
+  padding: 80px 10% 100px;
+  background: #f8f8f8;
+}
+
+.moni-support__grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.moni-support__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  display: flex; flex-direction: column; gap: 12px;
+  border: 1px solid #efefef;
+  transition: box-shadow 0.3s ease;
+}
+.moni-support__card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
+
+.moni-support__ico { width: 52px; height: 52px; }
+.moni-support__ico svg { width: 100%; height: 100%; }
+
+.moni-support__card h3 {
+  font-size: 18px; font-weight: 700;
+  color: #111; margin: 4px 0 0;
+}
+.moni-support__card p {
+  font-size: 14px; color: #666;
+  line-height: 1.65; flex: 1; margin: 0;
+}
+
+.moni-support__btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 22px; border-radius: 30px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; border: 1.5px solid #e0e0e0;
+  color: #333; background: transparent;
+  transition: all 0.25s ease; align-self: flex-start; margin-top: 8px;
+}
+.moni-support__btn:hover { border-color: #bbb; }
+.moni-support__btn--accent {
+  background: #ff7b00; border-color: #ff7b00; color: #fff;
+}
+.moni-support__btn--accent:hover {
+  background: #e86e00; border-color: #e86e00;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .moni-how__inner { grid-template-columns: 1fr; gap: 40px; }
+  .moni-how__left  { position: static; }
+}
+
+@media (max-width: 900px) {
+  .moni-hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .moni-hero__desc  { margin: 0 auto 36px; }
+  .moni-hero__ctas  { justify-content: center; }
+  .moni-hero__visual { order: -1; }
+  .moni-hero__phone  { max-width: 240px; }
+  .moni-feat__grid .moni-feat__card {
+    width: calc((100% - var(--moni-feat-gap)) / 2);
+    max-width: calc((100% - var(--moni-feat-gap)) / 2);
+  }
+  .moni-support__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .moni-hero    { padding: 80px 6% 60px; }
+  .moni-feat    { padding: 70px 6%; }
+  .moni-how     { padding: 70px 6%; }
+  .moni-faq     { padding: 70px 6%; }
+  .moni-support { padding: 60px 6% 80px; }
+  .moni-trust   { padding: 16px 6%; }
+  .moni-feat__grid .moni-feat__card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
