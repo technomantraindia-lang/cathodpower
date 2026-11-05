@@ -22,12 +22,12 @@ const TABS = [
     badge: "Ongrid Inverter",
     image: "/images/products/2kW - 4kW Single Phase.webp",
     description:
-      "High-efficiency grid-tied solar inverters for residential and commercial sites — seamless synchronisation, wide MPPT range, and maximum energy yield.",
+      "High-efficiency grid-tied solar inverters for residential and commercial sites, seamless synchronisation, wide MPPT range, and maximum energy yield.",
     powerLabel: "Power Range",
-    powerDisplay: "2.3 kW – 110 kW",
+    powerDisplay: "2.3 kW - 110 kW",
     powerLines: [
-      { label: "Single Phase", value: "2.3 – 6 kW" },
-      { label: "Three Phase", value: "4 – 110 kW" },
+      { label: "Single Phase", value: "2.3 - 6 kW" },
+      { label: "Three Phase", value: "4 - 110 kW" },
     ],
     bullets: [
       "Single & three phase variants for every site size",
@@ -45,10 +45,10 @@ const TABS = [
     description:
       "All-in-one hybrid platforms with integrated battery management for energy independence, backup power, and intelligent load control.",
     powerLabel: "Power Range",
-    powerDisplay: "3 kW – 15 kW",
+    powerDisplay: "3 kW - 15 kW",
     powerLines: [
-      { label: "Single Phase", value: "3 – 6 kW" },
-      { label: "Three Phase", value: "5 – 15 kW" },
+      { label: "Single Phase", value: "3 - 6 kW" },
+      { label: "Three Phase", value: "5 - 15 kW" },
     ],
     bullets: [
       "On-grid, off-grid & battery backup in one unit",
@@ -64,9 +64,9 @@ const TABS = [
     badge: "Micro Inverter",
     image: micro?.image,
     description:
-      "Module-level power electronics for maximum energy harvest per panel — ideal for complex rooftop layouts, partial shading, and space-constrained systems.",
+      "Module-level power electronics for maximum energy harvest per panel, ideal for complex rooftop layouts, partial shading, and space-constrained systems.",
     powerLabel: "Power Range",
-    powerDisplay: "0.6 kW – 2.4 kW",
+    powerDisplay: "0.6 kW - 2.4 kW",
     powerLines: [],
     bullets: [
       "Per-module MPPT for maximum individual panel yield",
@@ -83,12 +83,12 @@ const TABS = [
     // Client: use white wall-mount battery on homepage Perfect Fit
     image: "/images/products/Wall Mount Battery.webp",
     description:
-      "High-cycle LiFePO4 battery energy storage systems with intelligent BMS — engineered for seamless pairing with Cathode hybrid inverters.",
+      "High-cycle LiFePO4 battery energy storage systems with intelligent BMS, engineered for seamless pairing with Cathode hybrid inverters.",
     powerLabel: "Capacity Range",
-    powerDisplay: "5.12 – 10.24 kWh+",
+    powerDisplay: "5.12 - 10.24 kWh+",
     powerLines: [
-      { label: "Wall-Mount", value: "5.12 – 10.24 kWh" },
-      { label: "Rack-Mount", value: "5.12 – 10.24 kWh" },
+      { label: "Wall-Mount", value: "5.12 - 10.24 kWh" },
+      { label: "Rack-Mount", value: "5.12 - 10.24 kWh" },
     ],
     bullets: [
       "Tier-1 LiFePO4 cells with 6,000+ cycle life",

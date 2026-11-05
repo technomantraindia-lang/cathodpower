@@ -80,7 +80,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #ff6a00;
+  color: #0f172a;
   margin: 0 0 16px;
 }
 
@@ -88,9 +88,9 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #ff6a00;
+  background: #0f172a;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+  box-shadow: none;
 }
 
 .pb-title {
@@ -147,9 +147,9 @@
 }
 
 .pb-tab.active {
-  background: #ff6a00;
+  background: #11606d;
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(17, 96, 109, 0.35);
 }
 
 .pb-tab-dot {

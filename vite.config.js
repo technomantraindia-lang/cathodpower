@@ -49,15 +49,18 @@ export default defineConfig({
 
   server: {
     watch: {
+      // Do NOT ignore files under public/ — Vite tracks public assets via the
+      // watcher; ignoring *.mp4 there makes new videos return index.html (black player).
       ignored: [
-        '**/*.mp4',
-        '**/*.webm',
-        '**/*.m4v',
-        '**/*.pdf',
-        '**/video/**',
-        '**/public/video/**',
+        '**/new pdf changes/**',
         '**/public/NEW PRODUCT IMAGES/**',
         '**/*.zip',
+        (watchPath) => {
+          const normalized = String(watchPath).replace(/\\/g, '/');
+          if (normalized.includes('/public/')) return false;
+          if (normalized.includes('/node_modules/')) return true;
+          return /\.(mp4|webm|m4v|pdf)$/i.test(normalized);
+        },
       ],
     },
   },

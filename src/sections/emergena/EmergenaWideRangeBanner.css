@@ -2,11 +2,14 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: clamp(380px, 48vw, 560px);
+  /* Match client master 1905×512 so the video stays near native pixels (less soft upscale). */
+  aspect-ratio: 1904 / 512;
+  min-height: clamp(300px, 26.89vw, 512px);
+  max-height: 512px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(64px, 8vw, 100px) clamp(20px, 4vw, 48px);
+  padding: clamp(48px, 5vw, 72px) clamp(20px, 4vw, 48px);
   text-align: center;
   background: #0b1919;
   box-sizing: border-box;
@@ -27,20 +30,26 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  transform: none;
+  transform: translateZ(0);
   opacity: 1;
   background: #0b1919;
+  /* Keep playback sharp — no blur/filter/scale tricks */
+  filter: none;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .emergena-home .cp-wide-banner__overlay {
   position: absolute;
   inset: 0;
+  /* Lighter wash so the HD background stays crisp and visible */
   background:
     linear-gradient(
       180deg,
-      rgba(7, 18, 20, 0.45) 0%,
-      rgba(11, 25, 25, 0.5) 45%,
-      rgba(7, 18, 20, 0.58) 100%
+      rgba(7, 18, 20, 0.28) 0%,
+      rgba(11, 25, 25, 0.34) 45%,
+      rgba(7, 18, 20, 0.42) 100%
     );
   will-change: opacity;
 }
@@ -124,8 +133,10 @@
 
 @media (max-width: 640px) {
   .emergena-home .cp-wide-banner {
-    min-height: 320px;
-    padding: 56px 20px;
+    max-height: none;
+    min-height: 280px;
+    aspect-ratio: 1904 / 512;
+    padding: 48px 20px;
   }
 
   .emergena-home .cp-wide-banner__title,

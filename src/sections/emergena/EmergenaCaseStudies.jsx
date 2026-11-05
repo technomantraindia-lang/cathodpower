@@ -65,7 +65,7 @@ const PRODUCTS_LIST = [
     location: "Individual MPPT Per Solar Panel (Dual & Quad)",
     title: "Module-Level Solar Micro Inverters",
     description:
-      "Module-level power electronics for maximum energy harvest per panel — ideal for complex rooftop layouts, partial shading, balcony solar, and space-constrained systems.",
+      "Module-level power electronics for maximum energy harvest per panel, ideal for complex rooftop layouts, partial shading, balcony solar, and space-constrained systems.",
     metricValue: 2.4,
     metricUnit: "kW",
     metricLabel: "Per-unit yield: 600 W to 2.4 kW",

@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { PRODUCTS } from "../../data/productsData";
+import { getProductsByMainAndPhase } from "../../data/productsData";
 import "./ProductDetailsBanner.css";
 
 const SLIDE_DURATION = 520;
@@ -25,7 +25,10 @@ function getShowcaseImages(product) {
 
 export default function ProductDetailsBanner({ product }) {
   const relatedProducts = useMemo(() => {
-    const list = PRODUCTS.filter((p) => p.mainTabKey === product.mainTabKey);
+    const list = getProductsByMainAndPhase(
+      product.mainTabKey,
+      product.phaseKey
+    );
     return list.length ? list : [product];
   }, [product]);
 
@@ -153,7 +156,7 @@ export default function ProductDetailsBanner({ product }) {
       : product.mainTabKey === "micro"
         ? "Micro Inverter"
         : product.mainTabKey === "ongrid"
-          ? "On-grid Inverter"
+          ? "On-Grid Inverter"
           : "Inverter";
 
   const power = bannerProduct.meta?.split("|")[0]?.trim() ?? "";

@@ -37,7 +37,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(169, 253, 128, 0.95);
+  color: #ffffff;
 }
 
 .am__title {
@@ -55,6 +55,7 @@
 }
 
 .am__title span {
+  display: block;
   color: var(--am-accent-soft);
   font-weight: 600;
 }

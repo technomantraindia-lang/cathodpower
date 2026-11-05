@@ -231,6 +231,7 @@ export default function ProductGridSection({
                       p.specs?.find((s) => s.label === "Rated Power")?.value ||
                       p.meta?.split("|")[0]?.trim();
                     const phaseSpec =
+                      p.specs?.find((s) => s.label === "Phase / Type")?.value ||
                       p.specs?.find((s) => s.label === "Phase")?.value ||
                       p.meta?.split("|")[1]?.trim();
 

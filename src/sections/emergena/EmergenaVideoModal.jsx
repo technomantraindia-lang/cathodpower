@@ -1,23 +1,27 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
+const FILM_SRC = "/video/cathode-power-film.mp4";
+const FILM_POSTER = "/images/cta/cp-film-poster.jpg";
+
 export default function EmergenaVideoModal({ isOpen, onClose }) {
   const modalRef = useRef(null);
   const wrapperRef = useRef(null);
   const backdropRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) return undefined;
 
     const modal = modalRef.current;
     const wrapper = wrapperRef.current;
     const backdrop = backdropRef.current;
+    const video = videoRef.current;
 
-    if (!modal || !wrapper || !backdrop) return;
+    if (!modal || !wrapper || !backdrop) return undefined;
 
-    // Timeline t-84704455
     const tl = gsap.timeline();
-    tl.set(modal, { display: "block" });
+    tl.set(modal, { display: "flex" });
     tl.fromTo(backdrop, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" });
     tl.fromTo(
       wrapper,
@@ -26,13 +30,42 @@ export default function EmergenaVideoModal({ isOpen, onClose }) {
       "-=0.15"
     );
 
+    const tryPlay = () => {
+      if (!video) return;
+      video.muted = false;
+      const playPromise = video.play();
+      if (playPromise?.catch) {
+        playPromise.catch(() => {
+          // Autoplay with sound may be blocked; leave controls for the user.
+        });
+      }
+    };
+
+    if (video) {
+      video.load();
+      if (video.readyState >= 2) {
+        tryPlay();
+      } else {
+        video.addEventListener("loadeddata", tryPlay, { once: true });
+        video.addEventListener("canplay", tryPlay, { once: true });
+      }
+    }
+
     const handleKeyDown = (e) => {
       if (e.key === "Escape") handleClose();
     };
     window.addEventListener("keydown", handleKeyDown);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+      }
     };
   }, [isOpen]);
 
@@ -40,6 +73,11 @@ export default function EmergenaVideoModal({ isOpen, onClose }) {
     const modal = modalRef.current;
     const wrapper = wrapperRef.current;
     const backdrop = backdropRef.current;
+    const video = videoRef.current;
+
+    if (video) {
+      video.pause();
+    }
 
     if (!modal || !wrapper || !backdrop) {
       onClose();
@@ -87,7 +125,6 @@ export default function EmergenaVideoModal({ isOpen, onClose }) {
           justifyContent: "center",
         }}
       >
-        {/* Backdrop click to close */}
         <div
           ref={backdropRef}
           onClick={handleClose}
@@ -104,24 +141,24 @@ export default function EmergenaVideoModal({ isOpen, onClose }) {
           }}
         />
 
-        {/* Video Player Box */}
         <div
           ref={wrapperRef}
           className="popup-video-wrapper"
           style={{
             position: "relative",
-            width: "90%",
+            width: "92%",
             maxWidth: "960px",
             zIndex: 10,
             borderRadius: "16px",
             overflow: "hidden",
             boxShadow: "0 30px 90px rgba(0,0,0,0.6)",
+            backgroundColor: "#000",
           }}
         >
-          {/* Close button */}
           <button
             onClick={handleClose}
             aria-label="Close video"
+            type="button"
             style={{
               position: "absolute",
               top: "-44px",
@@ -138,22 +175,37 @@ export default function EmergenaVideoModal({ isOpen, onClose }) {
             &times;
           </button>
 
-          <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", backgroundColor: "#000" }}>
+          <div
+            style={{
+              position: "relative",
+              paddingBottom: "56.25%",
+              height: 0,
+              overflow: "hidden",
+              backgroundColor: "#000",
+            }}
+          >
             <video
-              src="/images/factoryimages/INVERTER.mp4"
+              ref={videoRef}
+              key={FILM_SRC}
+              src={FILM_SRC}
               controls
               autoPlay
               playsInline
-              poster="/images/factoryimages/5.webp"
+              preload="auto"
+              poster={FILM_POSTER}
               style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
+                backgroundColor: "#000",
               }}
-            />
+            >
+              <source src={FILM_SRC} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>

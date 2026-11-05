@@ -113,9 +113,13 @@ export default function EmergenaCta({ onTalkToEngineer, onPlayVideo }) {
                 <div className="video-bg-wrap">
                   <img
                     loading="eager"
-                    src="/images/cta/cta_video_thumb.webp"
-                    alt="Cathode Power cleanroom inverter manufacturing line."
+                    src="/images/cta/cta_video_thumb.jpg"
+                    alt="Cathode Power film — Watch Our Process"
                     className="image"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "/images/cta/cta_video_thumb.webp";
+                    }}
                   />
                 </div>
                 <div

@@ -32,23 +32,6 @@ export default function ProductsBanner({ title, subtitle, tabs, activeTab, onTab
             ))}
           </div>
         </div>
-
-        <div className="pb-info-card" aria-label="Product highlights">
-          <div className="pb-info-stats">
-            <div className="pb-info-stat">
-              <span className="pb-info-stat-num">30+</span>
-              <span className="pb-info-stat-text">Models</span>
-            </div>
-            <div className="pb-info-stat">
-              <span className="pb-info-stat-num">4</span>
-              <span className="pb-info-stat-text">Categories</span>
-            </div>
-            <div className="pb-info-stat">
-              <span className="pb-info-stat-num">IP66</span>
-              <span className="pb-info-stat-text">Rated</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

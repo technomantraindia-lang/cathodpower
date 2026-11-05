@@ -168,7 +168,7 @@ export default function EmergenaSolutions() {
                 <div className="title-card-solution">
                   <div className="solution-number">
                     <div id="text-xs" className="text-tag size-s">
-                      01 — GREENER
+                      01 GREENER
                     </div>
                   </div>
                   <div className="wrapper-text-card">
@@ -205,7 +205,7 @@ export default function EmergenaSolutions() {
                 <div className="title-card-solution">
                   <div className="solution-number">
                     <div id="text-xs" className="text-tag size-s">
-                      02 — SUSTAINABLE
+                      02, SUSTAINABLE
                     </div>
                   </div>
                   <div className="wrapper-text-card">
@@ -242,7 +242,7 @@ export default function EmergenaSolutions() {
                 <div className="title-card-solution">
                   <div className="solution-number">
                     <div id="text-xs" className="text-tag size-s">
-                      03 — TOMORROW
+                      03, TOMORROW
                     </div>
                   </div>
                   <div className="wrapper-text-card">

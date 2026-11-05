@@ -18,13 +18,13 @@ const FAQ_ITEMS = [
     id: "03",
     title: "What is the importance of an IP66 rating for outdoor solar inverters?",
     content:
-      "An IP66 rating signifies that the solar inverter is completely protected against dust ingress and can withstand high-pressure water jets from any direction. For the Indian climate, where inverters are often exposed to extreme heat, monsoon rains, and heavy dust, an IP66-rated housing—standard across Cathode Power's On-grid and hybrid product lines—is essential for ensuring the long-term reliability of the internal electronics and reducing maintenance costs.",
+      "An IP66 rating signifies that the solar inverter is completely protected against dust ingress and can withstand high-pressure water jets from any direction. For the Indian climate, where inverters are often exposed to extreme heat, monsoon rains, and heavy dust, an IP66-rated housing, standard across Cathode Power's On-grid and hybrid product lines, is essential for ensuring the long-term reliability of the internal electronics and reducing maintenance costs.",
   },
   {
     id: "04",
     title: "How can AI energy management systems reduce industrial electricity costs?",
     content:
-      "AI-driven energy management, integrated into Cathode Power's C&I solutions, utilizes AI-powered weather forecasting, load analysis, and dynamic tariff tracking to optimize energy consumption. By automatically adjusting battery discharge or grid export based on real-time electricity prices, businesses can engage in peak shaving—using stored solar energy during peak tariff periods—thereby significantly reducing their demand charges and overall operational expenses.",
+      "AI-driven energy management, integrated into Cathode Power's C&I solutions, utilizes AI-powered weather forecasting, load analysis, and dynamic tariff tracking to optimize energy consumption. By automatically adjusting battery discharge or grid export based on real-time electricity prices, businesses can engage in peak shaving, using stored solar energy during peak tariff periods, thereby significantly reducing their demand charges and overall operational expenses.",
   },
   {
     id: "05",
@@ -145,7 +145,7 @@ export default function SuccessStories() {
           <p>
             Answers on Cathode Power inverters, hybrid and on-grid systems,
             compatibility, cloud monitoring, subsidies, and our partner
-            program—so you can choose and run solar with confidence in India
+            program, so you can choose and run solar with confidence in India
             and beyond.
           </p>
         </header>

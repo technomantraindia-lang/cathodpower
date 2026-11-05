@@ -102,7 +102,7 @@
 
 .emergena-home .cp-why__visual {
   position: relative;
-  min-height: clamp(420px, 52vw, 640px);
+  min-height: clamp(460px, 54vw, 680px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,11 +155,13 @@
 .emergena-home .cp-why__image {
   position: relative;
   z-index: 1;
-  width: min(96%, 560px);
+  width: min(118%, 640px);
+  max-width: none;
   height: auto;
   object-fit: contain;
   margin: 0;
-  transform: translate(-20%, 14%);
+  transform: translate(-18%, 10%) scale(1.08);
+  transform-origin: center center;
   filter: drop-shadow(0 24px 40px rgba(20, 41, 34, 0.22));
 }
 
@@ -170,7 +172,7 @@
 
   .emergena-home .cp-why__visual {
     order: -1;
-    min-height: 400px;
+    min-height: 420px;
     max-width: 520px;
     margin: 0 auto;
   }
@@ -180,9 +182,11 @@
   }
 
   .emergena-home .cp-why__image {
-    width: min(92%, 420px);
+    width: min(108%, 460px);
+    max-width: none;
     margin: 0;
-    transform: translate(-16%, 10%);
+    transform: translate(-14%, 8%) scale(1.05);
+    transform-origin: center center;
   }
 }
 

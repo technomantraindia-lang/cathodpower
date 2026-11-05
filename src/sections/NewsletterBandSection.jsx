@@ -10,9 +10,9 @@ const DEFAULT_IMAGE = "/images/factoryimages/5.jpeg";
 
 /**
  * @param {object} props
- * @param {string} [props.imageSrc] — public URL or imported asset from Vite
+ * @param {string} [props.imageSrc], public URL or imported asset from Vite
  * @param {string} [props.imageAlt]
- * @param {string} [props.source] — tracking label for signup source page
+ * @param {string} [props.source], tracking label for signup source page
  */
 export default function NewsletterBandSection({
   imageSrc = DEFAULT_IMAGE,

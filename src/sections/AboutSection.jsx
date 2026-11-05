@@ -47,7 +47,7 @@ const timeline = [
 
 const SLIDE_DURATION = 4000;
 /**
- * First frames of the MP4 are black — start playback here (in seconds).
+ * First frames of the MP4 are black, start playback here (in seconds).
  * Tunable without re-encoding the file.
  */
 const VIDEO_START_TIME = 1.0;
@@ -361,8 +361,8 @@ export default function AboutSection() {
               onClick={() => goToSlide(index)}
               aria-label={
                 item.hero
-                  ? "Intro — About Cathode Power"
-                  : `Go to ${item.tag ?? "slide"} — ${item.year ?? ""}`.trim()
+                  ? "Intro About Cathode Power"
+                  : `Go to ${item.tag ?? "slide"} ${item.year ?? ""}`.trim()
               }
               aria-current={activeIndex === index ? "true" : undefined}
             >

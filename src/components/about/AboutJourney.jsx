@@ -9,7 +9,7 @@ const CHAPTERS = [
   {
     topic: "Our Story",
     title: "It Started With a Question. Why Not Build Better?",
-    text: "What began as an idea in 2018 became a journey of research, determination, and innovation — driven by a vision to develop inverter technology for India's unique needs.",
+    text: "What began as an idea in 2018 became a journey of research, determination, and innovation, driven by a vision to develop inverter technology for India's unique needs.",
     note: "Since 2018",
   },
   {
@@ -98,7 +98,7 @@ export default function AboutJourney() {
             </h2>
           </div>
           <p className="aj__lead">
-            Four defining chapters — explore how Cathode Power grew from an idea into
+            Four defining chapters. Explore how Cathode Power grew from an idea into
             engineering built for India.
           </p>
         </header>

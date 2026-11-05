@@ -53,7 +53,7 @@ const getProductPreviewCards = (mainTabKey, phaseKey) =>
 const PRODUCT_MEGA_MENU = [
   {
     key: "ongrid",
-    label: "On-grid Inverters",
+    label: "On-Grid Inverters",
     tagline: "Grid-tied inverter range for residential, commercial, and industrial solar projects.",
     allLink: buildProductMenuHref("ongrid", "single"),
     views: [

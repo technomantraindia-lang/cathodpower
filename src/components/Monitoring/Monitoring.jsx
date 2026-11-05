@@ -19,13 +19,13 @@ const LiveMonitoringViz = () => (
     <svg viewBox="0 0 260 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="fv__svg">
       <path
         d="M0 62 C30 56,50 44,80 37 C105 31,125 47,155 32 C175 22,205 15,260 10"
-        stroke="#ff7b00" strokeWidth="2.2" strokeLinecap="round"
+        stroke="#11606d" strokeWidth="2.2" strokeLinecap="round"
       />
       <path
         d="M0 62 C30 56,50 44,80 37 C105 31,125 47,155 32 C175 22,205 15,260 10 L260 80 L0 80 Z"
-        fill="#fff8f3"
+        fill="#e8f4f5"
       />
-      <circle cx="260" cy="10" r="4.5" fill="#ff7b00" />
+      <circle cx="260" cy="10" r="4.5" fill="#11606d" />
     </svg>
     <div className="fv__row">
       <div className="fv__metric">
@@ -92,17 +92,17 @@ const SCORE_C = 2 * Math.PI * SCORE_R; /* full circle length */
 const SCORE_PCT = 0.99;
 
 const EnergyScoreViz = () => {
-  const orangeLen = SCORE_C * SCORE_PCT;
-  const gapLen = Math.max(0, SCORE_C - orangeLen);
+  const accentLen = SCORE_C * SCORE_PCT;
+  const gapLen = Math.max(0, SCORE_C - accentLen);
   return (
     <div className="fv fv--score">
       <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="70" cy="70" r={SCORE_R} stroke="#f0f0f0" strokeWidth="12" />
         <circle
           cx="70" cy="70" r={SCORE_R}
-          stroke="#ff7b00" strokeWidth="12"
+          stroke="#11606d" strokeWidth="12"
           strokeLinecap="round"
-          strokeDasharray={`${orangeLen} ${gapLen}`}
+          strokeDasharray={`${accentLen} ${gapLen}`}
           transform="rotate(-90 70 70)"
         />
         <text x="70" y="63" textAnchor="middle" fontSize="34" fontWeight="700" fill="#111">99</text>
@@ -113,7 +113,7 @@ const EnergyScoreViz = () => {
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   HOW IT WORKS — STEP VISUALS
+   HOW IT WORKS, STEP VISUALS
 ═══════════════════════════════════════════════════════════════ */
 
 const StepLineChart = () => (
@@ -125,15 +125,15 @@ const StepLineChart = () => (
     <svg viewBox="0 0 420 130" fill="none" xmlns="http://www.w3.org/2000/svg" className="sv-svg">
       {[20, 75, 130, 185, 240, 295, 350].map((x, i) => (
         <rect key={i} x={x} y="8" width="34" height="115" rx="6"
-          fill={i === 4 ? "#ffe8cc" : "#f0f0f0"} />
+          fill={i === 4 ? "#d4ebee" : "#f0f0f0"} />
       ))}
       <path
         d="M10 95 C40 85,60 72,95 65 C115 60,140 48,170 43
            C190 40,210 52,230 46 C250 40,270 32,295 26
            C315 21,340 36,365 52 C380 60,400 68,415 73"
-        stroke="#ff7b00" strokeWidth="2.5" strokeLinecap="round"
+        stroke="#11606d" strokeWidth="2.5" strokeLinecap="round"
       />
-      <circle cx="295" cy="26" r="5.5" fill="white" stroke="#ff7b00" strokeWidth="2.5" />
+      <circle cx="295" cy="26" r="5.5" fill="white" stroke="#11606d" strokeWidth="2.5" />
     </svg>
   </div>
 );
@@ -145,14 +145,14 @@ const StepGrowthChart = () => (
       <path
         d="M0 112 C60 110,110 102,160 92 C200 84,240 74,280 54
            C310 38,360 20,420 8 L420 120 L0 120 Z"
-        fill="#fff3e8"
+        fill="#e8f4f5"
       />
       <path
         d="M0 112 C60 110,110 102,160 92 C200 84,240 74,280 54
            C310 38,360 20,420 8"
-        stroke="#ff7b00" strokeWidth="2.5" strokeLinecap="round"
+        stroke="#11606d" strokeWidth="2.5" strokeLinecap="round"
       />
-      <circle cx="420" cy="8" r="5.5" fill="#ff7b00" />
+      <circle cx="420" cy="8" r="5.5" fill="#11606d" />
     </svg>
   </div>
 );
@@ -184,7 +184,7 @@ const IconTrend = () => (
   </svg>
 );
 
-/* Feature card heading icons (orange accent) */
+/* Feature card heading icons (green accent) */
 const FeatIconLive = () => (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"
     strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -314,7 +314,7 @@ const STATS = [
 ];
 
 const FEATURES_COUNT = FEATURES.length;
-/** Pinned scroll length (px) — no huge 200vh+ empty track; one smooth band of scroll to cycle cards */
+/** Pinned scroll length (px), no huge 200vh+ empty track; one smooth band of scroll to cycle cards */
 function getFeaturePinScrollLength() {
   if (typeof window === "undefined") return 1000;
   return Math.min(1400, Math.max(850, Math.round(window.innerHeight * 0.95)));
@@ -664,7 +664,7 @@ export default function Monitoring() {
           <div className="moni-how__left">
             <div className="moni-how__tag">How It Works</div>
             <h2 className="moni-how__h2">
-              From install to insight—just three simple steps.
+              From install to insight, just three simple steps.
             </h2>
           </div>
 
@@ -724,9 +724,9 @@ export default function Monitoring() {
             <div className="moni-support__ico">
               <svg viewBox="0 0 48 48" fill="none">
                 <path d="M14 6h20a4 4 0 014 4v28a4 4 0 01-4 4H14a4 4 0 01-4-4V10a4 4 0 014-4z"
-                  stroke="#1a7070" strokeWidth="2.5" />
-                <circle cx="24" cy="36" r="2" fill="#1a7070" />
-                <path d="M18 6h12" stroke="#1a7070" strokeWidth="2.5" strokeLinecap="round" />
+                  stroke="#11606d" strokeWidth="2.5" />
+                <circle cx="24" cy="36" r="2" fill="#11606d" />
+                <path d="M18 6h12" stroke="#11606d" strokeWidth="2.5" strokeLinecap="round" />
               </svg>
             </div>
             <h3>Phone Support</h3>
@@ -738,8 +738,8 @@ export default function Monitoring() {
             <div className="moni-support__ico">
               <svg viewBox="0 0 48 48" fill="none">
                 <rect x="6" y="12" width="36" height="24" rx="3"
-                  stroke="#1a7070" strokeWidth="2.5" />
-                <path d="M6 15l18 11 18-11" stroke="#1a7070" strokeWidth="2.5"
+                  stroke="#11606d" strokeWidth="2.5" />
+                <path d="M6 15l18 11 18-11" stroke="#11606d" strokeWidth="2.5"
                   strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
@@ -751,12 +751,12 @@ export default function Monitoring() {
           <div className="moni-support__card">
             <div className="moni-support__ico">
               <svg viewBox="0 0 48 48" fill="none">
-                <path d="M16 28c0-4 3-7 8-7s8 3 8 7" stroke="#1a7070" strokeWidth="2.5" strokeLinecap="round" />
-                <circle cx="24" cy="16" r="5" stroke="#1a7070" strokeWidth="2.5" />
-                <path d="M8 34c0-3 2-5 6-6" stroke="#1a7070" strokeWidth="2.5" strokeLinecap="round" />
-                <circle cx="10" cy="22" r="4" stroke="#1a7070" strokeWidth="2.5" />
-                <path d="M40 34c0-3-2-5-6-6" stroke="#1a7070" strokeWidth="2.5" strokeLinecap="round" />
-                <circle cx="38" cy="22" r="4" stroke="#1a7070" strokeWidth="2.5" />
+                <path d="M16 28c0-4 3-7 8-7s8 3 8 7" stroke="#11606d" strokeWidth="2.5" strokeLinecap="round" />
+                <circle cx="24" cy="16" r="5" stroke="#11606d" strokeWidth="2.5" />
+                <path d="M8 34c0-3 2-5 6-6" stroke="#11606d" strokeWidth="2.5" strokeLinecap="round" />
+                <circle cx="10" cy="22" r="4" stroke="#11606d" strokeWidth="2.5" />
+                <path d="M40 34c0-3-2-5-6-6" stroke="#11606d" strokeWidth="2.5" strokeLinecap="round" />
+                <circle cx="38" cy="22" r="4" stroke="#11606d" strokeWidth="2.5" />
               </svg>
             </div>
             <h3>Partnership Opportunities</h3>

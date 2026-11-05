@@ -117,16 +117,18 @@ export default function EmergenaTagPoints() {
       ref={sectionRef}
       className="cp-tags"
       id="tag-points"
-      aria-label="Foundation of our success"
+      aria-label="Four strengths one powerful promise"
     >
       <div className="cp-tags__container">
         <div className="cp-tags__header">
           <h2 className="cp-tags__title text-xl">
-            The Foundation of Our <span>Success</span>
+            Four Strengths. <span>One Powerful Promise.</span>
           </h2>
           <p className="cp-tags__subtitle text-xs">
-            Four pillars guide every Cathode Power product — from factory floor to field
-            installation — so homeowners and EPCs get lasting solar confidence.
+            At Cathode Power, every inverter is engineered with a purpose. Combining
+            intelligent technology, dependable performance, energy efficiency, and
+            forward-thinking innovation, we build solar solutions designed for India
+            and ready for tomorrow.
           </p>
         </div>
 

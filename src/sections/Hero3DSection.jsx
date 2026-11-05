@@ -93,7 +93,7 @@ export default function Hero3DSection({ onOpenQuote }) {
               </div>
               <div className="h3d-pill">
                 <span className="h3d-pill-check">✓</span>
-                <span>10–12 Year Operating Life</span>
+                <span>10 - 12 Year Operating Life</span>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./CIBanner.css";
 
-/* Same asset as C&I Large banner.jpeg, copied to an ASCII name — "&" in URLs often 404s on static servers. */
+/* Same asset as C&I Large banner.jpeg, copied to an ASCII name, "&" in URLs often 404s on static servers. */
 const CI_BANNER = "/images/newimages/ci-large-banner.jpeg";
 
 export default function CIBanner() {
@@ -58,15 +58,14 @@ export default function CIBanner() {
 
           <p ref={subRef} className="ci-banner-sub">
             Cathode Power delivers advanced solar storage systems that manage
-            dynamic electricity pricing and ensure seamless parallel power —
-            helping enterprises cut energy costs and boost efficiency.
+            dynamic electricity pricing and ensure seamless parallel power, helping enterprises cut energy costs and boost efficiency.
           </p>
 
           <div ref={btnRef} className="ci-banner-actions">
             <a
               href="#our-solutions"
               className="ci-banner-btn"
-              aria-label="C and I solutions — jump to Our Solutions section"
+              aria-label="C and I solutions, jump to Our Solutions section"
             >
               <span>C&amp;I Solutions</span>
               <span className="ci-banner-btn-icon">→</span>

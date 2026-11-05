@@ -37,16 +37,6 @@ export default function AboutWho() {
           "-=0.7"
         )
         .from(
-          ".aw__media",
-          {
-            x: 40,
-            opacity: 0,
-            duration: 0.85,
-            ease: "power3.out",
-          },
-          "-=0.55"
-        )
-        .from(
           ".aw__accent-item",
           {
             y: 12,
@@ -69,47 +59,30 @@ export default function AboutWho() {
           02
         </span>
 
-        <div className="aw__grid">
-          <div className="aw__copy">
-            <p className="aw__kicker">
-              <span className="aw__kicker-line" aria-hidden="true" />
-              02 / WHO WE ARE
-            </p>
+        <div className="aw__copy">
+          <p className="aw__kicker">
+            <span className="aw__kicker-line" aria-hidden="true" />
+            02 / WHO WE ARE
+          </p>
 
             <h2 className="aw__title">
               More Than a Manufacturer.
-              <span> A Mindset to Innovate.</span>
+              <span>A Mindset to Innovate.</span>
             </h2>
 
-            <p className="aw__lead">
-              We are an Indian solar inverter manufacturer transforming real-world energy
-              challenges into intelligent, reliable, and efficient solar solutions.
-            </p>
+          <p className="aw__lead">
+            We are an Indian solar inverter manufacturer transforming real-world energy
+            challenges into intelligent, reliable, and efficient solar solutions.
+          </p>
 
-            <ul className="aw__accents">
-              {ACCENTS.map((line) => (
-                <li className="aw__accent-item" key={line}>
-                  <span className="aw__accent-dot" aria-hidden="true" />
-                  {line}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <figure className="aw__media">
-            <picture>
-              <source srcSet="/images/factoryimages/4.webp" type="image/webp" />
-              <img
-                src="/images/factoryimages/4.jpeg"
-                alt="Cathode Power manufacturing facility"
-                loading="lazy"
-              />
-            </picture>
-            <figcaption className="aw__caption">
-              <span className="aw__caption-label">Manufacturing Campus</span>
-              <span className="aw__caption-meta">Gujarat, India</span>
-            </figcaption>
-          </figure>
+          <ul className="aw__accents">
+            {ACCENTS.map((line) => (
+              <li className="aw__accent-item" key={line}>
+                <span className="aw__accent-dot" aria-hidden="true" />
+                {line}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

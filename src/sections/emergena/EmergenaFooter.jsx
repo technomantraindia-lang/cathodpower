@@ -94,7 +94,7 @@ export default function EmergenaFooter() {
                   Powering A Sustainable Future
                 </div>
                 <div className="text-xs" style={{ color: "#3a4a44", lineHeight: "1.6" }}>
-                  India&apos;s trusted solar inverter manufacturer — delivering reliable, high-efficiency energy systems for residential, commercial &amp; industrial scale.
+                  India&apos;s trusted solar inverter manufacturer, delivering reliable, high-efficiency energy systems for residential, commercial &amp; industrial scale.
                 </div>
               </div>
             </div>

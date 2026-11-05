@@ -135,7 +135,7 @@ export default function EmergenaFaq() {
                 </div>
                 <div className="founder-role">
                   <div className="text-xxs">
-                    Engineering & Solutions — <span className="highlight-emergena">Cathode Power</span>
+                    Engineering & Solutions, <span className="highlight-emergena">Cathode Power</span>
                   </div>
                 </div>
               </div>

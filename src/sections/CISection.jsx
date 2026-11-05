@@ -108,7 +108,7 @@ export default function CISection() {
 
                 <div className="ci-left">
                   <div className="ci-number">
-                    {slide.number} — 03
+                    {slide.number} / 03
                   </div>
                   <h2>{slide.title}</h2>
                   <p>{slide.desc}</p>

@@ -109,7 +109,11 @@ export default function SolarViewSection() {
             Solar View
           </p>
 
-          <h2 className="sv-cta-title text-xl">Monitor Every Watt In Real Time</h2>
+          <h2 className="sv-cta-title text-xl">
+            Monitor Every Watt
+            <br />
+            In Real Time
+          </h2>
           <div className="sv-cta-accent" aria-hidden="true" />
 
           <p className="sv-cta-lead">Control from Anywhere, Anytime</p>
@@ -117,7 +121,7 @@ export default function SolarViewSection() {
           <p className="sv-cta-copy text-xs">
             Track real-time generation, consumption, and battery status from your
             phone. Solar View gives you full visibility and control over your
-            solar system — 24/7, wherever you are.
+            solar system, 24/7, wherever you are.
           </p>
 
           <div className="sv-cta-actions">

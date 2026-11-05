@@ -45,7 +45,7 @@ export const PIMG = (file) => {
   return `/images/products/${encodeURIComponent(file)}`;
 };
 
-/** Key Advantages — Patented cooling technology product visual */
+/** Key Advantages, Patented cooling technology product visual */
 export const PATENT_COOLING_PRODUCT_IMAGE_URL = PIMG("2kW - 4kW Single Phase.png");
 
 const buildShowcase = (imageFile, showcaseFiles = []) => {
@@ -57,7 +57,7 @@ const buildShowcase = (imageFile, showcaseFiles = []) => {
 };
 
 /* ══════════════════════════════════════════════════════════════════════
-   PRODUCT VISUALS — NEW PRODUCT IMAGES (clean assets only)
+   PRODUCT VISUALS, NEW PRODUCT IMAGES (clean assets only)
    ══════════════════════════════════════════════════════════════════════ */
 const PRODUCT_VISUALS = {
   // 1. On-grid Single Phase 2kW - 4kW
@@ -124,32 +124,33 @@ const PRODUCT_VISUALS = {
 
 const PRODUCT_MEDIA_BY_MODEL = {
   // On-grid Single Phase 2kW - 4kW
-  "CP-2300L": PRODUCT_VISUALS.ongridSingleLow,
-  "CP-3000L": PRODUCT_VISUALS.ongridSingleLow,
-  "CP-3400L": PRODUCT_VISUALS.ongridSingleLow,
-  "CP-3600L": PRODUCT_VISUALS.ongridSingleLow,
-  "CP-4000L": PRODUCT_VISUALS.ongridSingleLow,
+  "6G-2000LS": PRODUCT_VISUALS.ongridSingleLow,
+  "6G-2300LS": PRODUCT_VISUALS.ongridSingleLow,
+  "6G-3000LS": PRODUCT_VISUALS.ongridSingleLow,
+  "6G-3400LS": PRODUCT_VISUALS.ongridSingleLow,
+  "6G-3600LS": PRODUCT_VISUALS.ongridSingleLow,
+  "6G-4000LS": PRODUCT_VISUALS.ongridSingleLow,
 
-  // On-grid Single Phase 4.4kW - 6kW
+  // On-grid Single Phase 4.4kW - 6kW (unchanged)
   "CP-4400L": PRODUCT_VISUALS.ongridSingleHigh,
   "CP-5000L": PRODUCT_VISUALS.ongridSingleHigh,
   "CP-6000L": PRODUCT_VISUALS.ongridSingleHigh,
 
   // On-grid Three Phase 4kW - 15kW
-  "CP-04HL": PRODUCT_VISUALS.ongridThreeLow,
-  "CP-05HL": PRODUCT_VISUALS.ongridThreeLow,
-  "CP-06HL": PRODUCT_VISUALS.ongridThreeLow,
-  "CP-08HL": PRODUCT_VISUALS.ongridThreeLow,
-  "CP-10HL": PRODUCT_VISUALS.ongridThreeLow,
-  "CP-12HL": PRODUCT_VISUALS.ongridThreeLow,
-  "CP-15HL": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-04HLS": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-05HLS": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-06HLS": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-08HLS": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-10HLS": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-12HLS": PRODUCT_VISUALS.ongridThreeLow,
+  "6G-15HLS": PRODUCT_VISUALS.ongridThreeLow,
 
-  // On-grid Three Phase 18kW - 25kW
+  // On-grid Three Phase 18kW - 25kW (unchanged)
   "CP-18HL": PRODUCT_VISUALS.ongridThreeMid,
   "CP-20HL": PRODUCT_VISUALS.ongridThreeMid,
   "CP-25HL": PRODUCT_VISUALS.ongridThreeMid,
 
-  // On-grid Three Phase 30kW - 50kW
+  // On-grid Three Phase 30kW - 50kW (unchanged)
   "CP-30HL": PRODUCT_VISUALS.ongridThreeHigh,
   "CP-33HL": PRODUCT_VISUALS.ongridThreeHigh,
   "CP-36HL": PRODUCT_VISUALS.ongridThreeHigh,
@@ -157,54 +158,59 @@ const PRODUCT_MEDIA_BY_MODEL = {
   "CP-45HL": PRODUCT_VISUALS.ongridThreeHigh,
   "CP-50HL": PRODUCT_VISUALS.ongridThreeHigh,
 
-  // On-grid Three Phase 80kW - 110kW (Heavy C&I)
+  // On-grid Three Phase 80kW - 110kW (unchanged)
   "CP-80HL": PRODUCT_VISUALS.ongridThreeIndustrial,
   "CP-100HL": PRODUCT_VISUALS.ongridThreeIndustrial,
   "CP-110HL": PRODUCT_VISUALS.ongridThreeIndustrial,
 
   // Single Phase Hybrid 3kW - 6kW
-  "CP-3.0-HYBD": PRODUCT_VISUALS.hybridSingle,
-  "CP-3.6-HYBD": PRODUCT_VISUALS.hybridSingle,
-  "CP-4.0-HYBD": PRODUCT_VISUALS.hybridSingle,
-  "CP-4.4-HYBD": PRODUCT_VISUALS.hybridSingle,
-  "CP-5.0-HYBD": PRODUCT_VISUALS.hybridSingle,
-  "CP-6.0-HYBD": PRODUCT_VISUALS.hybridSingle,
+  "6G-3.0-HYBDS": PRODUCT_VISUALS.hybridSingle,
+  "6G-3.6-HYBDS": PRODUCT_VISUALS.hybridSingle,
+  "6G-4.0-HYBDS": PRODUCT_VISUALS.hybridSingle,
+  "6G-4.4-HYBDS": PRODUCT_VISUALS.hybridSingle,
+  "6G-5.0-HYBDS": PRODUCT_VISUALS.hybridSingle,
+  "6G-6.0-HYBDS": PRODUCT_VISUALS.hybridSingle,
 
-  // Three Phase Hybrid 5kW - 15kW
-  "CP-5.0-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-6.0-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-7.0-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-8.0-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-10-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-12-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-13-3HYBD": PRODUCT_VISUALS.hybridThree,
-  "CP-15-3HYBD": PRODUCT_VISUALS.hybridThree,
+  // Three Phase Hybrid 8kW - 15kW
+  "CP-8.0-HYBD": PRODUCT_VISUALS.hybridThree,
+  "CP-10-HYBD": PRODUCT_VISUALS.hybridThree,
+  "CP-12-HYBD": PRODUCT_VISUALS.hybridThree,
+  "CP-15-HYBD": PRODUCT_VISUALS.hybridThree,
 
   // Micro Inverters (Dual MPPT & Quad MPPT)
-  "CP-MI-600": PRODUCT_VISUALS.microDual,
-  "CP-MI-800": PRODUCT_VISUALS.microDual,
-  "CP-MI-1000": PRODUCT_VISUALS.microDual,
-  "CP-MI-1200": PRODUCT_VISUALS.microQuad,
-  "CP-MI-1600": PRODUCT_VISUALS.microQuad,
-  "CP-MI-2000": PRODUCT_VISUALS.microQuad,
-  "CP-MI-2400": PRODUCT_VISUALS.microQuad,
+  "CP-0.6-MIC": PRODUCT_VISUALS.microDual,
+  "CP-0.8-MIC": PRODUCT_VISUALS.microDual,
+  "CP-1.0-MIC": PRODUCT_VISUALS.microDual,
+  "CP-1.2-MIC": PRODUCT_VISUALS.microDual,
+  "CP-1.6-MIC": PRODUCT_VISUALS.microQuad,
+  "CP-1.8-MIC": PRODUCT_VISUALS.microQuad,
+  "CP-2.0-MIC": PRODUCT_VISUALS.microQuad,
+  "CP-2.2-MIC": PRODUCT_VISUALS.microQuad,
+  "CP-2.4-MIC": PRODUCT_VISUALS.microQuad,
 
   // Energy Storage Batteries
-  "CP-BATT-R5": PRODUCT_VISUALS.storageRack,
-  "CP-BATT-R10": PRODUCT_VISUALS.storageRack,
-  "CP-BATT-W5": PRODUCT_VISUALS.storageWall,
-  "CP-BATT-W10": PRODUCT_VISUALS.storageWall,
+  "CP-51.2V100Ah": PRODUCT_VISUALS.storageRack,
+  "CP-51.2V200Vh": PRODUCT_VISUALS.storageRack,
+  "CP-51.2V200Ah": PRODUCT_VISUALS.storageWall,
 };
 
 const getProductMedia = (model, fallback) =>
   PRODUCT_MEDIA_BY_MODEL[model] ?? fallback;
 
 const ONGRID_SINGLE_LOW_POWERS = new Set([
+  "2.0 kW",
   "2.3 kW",
   "3.0 kW",
   "3.4 kW",
   "3.6 kW",
   "4.0 kW",
+]);
+
+const MICRO_DUAL_POWERS = new Set([
+  "0.6 kW",
+  "0.8 kW",
+  "1.0 kW",
+  "1.2 kW",
 ]);
 
 const ONGRID_THREE_LOW_POWERS = new Set([
@@ -235,6 +241,7 @@ export const resolveProductDatasheet = ({
   phaseKey,
   power,
   model = "",
+  mounting = "",
 }) => {
   let fileName = "Cathode Power Brochure V3.2.pdf";
   let size = "82.07MB";
@@ -281,11 +288,7 @@ export const resolveProductDatasheet = ({
       size = "9.21MB";
     }
   } else if (mainTabKey === "micro") {
-    if (
-      model.includes("600") ||
-      model.includes("800") ||
-      model.includes("1000")
-    ) {
+    if (MICRO_DUAL_POWERS.has(power)) {
       fileName = "Micro Dual MPPT - 0.6kW To 1.2kW - Cathode Power V3.2.pdf";
       size = "8.77MB";
     } else {
@@ -293,7 +296,7 @@ export const resolveProductDatasheet = ({
       size = "7.14MB";
     }
   } else if (mainTabKey === "storage") {
-    if (model.includes("R") || model.toLowerCase().includes("rack")) {
+    if (/rack/i.test(mounting) || model === "CP-51.2V200Vh") {
       fileName = "Rack Mount Battery - Cathode Power V3.2.pdf";
       size = "8.88MB";
     } else {
@@ -314,7 +317,7 @@ export const resolveProductDatasheet = ({
 };
 
 export const MAIN_PRODUCT_TABS = [
-  { key: "ongrid", label: "On-grid Inverter" },
+  { key: "ongrid", label: "On-Grid Inverter" },
   { key: "hybrid", label: "Hybrid Inverter" },
   { key: "micro", label: "Micro Inverter" },
   { key: "storage", label: "BESS" },
@@ -330,7 +333,7 @@ export const PRODUCT_CATEGORIES = [
   { key: "three_4_15", label: "Three Phase Inverter (4-15kW)" },
   { key: "three_high", label: "Three Phase Inverter (18-110kW)" },
   { key: "hybrid_single", label: "Single Phase Hybrid Inverter (3-6kW)" },
-  { key: "hybrid_three", label: "Three Phase Hybrid Inverter (5-15kW)" },
+  { key: "hybrid_three", label: "Three Phase Hybrid Inverter (8-15kW)" },
   { key: "micro_single", label: "Micro Inverter (Dual & Quad MPPT)" },
   { key: "storage", label: "Energy Storage LiFePO4 Batteries" },
 ];
@@ -396,6 +399,7 @@ const createProduct = ({
   categoryKey,
   mainTabKey,
   phaseKey = null,
+  phaseLabel = null,
   model,
   power,
   series,
@@ -408,22 +412,26 @@ const createProduct = ({
   metaDetails = [],
   backupSupport = "Not applicable",
   mounting = "Wall mounted",
+  slug: slugOverride,
 }) => {
-  const phase = phaseLabelFromKey(phaseKey);
+  const phase = phaseLabel || phaseLabelFromKey(phaseKey);
   const image = PIMG(imageFile);
   const datasheet = resolveProductDatasheet({
     mainTabKey,
     phaseKey,
     power,
     model,
+    mounting,
   });
 
+  const productKey = slugify(slugOverride || model);
+
   return {
-    id: slugify(model),
+    id: productKey,
     categoryKey,
     mainTabKey,
     phaseKey,
-    slug: slugify(model),
+    slug: productKey,
     name: model,
     series,
     meta: buildMeta(power, phase, metaDetails),
@@ -454,11 +462,13 @@ const createProduct = ({
 
 /* ── 1. ON-GRID SINGLE PHASE MODELS (2kW - 6kW) ───────────────────────── */
 const ONGRID_SINGLE_SOURCE = [
-  { model: "CP-2300L", power: "2.3 kW" },
-  { model: "CP-3000L", power: "3.0 kW" },
-  { model: "CP-3400L", power: "3.4 kW" },
-  { model: "CP-3600L", power: "3.6 kW" },
-  { model: "CP-4000L", power: "4.0 kW" },
+  { model: "6G-2000LS", power: "2.0 kW" },
+  { model: "6G-2300LS", power: "2.3 kW" },
+  { model: "6G-3000LS", power: "3.0 kW" },
+  { model: "6G-3400LS", power: "3.4 kW" },
+  { model: "6G-3600LS", power: "3.6 kW" },
+  { model: "6G-4000LS", power: "4.0 kW" },
+  // Remaining single-phase on-grid IDs unchanged
   { model: "CP-4400L", power: "4.4 kW" },
   { model: "CP-5000L", power: "5.0 kW" },
   { model: "CP-6000L", power: "6.0 kW" },
@@ -467,25 +477,23 @@ const ONGRID_SINGLE_SOURCE = [
 /* ── 2. ON-GRID THREE PHASE MODELS (4kW - 110kW) ──────────────────────── */
 const ONGRID_THREE_SOURCE = [
   // Low: 4kW - 15kW
-  { model: "CP-04HL", power: "4 kW" },
-  { model: "CP-05HL", power: "5 kW" },
-  { model: "CP-06HL", power: "6 kW" },
-  { model: "CP-08HL", power: "8 kW" },
-  { model: "CP-10HL", power: "10 kW" },
-  { model: "CP-12HL", power: "12 kW" },
-  { model: "CP-15HL", power: "15 kW" },
-  // Mid: 18kW - 25kW
+  { model: "6G-04HLS", power: "4 kW" },
+  { model: "6G-05HLS", power: "5 kW" },
+  { model: "6G-06HLS", power: "6 kW" },
+  { model: "6G-08HLS", power: "8 kW" },
+  { model: "6G-10HLS", power: "10 kW" },
+  { model: "6G-12HLS", power: "12 kW" },
+  { model: "6G-15HLS", power: "15 kW" },
+  // Mid / commercial / industrial unchanged
   { model: "CP-18HL", power: "18 kW" },
   { model: "CP-20HL", power: "20 kW" },
   { model: "CP-25HL", power: "25 kW" },
-  // Commercial: 30kW - 50kW
   { model: "CP-30HL", power: "30 kW" },
   { model: "CP-33HL", power: "33 kW" },
   { model: "CP-36HL", power: "36 kW" },
   { model: "CP-40HL", power: "40 kW" },
   { model: "CP-45HL", power: "45 kW" },
   { model: "CP-50HL", power: "50 kW" },
-  // Industrial C&I: 80kW - 110kW
   { model: "CP-80HL", power: "80 kW" },
   { model: "CP-100HL", power: "100 kW" },
   { model: "CP-110HL", power: "110 kW" },
@@ -493,70 +501,74 @@ const ONGRID_THREE_SOURCE = [
 
 /* ── 3. HYBRID SINGLE PHASE MODELS (3kW - 6kW) ────────────────────────── */
 const HYBRID_SINGLE_SOURCE = [
-  { model: "CP-3.0-HYBD", power: "3 kW" },
-  { model: "CP-3.6-HYBD", power: "3.6 kW" },
-  { model: "CP-4.0-HYBD", power: "4 kW" },
-  { model: "CP-4.4-HYBD", power: "4.4 kW" },
-  { model: "CP-5.0-HYBD", power: "5 kW" },
-  { model: "CP-6.0-HYBD", power: "6 kW" },
+  { model: "6G-3.0-HYBDS", power: "3 kW" },
+  { model: "6G-3.6-HYBDS", power: "3.6 kW" },
+  { model: "6G-4.0-HYBDS", power: "4 kW" },
+  { model: "6G-4.4-HYBDS", power: "4.4 kW" },
+  { model: "6G-5.0-HYBDS", power: "5 kW" },
+  { model: "6G-6.0-HYBDS", power: "6 kW" },
 ];
 
-/* ── 4. HYBRID THREE PHASE MODELS (5kW - 15kW) ────────────────────────── */
+/* ── 4. HYBRID THREE PHASE MODELS (8kW - 15kW) ────────────────────────── */
 const HYBRID_THREE_SOURCE = [
-  { model: "CP-5.0-3HYBD", power: "5 kW" },
-  { model: "CP-6.0-3HYBD", power: "6 kW" },
-  { model: "CP-7.0-3HYBD", power: "7 kW" },
-  { model: "CP-8.0-3HYBD", power: "8 kW" },
-  { model: "CP-10-3HYBD", power: "10 kW" },
-  { model: "CP-12-3HYBD", power: "12 kW" },
-  { model: "CP-13-3HYBD", power: "13 kW" },
-  { model: "CP-15-3HYBD", power: "15 kW" },
+  { model: "CP-8.0-HYBD", power: "8 kW" },
+  { model: "CP-10-HYBD", power: "10 kW" },
+  { model: "CP-12-HYBD", power: "12 kW" },
+  { model: "CP-15-HYBD", power: "15 kW" },
 ];
 
 /* ── 5. MICRO INVERTER MODELS (Dual MPPT & Quad MPPT) ─────────────────── */
 const MICRO_SOURCE = [
-  { model: "CP-MI-600", power: "600 W" },
-  { model: "CP-MI-800", power: "800 W" },
-  { model: "CP-MI-1000", power: "1.0 kW" },
-  { model: "CP-MI-1200", power: "1.2 kW" },
-  { model: "CP-MI-1600", power: "1.6 kW" },
-  { model: "CP-MI-2000", power: "2.0 kW" },
-  { model: "CP-MI-2400", power: "2.4 kW" },
+  // Two MPPT
+  { model: "CP-0.6-MIC", power: "0.6 kW" },
+  { model: "CP-0.8-MIC", power: "0.8 kW" },
+  { model: "CP-1.0-MIC", power: "1.0 kW" },
+  { model: "CP-1.2-MIC", power: "1.2 kW" },
+  // Four MPPT
+  { model: "CP-1.6-MIC", power: "1.6 kW" },
+  { model: "CP-1.8-MIC", power: "1.8 kW" },
+  { model: "CP-2.0-MIC", power: "2.0 kW" },
+  { model: "CP-2.2-MIC", power: "2.2 kW" },
+  { model: "CP-2.4-MIC", power: "2.4 kW" },
 ];
 
-/* ── 6. ENERGY STORAGE BATTERY MODELS (New Range!) ────────────────────── */
+/* ── 6. ENERGY STORAGE BATTERY MODELS ─────────────────────────────────── */
 const STORAGE_SOURCE = [
   {
-    model: "CP-BATT-R5",
+    model: "CP-51.2V100Ah",
+    slug: "cp-51-2v100ah-rack",
     power: "5.12 kWh",
-    type: "Rack Mount LiFePO4 Battery",
+    type: "Black Rack Mount LiFePO4 Battery",
     voltage: "51.2 V",
     capacity: "100 Ah",
     mounting: "Rack mounted (19\" standard)",
     imageFile: "Rack Mount Battery.png",
   },
   {
-    model: "CP-BATT-R10",
+    model: "CP-51.2V200Vh",
+    slug: "cp-51-2v200vh-rack",
     power: "10.24 kWh",
-    type: "Rack Mount LiFePO4 Battery",
+    type: "Black Rack Mount LiFePO4 Battery",
     voltage: "51.2 V",
     capacity: "200 Ah",
     mounting: "Rack mounted (19\" standard)",
     imageFile: "Rack Mount Battery.png",
   },
   {
-    model: "CP-BATT-W5",
+    model: "CP-51.2V100Ah",
+    slug: "cp-51-2v100ah-wall",
     power: "5.12 kWh",
-    type: "Wall Mount PowerVault Battery",
+    type: "White Wall Mount LiFePO4 Battery",
     voltage: "51.2 V",
     capacity: "100 Ah",
     mounting: "Wall mounted",
     imageFile: "Wall Mount Battery.png",
   },
   {
-    model: "CP-BATT-W10",
+    model: "CP-51.2V200Ah",
+    slug: "cp-51-2v200ah-wall",
     power: "10.24 kWh",
-    type: "Wall Mount PowerVault Battery",
+    type: "White Wall Mount LiFePO4 Battery",
     voltage: "51.2 V",
     capacity: "200 Ah",
     mounting: "Wall mounted",
@@ -665,7 +677,7 @@ export const PRODUCTS = [
       phaseKey: "three",
       model,
       power,
-      series: "Three Phase Hybrid Inverter (5kW - 15kW)",
+      series: "Three Phase Hybrid Inverter (8kW - 15kW)",
       overview: `${model} is a ${power} three phase hybrid inverter designed for advanced commercial solar plus storage applications.`,
       features: [
         "High voltage battery compatibility",
@@ -682,7 +694,8 @@ export const PRODUCTS = [
 
   // 5. Micro Inverters (Dual & Quad MPPT)
   ...MICRO_SOURCE.map(({ model, power }) => {
-    const isQuad = ["1.2 kW", "1.6 kW", "2.0 kW", "2.4 kW"].includes(power);
+    const isQuad = !MICRO_DUAL_POWERS.has(power);
+    const mpptLabel = isQuad ? "Four MPPT" : "Dual MPPT";
     const fallback = isQuad ? PRODUCT_VISUALS.microQuad : PRODUCT_VISUALS.microDual;
 
     return createProduct({
@@ -690,6 +703,7 @@ export const PRODUCTS = [
       categoryKey: "micro_single",
       mainTabKey: "micro",
       phaseKey: "single",
+      phaseLabel: mpptLabel,
       model,
       power,
       series: isQuad ? "Quad MPPT Micro Inverter (4-in-1)" : "Dual MPPT Micro Inverter (2-in-1)",
@@ -700,36 +714,42 @@ export const PRODUCTS = [
         "Real-time Wi-Fi performance visibility with safe DC (<60V)",
       ],
       application: "Flexible rooftop & balcony solar",
-      mppt: isQuad ? "Four MPPT" : "Dual MPPT",
-      metaDetails: [isQuad ? "Four MPPT" : "Dual MPPT", "Safe DC"],
+      mppt: mpptLabel,
+      metaDetails: ["Safe DC"],
       mounting: "Module mounted",
     });
   }),
 
-  // 6. Energy Storage Batteries (New Range)
-  ...STORAGE_SOURCE.map(({ model, power, type, voltage, capacity, mounting, imageFile }) =>
-    createProduct({
-      imageFile,
-      showcaseFiles: [imageFile],
-      categoryKey: "storage",
-      mainTabKey: "storage",
-      phaseKey: "single",
-      model,
-      power,
-      series: type,
-      overview: `${model} is a high-cycle ${power} (${capacity}, ${voltage}) LiFePO4 lithium energy storage battery engineered for seamless plug-and-play pairing with Cathode Power hybrid inverters.`,
-      features: [
-        ">6000 cycles at 80% DoD with Tier-1 LiFePO4 cells",
-        "Intelligent multi-tier BMS with CAN / RS485 communication",
-        "Compact modular architecture with parallel expansion capability",
-        "Ultra-safe thermal stability with zero thermal runaway risk",
-      ],
-      application: "Residential & Commercial Energy Storage",
-      mppt: "Integrated BMS",
-      metaDetails: ["LiFePO4", voltage, capacity],
-      backupSupport: "Supported",
-      mounting,
-    })
+  // 6. Energy Storage Batteries
+  ...STORAGE_SOURCE.map(
+    ({ model, slug, power, type, voltage, capacity, mounting, imageFile }) => {
+      const mountLabel = /rack/i.test(mounting) ? "Rack Mount" : "Wall Mount";
+
+      return createProduct({
+        imageFile,
+        showcaseFiles: [imageFile],
+        categoryKey: "storage",
+        mainTabKey: "storage",
+        phaseKey: "single",
+        phaseLabel: mountLabel,
+        model,
+        slug,
+        power,
+        series: type,
+        overview: `${model} is a high-cycle ${power} (${capacity}, ${voltage}) LiFePO4 lithium energy storage battery engineered for seamless plug-and-play pairing with Cathode Power hybrid inverters.`,
+        features: [
+          ">6000 cycles at 80% DoD with Tier-1 LiFePO4 cells",
+          "Intelligent multi-tier BMS with CAN / RS485 communication",
+          "Compact modular architecture with parallel expansion capability",
+          "Ultra-safe thermal stability with zero thermal runaway risk",
+        ],
+        application: "Residential & Commercial Energy Storage",
+        mppt: "Integrated BMS",
+        metaDetails: ["LiFePO4", voltage, capacity],
+        backupSupport: "Supported",
+        mounting,
+      });
+    }
   ),
 ];
 
@@ -811,18 +831,18 @@ export const getProductSectionMeta = (mainTabKey, phaseKey) => {
 
   if (mainTabKey === "ongrid" && phaseKey === "single") {
     return {
-      title: "Single Phase On-grid Inverters",
+      title: "Single Phase On-Grid Inverters",
       description:
-        "Efficient single phase on-grid inverter solutions (2 kW to 6 kW) for residential and light commercial applications.",
+        "Efficient single phase On-Grid inverter solutions (2 kW to 6 kW) for residential and light commercial applications.",
       showPhaseTabs: true,
     };
   }
 
   if (mainTabKey === "ongrid" && phaseKey === "three") {
     return {
-      title: "Three Phase On-grid Inverters",
+      title: "Three Phase On-Grid Inverters",
       description:
-        "Reliable three phase on-grid inverter range (4 kW to 110 kW) for commercial and industrial solar performance needs.",
+        "Reliable three phase On-Grid inverter range (4 kW to 110 kW) for commercial and industrial solar performance needs.",
       showPhaseTabs: true,
     };
   }
@@ -831,7 +851,7 @@ export const getProductSectionMeta = (mainTabKey, phaseKey) => {
     return {
       title: "Three Phase Hybrid Inverters",
       description:
-        "Advanced three phase hybrid inverter solutions (5 kW to 15 kW) for commercial solar plus storage applications.",
+        "Advanced three phase hybrid inverter solutions (8 kW to 15 kW) for commercial solar plus storage applications.",
       showPhaseTabs: true,
     };
   }

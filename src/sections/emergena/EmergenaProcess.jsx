@@ -81,7 +81,7 @@ export default function EmergenaProcess() {
       const mm = gsap.matchMedia();
 
       // ────────────────────────────────────────────────────────
-      // DESKTOP (≥ 992px) — Faithful Webflow Scroll Scrub & Pinning
+      // DESKTOP (≥ 992px), Faithful Webflow Scroll Scrub & Pinning
       // ────────────────────────────────────────────────────────
       mm.add("(min-width: 992px)", () => {
         const cards = gsap.utils.toArray(
@@ -356,7 +356,7 @@ export default function EmergenaProcess() {
       });
 
       // ────────────────────────────────────────────────────────
-      // TABLET / MOBILE (< 992px) — Clean Reveal Animations
+      // TABLET / MOBILE (< 992px), Clean Reveal Animations
       // ────────────────────────────────────────────────────────
       mm.add("(max-width: 991px)", () => {
         gsap.set([titleSection, listWrap], { clearProps: "all" });
@@ -397,7 +397,7 @@ export default function EmergenaProcess() {
   return (
     <section className="main-section process-section" id="process" ref={sectionRef}>
       <div className="w-layout-blockcontainer main-container process-section w-container">
-        {/* Scroll track — height: 300vh */}
+        {/* Scroll track, height: 300vh */}
         <div className="process-scroll secondary" ref={scrollRef}>
           {/* Sticky content wrapper pinned while scrolling */}
           <div className="process-content-wrapper" ref={contentWrapperRef}>

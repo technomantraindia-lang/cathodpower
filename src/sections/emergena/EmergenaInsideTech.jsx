@@ -20,8 +20,8 @@ const HOTSPOTS = [
   },
   {
     id: "display",
-    x: 52,
-    y: 48,
+    x: 70,
+    y: 59,
     title: "Local Display & Status",
     text: "Confirm on-device indicators, fault codes and commissioning menus for the selected model before site handover.",
     links: [
@@ -31,8 +31,8 @@ const HOTSPOTS = [
   },
   {
     id: "comms",
-    x: 72,
-    y: 62,
+    x: 78,
+    y: 72,
     title: "Monitoring & Comms Ports",
     text: "Verify Wi-Fi / RS485 / smart-meter interfaces and which values are exposed in the Cathode monitoring app for that SKU.",
     links: [
@@ -43,9 +43,9 @@ const HOTSPOTS = [
   {
     id: "protection",
     x: 40,
-    y: 72,
+    y: 78,
     title: "Protection & Grid Interface",
-    text: "Review published protection functions and DISCOM grid settings for the exact inverter — they vary by power class and phase.",
+    text: "Review published protection functions and DISCOM grid settings for the exact inverter, they vary by power class and phase.",
     links: [
       { label: "Grid requirements", href: "/downloads" },
       { label: "Get a quote", href: "/contact" },

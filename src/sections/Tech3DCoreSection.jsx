@@ -21,7 +21,7 @@ const PILLARS = [
     num: "03",
     spec: "Ultra-Low 70V Start",
     title: "Wide DC Operating Voltage Window",
-    desc: "Starts generating at just 70V–120V input, harvesting solar power 45 minutes earlier in the morning and continuing later into twilight.",
+    desc: "Starts generating at just 70V - 120V input, harvesting solar power 45 minutes earlier in the morning and continuing later into twilight.",
     badge: "+12% Daily Generation Window",
   },
   {

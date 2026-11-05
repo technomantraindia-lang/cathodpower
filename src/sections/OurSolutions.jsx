@@ -68,7 +68,7 @@ const SOLUTIONS = [
 
 const CAROUSEL_SLIDES = [...SOLUTIONS, ...SOLUTIONS];
 
-const SWIPER_EASE_MS = 820; /* 700–900ms */
+const SWIPER_EASE_MS = 820; /* 700 - 900ms */
 
 function ArrowLeft() {
   return (

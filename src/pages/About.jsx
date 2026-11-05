@@ -3,8 +3,6 @@ import NewsletterBandSection from "../sections/NewsletterBandSection";
 import AboutMilestones from "../components/about/AboutMilestones";
 import AboutPresenceMap from "../components/about/AboutPresenceMap";
 import AboutWho from "../components/about/AboutWho";
-import AboutStrengths from "../components/about/AboutStrengths";
-import AboutIndiaDesign from "../components/about/AboutIndiaDesign";
 
 export default function About() {
   return (
@@ -26,10 +24,6 @@ export default function About() {
 
       <AboutWho />
 
-      <AboutStrengths />
-
-      <AboutIndiaDesign />
-
       {/* Keep milestones exactly as designed */}
       <AboutMilestones />
 
@@ -46,10 +40,6 @@ export default function About() {
               <h2 className="about-ahead__title">
                 The Future Isn&apos;t Something We Wait For. It&apos;s Something We Engineer.
               </h2>
-              <p className="about-ahead__copy">
-                From smarter solar inverters to evolving energy storage technologies, our pursuit of
-                innovation continues beyond today&apos;s possibilities.
-              </p>
             </div>
           </header>
 

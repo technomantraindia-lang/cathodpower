@@ -10,7 +10,7 @@ const PRODUCT_SERIES = [
   {
     key: "ongrid",
     badge: "Grid-Tied",
-    range: "2.3 kW – 110 kW",
+    range: "2.3 kW - 110 kW",
     name: "On-Grid Solar Inverters",
     subtitle:
       "Engineered for maximum solar harvest with single-phase residential & three-phase C&I architectures.",
@@ -27,7 +27,7 @@ const PRODUCT_SERIES = [
   {
     key: "hybrid",
     badge: "Storage Ready",
-    range: "3 kW – 15 kW",
+    range: "3 kW - 15 kW",
     name: "Hybrid Storage Inverters",
     subtitle:
       "All-in-one solar generation and smart battery energy storage with UPS-grade uninterruptible power.",
@@ -44,7 +44,7 @@ const PRODUCT_SERIES = [
   {
     key: "micro",
     badge: "Module Level",
-    range: "600 W – 2.4 kW",
+    range: "600 W - 2.4 kW",
     name: "Micro Inverters",
     subtitle:
       "Module-level power electronics for residential balconies, complex roofs, and maximum safety.",
@@ -61,7 +61,7 @@ const PRODUCT_SERIES = [
   {
     key: "storage",
     badge: "LiFePO4 Storage",
-    range: "5.12 kWh – 10.24 kWh",
+    range: "5.12 kWh - 10.24 kWh",
     name: "Energy Storage Systems",
     subtitle:
       "High-cycle lithium iron phosphate battery systems in modular rack and sleek wall-mount form factors.",

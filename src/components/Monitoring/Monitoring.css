@@ -1,29 +1,41 @@
 /* ════════════════════════════════════════════════════════════════
-   Monitoring Page — Emergena design system
-   Accent: #ff6a00  |  Text: #142922 / #475e55  |  BG: #f7f7f5
+   Monitoring Page — white + brand green theme
+   Accent: #11606d  |  Text: #142922 / #475e55  |  BG: #ffffff
  ════════════════════════════════════════════════════════════════ */
 
 .moni {
+  --moni-green: #11606d;
+  --moni-green-dark: #0e4f5a;
+  --moni-green-soft: #e8f4f5;
+  --moni-green-mid: #cfe6ea;
   font-family: var(--font-primary, "Instrument Sans", sans-serif);
   color: #142922;
-  background: var(--bg-canvas, #f7f7f5);
+  background: #ffffff;
 }
 
 /* ── 1. HERO ──────────────────────────────────────────────────── */
 
 .moni-hero {
-  background: var(--bg-canvas, #f7f7f5);
-  padding: 100px 10% 80px;
+  background:
+    radial-gradient(ellipse 70% 55% at 85% 20%, rgba(17, 96, 109, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(17, 96, 109, 0.05) 0%, transparent 50%),
+    #ffffff;
+  padding: 100px 10% 0;
   overflow: hidden;
 }
 
 .moni-hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 60px;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: end;
+  gap: 40px;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.moni-hero__text {
+  align-self: center;
+  padding-bottom: 72px;
 }
 
 .moni-hero__eyebrow {
@@ -31,13 +43,13 @@
   align-items: center;
   padding: 6px 18px;
   border-radius: 999px;
-  background: rgba(20, 41, 34, 0.06);
-  border: 1px solid rgba(20, 41, 34, 0.08);
+  background: rgba(17, 96, 109, 0.08);
+  border: 1px solid rgba(17, 96, 109, 0.16);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #ff6a00;
+  color: #11606d;
   margin-bottom: 24px;
 }
 
@@ -81,14 +93,14 @@
 }
 
 .moni-hero__btn--primary {
-  background: #ff6a00;
+  background: #11606d;
   color: #fff;
-  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(17, 96, 109, 0.35);
 }
 .moni-hero__btn--primary:hover {
-  background: #ff7a18;
+  background: #0e4f5a;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(255, 106, 0, 0.45);
+  box-shadow: 0 10px 28px rgba(17, 96, 109, 0.45);
 }
 
 .moni-hero__btn--ghost {
@@ -97,8 +109,8 @@
   background: #ffffff;
 }
 .moni-hero__btn--ghost:hover {
-  border-color: #ff6a00;
-  color: #ff6a00;
+  border-color: #11606d;
+  color: #11606d;
   transform: translateY(-2px);
 }
 
@@ -107,32 +119,37 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  align-self: end;
+  margin-bottom: 0;
+  line-height: 0;
 }
 
 .moni-hero__glow {
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,123,0,0.14) 0%, transparent 70%);
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(17, 96, 109, 0.16) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .moni-hero__phone {
   width: 100%;
-  max-width: 380px;
+  max-width: 560px;
+  display: block;
   object-fit: contain;
-  filter: drop-shadow(0 40px 60px rgba(0,0,0,0.15));
+  object-position: bottom center;
+  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.16));
 }
 
 /* ── 2. TRUST BAR ─────────────────────────────────────────────── */
 
 .moni-trust {
-  background: #f8f8f8;
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
+  background: #f7fbfc;
+  border-top: 1px solid rgba(17, 96, 109, 0.08);
+  border-bottom: 1px solid rgba(17, 96, 109, 0.08);
   padding: 20px 10%;
 }
 
@@ -186,7 +203,7 @@
 
 .moni-feat {
   padding: 56px 5% 72px;
-  background: linear-gradient(180deg, #fbf9f6 0%, #f0ebe4 50%, #faf8f5 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f3fafb 45%, #ffffff 100%);
   position: relative;
   overflow: visible;
 }
@@ -197,12 +214,12 @@
   inset: 0;
   background-image: radial-gradient(
       ellipse 80% 50% at 15% 20%,
-      rgba(255, 123, 0, 0.07) 0%,
+      rgba(17, 96, 109, 0.07) 0%,
       transparent 55%
     ),
     radial-gradient(
       ellipse 60% 40% at 90% 70%,
-      rgba(255, 140, 60, 0.05) 0%,
+      rgba(17, 96, 109, 0.05) 0%,
       transparent 50%
     );
   pointer-events: none;
@@ -226,7 +243,7 @@
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
-  color: #ff7b00;
+  color: #11606d;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -291,8 +308,8 @@
 .moni-feat__side-active {
   margin-bottom: 28px;
   padding: 20px 20px 20px 22px;
-  border-left: 4px solid #ff7b00;
-  background: linear-gradient(90deg, rgba(255, 123, 0, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+  border-left: 4px solid #11606d;
+  background: linear-gradient(90deg, rgba(17, 96, 109, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 0 16px 16px 0;
 }
 
@@ -303,11 +320,11 @@
   width: 48px;
   height: 48px;
   margin-bottom: 12px;
-  background: linear-gradient(145deg, #fff4eb 0%, #ffe0cc 100%);
-  border: 1px solid rgba(255, 123, 0, 0.2);
+  background: linear-gradient(145deg, #e8f4f5 0%, #cfe6ea 100%);
+  border: 1px solid rgba(17, 96, 109, 0.2);
   border-radius: 14px;
-  color: #ff7b00;
-  box-shadow: 0 2px 8px rgba(255, 123, 0, 0.12);
+  color: #11606d;
+  box-shadow: 0 2px 8px rgba(17, 96, 109, 0.12);
 }
 
 .moni-feat__side-ico svg {
@@ -334,7 +351,7 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: #ff7b00;
+  color: #11606d;
   margin: 0;
 }
 
@@ -372,7 +389,7 @@
 }
 
 .moni-feat__index-item.is-active {
-  background: rgba(255, 123, 0, 0.1);
+  background: rgba(17, 96, 109, 0.1);
   color: #111;
   font-weight: 600;
 }
@@ -385,7 +402,7 @@
   min-width: 1.5rem;
 }
 .moni-feat__index-item.is-active .moni-feat__index-num {
-  color: #ff7b00;
+  color: #11606d;
 }
 
 .moni-feat__index-t {
@@ -443,7 +460,7 @@
 .moni-feat__card--viz-only {
   padding: 0;
   display: block;
-  background: #f5f2ee;
+  background: #f0f7f8;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -589,7 +606,7 @@
 .moni-feat__dot.is-active {
   width: 24px;
   border-radius: 99px;
-  background: #ff7b00;
+  background: #11606d;
 }
 
 .moni-feat__sr {
@@ -624,14 +641,16 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  background: #f7f7f7;
+  background: #ffffff;
+  border: 1px solid rgba(17, 96, 109, 0.1);
   border-radius: 20px;
   padding: 28px 28px 0;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .moni-feat__grid .moni-feat__card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  border-color: rgba(17, 96, 109, 0.22);
+  box-shadow: 0 8px 32px rgba(17, 96, 109, 0.1);
 }
 
 .moni-feat__card-h {
@@ -652,11 +671,11 @@
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  background: linear-gradient(145deg, #fff4eb 0%, #ffe0cc 100%);
-  border: 1px solid rgba(255, 123, 0, 0.18);
+  background: linear-gradient(145deg, #e8f4f5 0%, #cfe6ea 100%);
+  border: 1px solid rgba(17, 96, 109, 0.18);
   border-radius: 12px;
-  color: #ff7b00;
-  box-shadow: 0 2px 8px rgba(255, 123, 0, 0.1);
+  color: #11606d;
+  box-shadow: 0 2px 8px rgba(17, 96, 109, 0.1);
 }
 
 .moni-feat__h-ico svg {
@@ -703,12 +722,12 @@
   gap: 6px;
   font-size: 12px;
   font-weight: 600;
-  color: #ff7b00;
+  color: #11606d;
 }
 .fv__pulse {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: #ff7b00;
+  background: #11606d;
   animation: fv-pulse 1.5s ease-in-out infinite;
 }
 @keyframes fv-pulse {
@@ -743,7 +762,7 @@
   width: 100%; background: #e8e8e8;
   border-radius: 4px 4px 0 0;
 }
-.fv__bar--hi { background: #ff7b00; }
+.fv__bar--hi { background: #11606d; }
 .fv__day { font-size: 10px; color: #aaa; }
 .fv__note { font-size: 12px; color: #888; padding: 0 0 16px; }
 .fv__note strong { color: #111; }
@@ -763,7 +782,7 @@
   border-radius: 11px; background: #ccc;
   position: relative; transition: background 0.2s; flex-shrink: 0;
 }
-.fv__toggle--on { background: #ff7b00; }
+.fv__toggle--on { background: #11606d; }
 .fv__toggle-knob {
   position: absolute; top: 3px; left: 3px;
   width: 16px; height: 16px;
@@ -794,7 +813,9 @@
 
 .moni-how {
   padding: 100px 10% 160px;
-  background: #f8f8f8;
+  background:
+    radial-gradient(ellipse 60% 40% at 0% 0%, rgba(17, 96, 109, 0.06) 0%, transparent 55%),
+    #f7fbfc;
 }
 
 .moni-how__inner {
@@ -816,11 +837,11 @@
   align-items: center;
   padding: 7px 18px;
   border-radius: 30px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(17, 96, 109, 0.18);
   background: #fff;
   font-size: 13px;
-  font-weight: 500;
-  color: #555;
+  font-weight: 600;
+  color: #11606d;
   margin-bottom: 24px;
 }
 
@@ -864,7 +885,7 @@
 }
 .moni-step__icon {
   width: 44px; height: 44px;
-  border-radius: 50%; background: #ff7b00;
+  border-radius: 50%; background: #11606d;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
@@ -916,7 +937,7 @@
 .moni-faq__eyebrow {
   display: inline-block;
   font-size: 13px; font-weight: 600;
-  color: #ff7b00; letter-spacing: 0.08em;
+  color: #11606d; letter-spacing: 0.08em;
   text-transform: uppercase; margin-bottom: 14px;
 }
 
@@ -971,7 +992,7 @@
 
 .moni-support {
   padding: 80px 10% 100px;
-  background: #f8f8f8;
+  background: #f7fbfc;
 }
 
 .moni-support__grid {
@@ -1012,12 +1033,15 @@
   color: #333; background: transparent;
   transition: all 0.25s ease; align-self: flex-start; margin-top: 8px;
 }
-.moni-support__btn:hover { border-color: #bbb; }
+.moni-support__btn:hover {
+  border-color: #11606d;
+  color: #11606d;
+}
 .moni-support__btn--accent {
-  background: #ff7b00; border-color: #ff7b00; color: #fff;
+  background: #11606d; border-color: #11606d; color: #fff;
 }
 .moni-support__btn--accent:hover {
-  background: #e86e00; border-color: #e86e00;
+  background: #0e4f5a; border-color: #0e4f5a;
 }
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
@@ -1028,11 +1052,13 @@
 }
 
 @media (max-width: 900px) {
-  .moni-hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .moni-hero { padding: 80px 6% 0; }
+  .moni-hero__inner { grid-template-columns: 1fr; text-align: center; align-items: center; gap: 28px; }
+  .moni-hero__text { padding-bottom: 0; }
   .moni-hero__desc  { margin: 0 auto 36px; }
   .moni-hero__ctas  { justify-content: center; }
-  .moni-hero__visual { order: -1; }
-  .moni-hero__phone  { max-width: 240px; }
+  .moni-hero__visual { order: -1; justify-content: center; margin-bottom: 0; }
+  .moni-hero__phone  { max-width: min(360px, 78vw); }
   .moni-feat__grid .moni-feat__card {
     width: calc((100% - var(--moni-feat-gap)) / 2);
     max-width: calc((100% - var(--moni-feat-gap)) / 2);
@@ -1041,7 +1067,8 @@
 }
 
 @media (max-width: 640px) {
-  .moni-hero    { padding: 80px 6% 60px; }
+  .moni-hero    { padding: 72px 6% 0; }
+  .moni-hero__phone { max-width: min(320px, 82vw); }
   .moni-feat    { padding: 70px 6%; }
   .moni-how     { padding: 70px 6%; }
   .moni-faq     { padding: 70px 6%; }

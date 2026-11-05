@@ -45,12 +45,12 @@ export default function NewsletterSection() {
     <section className="newsletterSection">
       <div className="newsletterContainer">
 
-        {/* LEFT — Image */}
+        {/* LEFT, Image */}
         <div className="newsletterImage">
           <img src={newsletterImg} alt="Solar Energy Home" loading="lazy" decoding="async" />
         </div>
 
-        {/* RIGHT — Content */}
+        {/* RIGHT, Content */}
         <div className="newsletterContent">
           <p className="newsletterSmall">Stay Connected</p>
 

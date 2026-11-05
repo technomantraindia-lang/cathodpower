@@ -14,8 +14,7 @@ if (import.meta.env.PROD) {
   gsap.config({ nullTargetWarn: false });
 }
 
-// Prevent GSAP from trying to compensate for frame-rate lag —
-// keeps animations smooth during heavy scroll/load bursts.
+// Prevent GSAP from trying to compensate for frame-rate lag, // keeps animations smooth during heavy scroll/load bursts.
 gsap.ticker.lagSmoothing(0);
 
 // Reduce unnecessary ScrollTrigger recalculations on every scroll tick.
@@ -34,8 +33,7 @@ if (window.__lenis) {
 const lenis = new Lenis({ duration: 1.2, smooth: true });
 window.__lenis = lenis;
 
-// Drive Lenis through GSAP's ticker so they stay perfectly in sync —
-// eliminates the separate requestAnimationFrame loop.
+// Drive Lenis through GSAP's ticker so they stay perfectly in sync, // eliminates the separate requestAnimationFrame loop.
 gsap.ticker.add((time) => lenis.raf(time * 1000));
 
 // Keep ScrollTrigger in sync with Lenis scroll position

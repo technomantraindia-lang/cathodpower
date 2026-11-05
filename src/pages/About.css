@@ -21,7 +21,7 @@
       url("/images/about/about-factory-banner.webp") type("image/webp"),
       url("/images/about/about-factory-banner.jpeg") type("image/jpeg")
     )
-    center bottom / cover no-repeat;
+    center center / cover no-repeat;
   background-color: #0b1919;
   display: flex;
   align-items: flex-end;
@@ -190,29 +190,18 @@
 }
 
 .about-ahead__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.75fr);
-  gap: clamp(32px, 4.5vw, 64px);
-  align-items: end;
+  display: block;
 }
 
 .about-ahead__title {
   margin: 0;
-  max-width: none;
+  max-width: 34ch;
   font-size: clamp(1.85rem, 3.3vw, 2.65rem);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.03em;
   text-wrap: balance;
   color: #0f2426;
-}
-
-.about-ahead__copy {
-  margin: 0;
-  max-width: 40ch;
-  font-size: clamp(15px, 1.1vw, 17px);
-  line-height: 1.75;
-  color: #5a6a6a;
 }
 
 .about-close__newsletter {
@@ -317,18 +306,8 @@
 
 /* ── RESPONSIVE ────────────────────────────────────── */
 @media (max-width: 900px) {
-  .about-ahead__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    align-items: start;
-  }
-
   .about-ahead__title {
     max-width: none;
-  }
-
-  .about-ahead__copy {
-    max-width: 52ch;
   }
 
   .about-page .about-close__newsletter .nlb__inner,

@@ -88,7 +88,7 @@ export default function EmergenaWereSection() {
 
       if (!mascot) return;
 
-      // Minimal entrance — soft fade + slight rise, no bounce/float loop
+      // Minimal entrance, soft fade + slight rise, no bounce/float loop
       tl.to(
         mascot,
         {
@@ -129,7 +129,7 @@ export default function EmergenaWereSection() {
           <div className="cp-were__copy">
             <p className="text-xs">
               Cathode Power delivers robust, world-class renewable power systems
-              engineered for real Indian grid conditions — from residential rooftops
+              engineered for real Indian grid conditions, from residential rooftops
               to commercial and industrial installations.
             </p>
             <p className="text-xs">

@@ -6,7 +6,7 @@ import "./VisionCardsSection.css";
 import forestImg from "../assets/images/forest.webp";
 import mountainImg from "../assets/images/mountain.webp";
 
-/** public/images/newimages — aerial solar building (Sustainable. slide) */
+/** public/images/newimages, aerial solar building (Sustainable. slide) */
 const sustainableBg =
   "/images/newimages/An_ultra_realistic_202604231257.webp";
 

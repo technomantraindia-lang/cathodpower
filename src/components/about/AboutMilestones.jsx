@@ -24,7 +24,7 @@ const MILESTONES = [
   {
     year: "2024",
     title: "Team Growth",
-    text: "Expanded workforce to 100+ staff in manufacturing and 30–40 staff in corporate office, and introduced advanced inverter models.",
+    text: "Expanded workforce to 100+ staff in manufacturing and 30 - 40 staff in corporate office, and introduced advanced inverter models.",
   },
   {
     year: "2025",
@@ -158,7 +158,8 @@ export default function AboutMilestones() {
       <div className="am__inner">
         <p className="am__kicker">OUR STORY</p>
         <h2 className="am__title">
-          Every Milestone Has a Story. <span>Ours Is Just Getting Started.</span>
+          Every Milestone Has a Story.
+          <span>Ours Is Just Getting Started.</span>
         </h2>
         <p className="am__subtitle">
           From our first prototype to a growing portfolio of solar technologies and expanded

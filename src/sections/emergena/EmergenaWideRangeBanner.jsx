@@ -2,8 +2,11 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import wideBannerVideo from "../../assets/video/wide-banner-hd.mp4";
 import "./EmergenaWideRangeBanner.css";
+
+/** Client master (1905×512) — served from public/ with no re-encode. */
+const WIDE_BANNER_VIDEO = "/video/wide-banner-india.mp4";
+const WIDE_BANNER_POSTER = "/video/wide-banner-india-poster.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,7 +120,8 @@ export default function EmergenaWideRangeBanner() {
         <video
           ref={videoRef}
           className="cp-wide-banner__media"
-          src={wideBannerVideo}
+          src={WIDE_BANNER_VIDEO}
+          poster={WIDE_BANNER_POSTER}
           muted
           loop
           playsInline
@@ -132,7 +136,7 @@ export default function EmergenaWideRangeBanner() {
           Engineered in India for real-world power.
         </h2>
         <p className="cp-wide-banner__subtitle text-xs">
-          From precision manufacturing to field-ready inverters — built for reliability,
+          From precision manufacturing to field-ready inverters, built for reliability,
           efficiency, and long-term performance across every installation.
         </p>
         <Link

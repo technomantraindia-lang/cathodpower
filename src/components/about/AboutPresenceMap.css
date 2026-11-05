@@ -70,8 +70,8 @@
 
 .apm__stage {
   display: grid;
-  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr) minmax(200px, 260px);
-  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) minmax(160px, 220px);
+  gap: clamp(16px, 2.5vw, 28px);
   align-items: center;
   margin-bottom: clamp(28px, 3.5vw, 40px);
 }
@@ -147,7 +147,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 720px;
+  max-width: 980px;
   aspect-ratio: 504 / 360;
   background: transparent;
 }
@@ -161,6 +161,30 @@
   user-select: none;
   pointer-events: none;
   filter: drop-shadow(0 18px 32px rgba(15, 36, 38, 0.12));
+}
+
+.apm__routes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.apm__route-line {
+  animation: apm-route-dash 1.1s linear infinite;
+}
+
+.apm__route-arrow {
+  filter: drop-shadow(0 0 1.2px rgba(255, 106, 0, 0.55));
+}
+
+@keyframes apm-route-dash {
+  to {
+    stroke-dashoffset: -5.9;
+  }
 }
 
 .apm__pin {
@@ -221,6 +245,32 @@
     0 0 0 3px var(--apm-marker),
     0 0 0 7px rgba(255, 106, 0, 0.22),
     0 0 18px rgba(255, 106, 0, 0.4);
+}
+
+.apm__pin.is-origin {
+  z-index: 3;
+}
+
+.apm__pin.is-origin .apm__pin-ring {
+  opacity: 1;
+  transform: scale(1);
+  border-color: rgba(17, 96, 109, 0.45);
+  animation: apm-ring 1.8s ease-out infinite;
+}
+
+.apm__pin.is-origin .apm__pin-dot {
+  width: 11px;
+  height: 11px;
+  margin: -5.5px 0 0 -5.5px;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px var(--apm-accent),
+    0 0 0 7px rgba(17, 96, 109, 0.18),
+    0 0 16px rgba(17, 96, 109, 0.35);
+}
+
+.apm__pin.is-hq .apm__tooltip {
+  color: var(--apm-accent);
 }
 
 .apm__tooltip {
@@ -383,7 +433,7 @@
   }
 
   .apm__map {
-    max-width: 640px;
+    max-width: 820px;
   }
 }
 
@@ -426,7 +476,9 @@
 @media (prefers-reduced-motion: reduce) {
   .apm__tooltip,
   .apm__active-dot,
-  .apm__pin.is-active .apm__pin-ring {
+  .apm__route-line,
+  .apm__pin.is-active .apm__pin-ring,
+  .apm__pin.is-origin .apm__pin-ring {
     animation: none;
   }
 

@@ -195,7 +195,7 @@ export default function ProductAdvantageSection({ product, onInquire }) {
 
       const clamped = Math.max(0, Math.min(index, total - 1));
       // Use the *middle* of each 1/total progress slice. Old formula used index/(total-1)
-      // so the last tab needed progress === 1 (st.end) — the page often can't scroll that
+      // so the last tab needed progress === 1 (st.end), the page often can't scroll that
       // far, so onUpdate never reached index 4. Mid-bucket + floor mapping stays in sync.
       const progress = total <= 1 ? 0 : (clamped + 0.5) / total;
       const targetY = startY + progress * (endY - startY);
@@ -222,7 +222,7 @@ export default function ProductAdvantageSection({ product, onInquire }) {
 
     activeIdxRef.current = 0;
     // Start fully “open” so the orbit, labels, connector, and card are visible
-    // as soon as the section is seen — not after a scroll-driven reveal.
+    // as soon as the section is seen, not after a scroll-driven reveal.
     isOpenRef.current = true;
     applyPath(0);
     if (connectorRef.current) {

@@ -96,23 +96,23 @@ export default function Home() {
       {/* 1.7 Tag points foundation cards */}
       <EmergenaTagPoints />
 
-      {/* 2. Solutions: Three connected disciplines — hidden for now
+      {/* 2. Solutions: Three connected disciplines, hidden for now
       <EmergenaSolutions />
       */}
 
-      {/* 3. Who we are: Deep green manifesto & 4 animated counters — hidden for now
+      {/* 3. Who we are: Deep green manifesto & 4 animated counters, hidden for now
       <EmergenaAboutCounters />
       */}
 
-      {/* 4. Principles: Guiding standards & 3-column architecture — hidden for now
+      {/* 4. Principles: Guiding standards & 3-column architecture, hidden for now
       <EmergenaPrinciples />
       */}
 
-      {/* 5. Types Of Solar Inverters — hidden for now
+      {/* 5. Types Of Solar Inverters, hidden for now
       <EmergenaCaseStudies onOpenQuote={openQuote} />
       */}
 
-      {/* 5b. Find Your Perfect Fit — product categories + BESS */}
+      {/* 5b. Find Your Perfect Fit, product categories + BESS */}
       <EmergenaPerfectFit />
 
       {/* 5c. Why Cathode Technology */}
@@ -121,18 +121,18 @@ export default function Home() {
       {/* 5d. Designed for India / Inside Technology hotspots */}
       <EmergenaInsideTech />
 
-      {/* 5e. Solar View — Monitor every watt in real time */}
+      {/* 5e. Solar View, Monitor every watt in real time */}
       <SolarViewSection />
 
-      {/* 6. Process: How we deliver — hidden for now
+      {/* 6. Process: How we deliver, hidden for now
       <EmergenaProcess />
       */}
 
-      {/* 7. Live Data USP — hidden for now
+      {/* 7. Live Data USP, hidden for now
       <EmergenaUsp />
       */}
 
-      {/* 8. FAQ — old website two-column accordion layout */}
+      {/* 8. FAQ, old website two-column accordion layout */}
       <SuccessStories />
 
       {/* 9. Field Notes: Editorial Journal Cards */}

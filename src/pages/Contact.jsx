@@ -254,7 +254,7 @@ const Contact = () => {
               <p>
                 SF 201-203, Fortune Platinum,<br />
                 Nr. Tulsidham Circle, Manjalpur,<br />
-                Vadodara, Gujarat — 390011
+                Vadodara, Gujarat 390011
               </p>
             </div>
             <div className="info-card">
@@ -262,7 +262,7 @@ const Contact = () => {
               <p>
                 R.S. No. 229, Sugar Factory,<br />
                 Ta. Karjan, Opp. Gandhara,<br />
-                Gandhara, Gujarat — 391210
+                Gandhara, Gujarat 391210
               </p>
             </div>
 
@@ -320,7 +320,7 @@ const Contact = () => {
             <div className="support-card">
               <div className="support-card-tag">⚡ After-Sales</div>
               <h3>Need Support?</h3>
-              <p>Warranty claims, service enquiries, or technical support — our team is ready.</p>
+              <p>Warranty claims, service enquiries, or technical support. Our team is ready.</p>
               <a
                 href="tel:+919800268002"
                 className="support-cta"

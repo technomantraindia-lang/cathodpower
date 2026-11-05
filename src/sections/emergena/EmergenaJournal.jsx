@@ -41,39 +41,40 @@ export default function EmergenaJournal() {
     if (!section || !header || !list) return;
 
     const ctx = gsap.context(() => {
+      const cards = list.querySelectorAll(".blog-item");
+
+      // Fire as soon as the section enters the viewport (was waiting until ~78%).
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 78%",
+          start: "top 92%",
           once: true,
+          fastScrollEnd: true,
         },
       });
 
-      // Header reveal
       tl.fromTo(
         header,
-        { y: 40, opacity: 0 },
+        { y: 24, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          ease: "back.out(1.7)",
+          duration: 0.45,
+          ease: "power2.out",
         }
       );
 
-      // Articles stagger in
-      const cards = list.querySelectorAll(".blog-item");
       tl.fromTo(
         cards,
-        { y: 50, opacity: 0 },
+        { y: 28, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.85,
-          stagger: 0.16,
-          ease: "power3.out",
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.28"
       );
     }, sectionRef);
 

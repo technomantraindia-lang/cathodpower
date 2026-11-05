@@ -30,7 +30,7 @@ const getRangesForTab = (mainTabKey) => {
   if (mainTabKey === "micro") {
     const wValues = items.map((p) => p.specs?.find((s) => s.label === "Rated Power")?.value ?? p.meta?.split("|")[0]);
     // micro values are in W / kW; keep the existing string if missing
-    return { display: "300 W – 1.2 kW", lines: [] };
+    return { display: "300 W - 1.2 kW", lines: [] };
   }
 
   const single = items
@@ -96,7 +96,7 @@ const TABS = [
     label: "Micro Inverter",
     image: micro?.image,
     description:
-      "Module-level power electronics for maximum energy harvest per panel — ideal for complex rooftop layouts, partial shading and space-constrained systems.",
+      "Module-level power electronics for maximum energy harvest per panel, ideal for complex rooftop layouts, partial shading and space-constrained systems.",
     powerRange: getRangesForTab("micro"),
     bullets: [
       "Per-module MPPT for maximum individual panel yield",
@@ -209,7 +209,7 @@ export default function ProductsSlider() {
         <div className="pf-header">
           <p className="pf-eyebrow">Our Product Range</p>
           <h2 className="pf-title">Types Of Solar Inverters We Offer</h2>
-          <p className="pf-subtitle">Engineered for every rooftop — grid-tied, hybrid storage, and micro-inverter systems built for Indian conditions.</p>
+          <p className="pf-subtitle">Engineered for every rooftop, grid-tied, hybrid storage, and micro-inverter systems built for Indian conditions.</p>
 
           <nav className="pf-tabs" aria-label="Product categories">
             {TABS.map((tab) => (

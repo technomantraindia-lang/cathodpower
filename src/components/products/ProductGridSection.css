@@ -26,7 +26,7 @@
 .pg__leadTitle {
   margin: 0 0 14px;
   font-family: var(--font-primary, "Instrument Sans", sans-serif);
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.75rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.03em;
@@ -115,10 +115,10 @@
 }
 
 .pg__phaseTab.active {
-  background: var(--brand, #ff6a00);
+  background: #11606d;
   color: #ffffff;
   font-weight: 600;
-  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.28);
+  box-shadow: 0 4px 14px rgba(17, 96, 109, 0.28);
 }
 
 /* ===============================

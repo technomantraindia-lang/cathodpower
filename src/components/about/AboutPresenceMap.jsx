@@ -38,7 +38,7 @@ export default function AboutPresenceMap() {
   const invertersRef = useRef(null);
   const daysStatRef = useRef(null);
   const countedRef = useRef(false);
-  const [activeId, setActiveId] = useState("gujarat");
+  const [activeId, setActiveId] = useState("delhi");
 
   useEffect(() => {
     const root = rootRef.current;
@@ -174,10 +174,38 @@ export default function AboutPresenceMap() {
     };
   }, []);
 
+  const hq = useMemo(() => STATES.find((s) => s.office) ?? STATES[0], []);
   const active = useMemo(
     () => STATES.find((s) => s.id === activeId) ?? STATES[0],
     [activeId]
   );
+
+  const route = useMemo(() => {
+    if (active.id === hq.id) return null;
+
+    const x1 = hq.x;
+    const y1 = hq.y;
+    const x2 = active.x;
+    const y2 = active.y;
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const dist = Math.hypot(dx, dy) || 1;
+    const bend = Math.min(12, dist * 0.22);
+    const cx = (x1 + x2) / 2 - (dy / dist) * bend;
+    const cy = (y1 + y2) / 2 + (dx / dist) * bend;
+    const mx = 0.25 * x1 + 0.5 * cx + 0.25 * x2;
+    const my = 0.25 * y1 + 0.5 * cy + 0.25 * y2;
+    const tx = x2 - x1;
+    const ty = y2 - y1;
+    const angle = (Math.atan2(ty, tx) * 180) / Math.PI;
+
+    return {
+      path: `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`,
+      mx,
+      my,
+      angle,
+    };
+  }, [active, hq]);
 
   return (
     <section className="apm" id="presence" aria-label="Nationwide presence" ref={rootRef}>
@@ -217,13 +245,62 @@ export default function AboutPresenceMap() {
                 draggable={false}
               />
 
+              {route && (
+                <svg
+                  className="apm__routes"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <linearGradient
+                      id="apm-route-grad"
+                      x1={hq.x}
+                      y1={hq.y}
+                      x2={active.x}
+                      y2={active.y}
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stopColor="#ff8a1f" />
+                      <stop offset="100%" stopColor="#11606d" />
+                    </linearGradient>
+                    <filter id="apm-route-glow" x="-40%" y="-40%" width="180%" height="180%">
+                      <feGaussianBlur stdDeviation="0.35" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <path
+                    className="apm__route-line"
+                    d={route.path}
+                    fill="none"
+                    stroke="url(#apm-route-grad)"
+                    strokeWidth="0.55"
+                    strokeDasharray="1.6 1.35"
+                    strokeLinecap="round"
+                    filter="url(#apm-route-glow)"
+                  />
+                  <g
+                    className="apm__route-arrow"
+                    transform={`translate(${route.mx} ${route.my}) rotate(${route.angle})`}
+                  >
+                    <polygon points="-1.35,-1.05 1.7,0 -1.35,1.05" fill="#ff6a00" />
+                  </g>
+                </svg>
+              )}
+
               {STATES.map((state) => {
                 const isActive = state.id === activeId;
+                const isOrigin = Boolean(route) && state.office;
                 return (
                   <button
                     key={state.id}
                     type="button"
-                    className={`apm__pin${isActive ? " is-active" : ""}${state.office ? " is-hq" : ""}`}
+                    className={`apm__pin${isActive ? " is-active" : ""}${
+                      state.office ? " is-hq" : ""
+                    }${isOrigin ? " is-origin" : ""}`}
                     style={{ left: `${state.x}%`, top: `${state.y}%` }}
                     onClick={() => setActiveId(state.id)}
                     onMouseEnter={() => setActiveId(state.id)}
@@ -232,8 +309,10 @@ export default function AboutPresenceMap() {
                   >
                     <span className="apm__pin-ring" aria-hidden="true" />
                     <span className="apm__pin-dot" />
-                    {isActive && (
-                      <span className="apm__tooltip">{state.label || state.name}</span>
+                    {(isActive || isOrigin) && (
+                      <span className="apm__tooltip">
+                        {state.label || state.name}
+                      </span>
                     )}
                   </button>
                 );
