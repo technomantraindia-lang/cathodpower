@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import wideBannerVideo from "../../assets/video/wide-banner-web.mp4";
+import wideBannerVideo from "../../assets/video/wide-banner-hd.mp4";
 import "./EmergenaWideRangeBanner.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -45,19 +45,12 @@ export default function EmergenaWideRangeBanner() {
     io.observe(section);
 
     const ctx = gsap.context(() => {
-      const media = section.querySelector(".cp-wide-banner__media");
       const overlay = section.querySelector(".cp-wide-banner__overlay");
       const title = section.querySelector(".cp-wide-banner__title");
       const subtitle = section.querySelector(".cp-wide-banner__subtitle");
       const cta = section.querySelector(".cp-wide-banner__cta");
 
-      if (media) {
-        gsap.set(media, {
-          scale: reduceMotion ? 1 : 1.08,
-          opacity: 1,
-        });
-      }
-      if (overlay) gsap.set(overlay, { opacity: reduceMotion ? 1 : 0.7 });
+      if (overlay) gsap.set(overlay, { opacity: reduceMotion ? 1 : 0.75 });
       gsap.set([title, subtitle, cta].filter(Boolean), {
         y: reduceMotion ? 0 : 40,
         opacity: 0,
@@ -72,28 +65,16 @@ export default function EmergenaWideRangeBanner() {
         },
       });
 
-      if (media) {
-        tl.to(
-          media,
-          {
-            scale: 1,
-            duration: reduceMotion ? 0.35 : 1.05,
-            ease: "power2.out",
-          },
-          0
-        );
-      }
-
       if (overlay) {
         tl.to(
           overlay,
           { opacity: 1, duration: reduceMotion ? 0.3 : 0.7, ease: "power2.out" },
-          0.05
+          0
         );
       }
 
       if (title) {
-        tl.to(title, { y: 0, opacity: 1, duration: 0.7 }, reduceMotion ? 0.1 : 0.2);
+        tl.to(title, { y: 0, opacity: 1, duration: 0.7 }, reduceMotion ? 0.1 : 0.15);
       }
 
       if (subtitle) {

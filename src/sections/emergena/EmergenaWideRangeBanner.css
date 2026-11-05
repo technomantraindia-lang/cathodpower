@@ -1,14 +1,16 @@
 .emergena-home .cp-wide-banner {
   position: relative;
   overflow: hidden;
-  /* Match 1905×310 source aspect so the video isn’t over-cropped */
-  min-height: clamp(260px, calc(100vw / 6.1), 360px);
+  width: 100%;
+  /* Slightly taller than native 1904×310 strip for text, video stays sharp via contain */
+  min-height: clamp(300px, calc(100vw * 310 / 1904 + 120px), 440px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(56px, 7vw, 88px) clamp(20px, 4vw, 48px);
   text-align: center;
   background: #0b1919;
+  box-sizing: border-box;
 }
 
 .emergena-home .cp-wide-banner__bg {
@@ -16,6 +18,10 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b1919;
 }
 
 .emergena-home .cp-wide-banner__media {
@@ -23,11 +29,11 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* contain = never stretch above native pixels (cover was causing the blur) */
+  object-fit: contain;
   object-position: center center;
-  transform: scale(1);
+  transform: none;
   opacity: 1;
-  will-change: transform;
   background: #0b1919;
 }
 
@@ -37,9 +43,9 @@
   background:
     linear-gradient(
       180deg,
-      rgba(7, 18, 20, 0.55) 0%,
-      rgba(11, 25, 25, 0.62) 45%,
-      rgba(7, 18, 20, 0.72) 100%
+      rgba(7, 18, 20, 0.35) 0%,
+      rgba(11, 25, 25, 0.4) 45%,
+      rgba(7, 18, 20, 0.5) 100%
     );
   will-change: opacity;
 }
@@ -123,8 +129,8 @@
 
 @media (max-width: 640px) {
   .emergena-home .cp-wide-banner {
-    min-height: 260px;
-    padding: 64px 20px;
+    min-height: 280px;
+    padding: 52px 20px;
   }
 
   .emergena-home .cp-wide-banner__title,
