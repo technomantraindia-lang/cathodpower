@@ -39,7 +39,7 @@
   font-family: var(--ss-heading);
   font-size: var(--_typography---text-xl--xl-text-size, clamp(2rem, 3.5vw, 3.25rem));
   margin: 10px 0 10px;
-  font-weight: 400;
+  font-weight: 600;
   color: #ffffff;
   line-height: var(--_typography---text-xl--xl-text-line-height, 1.15);
   letter-spacing: var(--_typography---text-xl--xl-text-letter-spacing, -0.02em);

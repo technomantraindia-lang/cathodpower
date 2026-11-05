@@ -2,12 +2,11 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  /* Slightly taller than native 1904×310 strip for text, video stays sharp via contain */
-  min-height: clamp(300px, calc(100vw * 310 / 1904 + 120px), 440px);
+  min-height: clamp(380px, 48vw, 560px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(56px, 7vw, 88px) clamp(20px, 4vw, 48px);
+  padding: clamp(64px, 8vw, 100px) clamp(20px, 4vw, 48px);
   text-align: center;
   background: #0b1919;
   box-sizing: border-box;
@@ -18,9 +17,6 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #0b1919;
 }
 
@@ -29,8 +25,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  /* contain = never stretch above native pixels (cover was causing the blur) */
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   transform: none;
   opacity: 1;
@@ -43,9 +38,9 @@
   background:
     linear-gradient(
       180deg,
-      rgba(7, 18, 20, 0.35) 0%,
-      rgba(11, 25, 25, 0.4) 45%,
-      rgba(7, 18, 20, 0.5) 100%
+      rgba(7, 18, 20, 0.45) 0%,
+      rgba(11, 25, 25, 0.5) 45%,
+      rgba(7, 18, 20, 0.58) 100%
     );
   will-change: opacity;
 }
@@ -72,7 +67,7 @@
   margin: 0 !important;
   font-family: var(--_typography---font--heading-font, "Instrument Sans", sans-serif) !important;
   font-size: var(--_typography---text-xl--xl-text-size, 3.25rem) !important;
-  font-weight: var(--_typography---font-weight--400, 400) !important;
+  font-weight: 600 !important;
   line-height: var(--_typography---text-xl--xl-text-line-height, 1.15em) !important;
   letter-spacing: var(--_typography---text-xl--xl-text-letter-spacing, -0.15rem) !important;
   text-transform: none !important;
@@ -129,8 +124,8 @@
 
 @media (max-width: 640px) {
   .emergena-home .cp-wide-banner {
-    min-height: 280px;
-    padding: 52px 20px;
+    min-height: 320px;
+    padding: 56px 20px;
   }
 
   .emergena-home .cp-wide-banner__title,

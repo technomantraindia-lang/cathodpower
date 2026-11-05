@@ -582,7 +582,7 @@
 
 .contact-zonal-heading h2 {
   font-size: clamp(28px, 3.4vw, 42px);
-  font-weight: 700;
+  font-weight: 600;
   color: #111816;
   margin: 12px 0 14px;
   letter-spacing: -0.02em;

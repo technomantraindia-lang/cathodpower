@@ -99,7 +99,7 @@
 .se-slide__title {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(28px, 3vw, 42px);
-  font-weight: 400;
+  font-weight: 600;
   color: #1a1a1a;
   line-height: 1.2;
   margin: 0 0 20px 0;

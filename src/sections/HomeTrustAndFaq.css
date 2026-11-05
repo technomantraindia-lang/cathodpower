@@ -74,7 +74,7 @@
 
 .htf-title {
   font-size: clamp(2.2rem, 3.4vw, 3rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   line-height: 1.15;
 }

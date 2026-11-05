@@ -29,6 +29,16 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Headings site-wide — medium-bold, consistent across sections */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
 #root {
   width: 100%;
   max-width: 100vw;
