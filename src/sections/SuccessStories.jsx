@@ -137,7 +137,7 @@ export default function SuccessStories() {
   const faqRight = FAQ_ITEMS.slice(5, 10);
 
   return (
-    <section className="success-section perf-cv" aria-labelledby={`${baseId}-heading`}>
+    <section className="success-section perf-cv" id="faq" aria-labelledby={`${baseId}-heading`}>
       <div className="container success-container">
         <header className="success-header">
           <span className="success-label">• FAQs</span>

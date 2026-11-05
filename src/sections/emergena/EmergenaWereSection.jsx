@@ -23,8 +23,6 @@ export default function EmergenaWereSection() {
       const actions = section.querySelector(".cp-were__actions");
       const rings = section.querySelectorAll(".cp-were__ring");
       const mascot = section.querySelector(".cp-were__mascot");
-      const platform = section.querySelector(".cp-were__platform");
-      const glow = section.querySelector(".cp-were__glow");
 
       gsap.set([eyebrow, title, ...copy, actions].filter(Boolean), {
         y: reduceMotion ? 0 : 36,
@@ -32,22 +30,13 @@ export default function EmergenaWereSection() {
       });
       if (accent) gsap.set(accent, { scaleX: 0, opacity: 0, transformOrigin: "0% 50%" });
       if (rings.length) gsap.set(rings, { scale: 0.72, opacity: 0 });
-      if (platform) gsap.set(platform, { opacity: 0, scaleX: 0.55 });
-      if (glow) gsap.set(glow, { opacity: 0, scale: 0.65 });
 
       if (mascot) {
-        if (reduceMotion) {
-          gsap.set(mascot, { opacity: 0 });
-        } else {
-          gsap.set(mascot, {
-            x: 240,
-            y: -36,
-            rotate: 12,
-            scale: 0.78,
-            opacity: 0,
-            transformOrigin: "50% 100%",
-          });
-        }
+        gsap.set(mascot, {
+          y: reduceMotion ? 0 : 18,
+          opacity: 0,
+          transformOrigin: "50% 100%",
+        });
       }
 
       const tl = gsap.timeline({
@@ -99,71 +88,17 @@ export default function EmergenaWereSection() {
 
       if (!mascot) return;
 
-      if (reduceMotion) {
-        tl.to(mascot, { opacity: 1, duration: 0.4, ease: "power2.out" }, "-=0.35");
-        if (platform) tl.to(platform, { opacity: 1, scaleX: 1, duration: 0.35 }, "-=0.3");
-        if (glow) tl.to(glow, { opacity: 1, scale: 1, duration: 0.4 }, "-=0.3");
-        return;
-      }
-
+      // Minimal entrance — soft fade + slight rise, no bounce/float loop
       tl.to(
         mascot,
         {
-          x: 40,
-          y: -70,
-          rotate: -5,
-          scale: 1.06,
+          y: 0,
           opacity: 1,
-          duration: 0.45,
+          duration: reduceMotion ? 0.35 : 0.55,
           ease: "power2.out",
         },
-        "-=0.55"
-      )
-        .to(mascot, {
-          x: 0,
-          y: 0,
-          rotate: 0,
-          scale: 1,
-          duration: 0.75,
-          ease: "bounce.out",
-        })
-        .to(
-          mascot,
-          {
-            y: -10,
-            duration: 0.16,
-            ease: "power1.out",
-            yoyo: true,
-            repeat: 1,
-          },
-          "-=0.06"
-        );
-
-      if (platform) {
-        tl.to(
-          platform,
-          { opacity: 1, scaleX: 1, duration: 0.45, ease: "power2.out" },
-          "-=0.6"
-        );
-      }
-
-      if (glow) {
-        tl.to(
-          glow,
-          { opacity: 1, scale: 1, duration: 0.55, ease: "power2.out" },
-          "-=0.55"
-        );
-      }
-
-      tl.add(() => {
-        gsap.to(mascot, {
-          y: -8,
-          duration: 1.35,
-          ease: "sine.inOut",
-          yoyo: true,
-          repeat: -1,
-        });
-      });
+        "-=0.4"
+      );
     }, sectionRef);
 
     const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 200);

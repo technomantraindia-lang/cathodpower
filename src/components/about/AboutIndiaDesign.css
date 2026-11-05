@@ -1,0 +1,196 @@
+.aid {
+  --aid-ink: #0f2426;
+  --aid-muted: #5a6a6a;
+  --aid-accent: #11606d;
+  --aid-line: rgba(17, 96, 109, 0.14);
+
+  position: relative;
+  padding: clamp(64px, 8vw, 104px) 0;
+  overflow: hidden;
+  background:
+    radial-gradient(50% 40% at 100% 0%, rgba(17, 96, 109, 0.06), transparent 60%),
+    #f7f7f5;
+}
+
+.aid__inner {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 56px);
+}
+
+.aid__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: end;
+  margin: 0 0 clamp(36px, 5vw, 52px);
+  padding-bottom: clamp(28px, 3.5vw, 36px);
+  border-bottom: 1px solid var(--aid-line);
+}
+
+.aid__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--aid-accent);
+}
+
+.aid__kicker-line {
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--aid-accent), rgba(255, 106, 0, 0.7));
+}
+
+.aid__title {
+  margin: 0;
+  max-width: 18ch;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  font-size: clamp(1.75rem, 3.1vw, 2.55rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  color: var(--aid-ink);
+}
+
+.aid__intro-right {
+  max-width: 42ch;
+  justify-self: end;
+}
+
+.aid__lead {
+  margin: 0 0 12px;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--aid-accent);
+}
+
+.aid__desc {
+  margin: 0;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--aid-muted);
+}
+
+.aid__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.aid__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(16px, 2.5vw, 32px);
+  align-items: center;
+  padding: clamp(26px, 3vw, 34px) 8px clamp(26px, 3vw, 34px) 12px;
+  border-bottom: 1px solid var(--aid-line);
+  transition: background 0.3s ease;
+}
+
+.aid__row:first-child {
+  border-top: 1px solid var(--aid-line);
+}
+
+.aid__row:hover {
+  background: rgba(17, 96, 109, 0.03);
+}
+
+.aid__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6a00;
+  box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.14);
+  transition: transform 0.3s ease;
+}
+
+.aid__row:hover .aid__dot {
+  transform: scale(1.15);
+}
+
+.aid__row-title {
+  margin: 0;
+  max-width: 20ch;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--aid-ink);
+}
+
+.aid__row-text {
+  margin: 0;
+  max-width: 42ch;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--aid-muted);
+}
+
+.aid__mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  translate: 0 -50%;
+  background: linear-gradient(90deg, var(--aid-accent), rgba(255, 106, 0, 0.7));
+  transition: width 0.35s ease;
+}
+
+.aid__row:hover .aid__mark {
+  width: 28px;
+}
+
+@media (max-width: 900px) {
+  .aid__intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .aid__intro-right {
+    justify-self: start;
+    max-width: none;
+  }
+
+  .aid__title {
+    max-width: 22ch;
+  }
+
+  .aid__row {
+    grid-template-columns: 24px 1fr;
+    gap: 12px 14px;
+    align-items: start;
+    padding: 22px 4px;
+  }
+
+  .aid__row-title {
+    max-width: none;
+    grid-column: 2;
+  }
+
+  .aid__row-text {
+    grid-column: 2;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aid__row,
+  .aid__dot,
+  .aid__mark {
+    transition: none;
+  }
+}

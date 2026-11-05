@@ -317,7 +317,7 @@ export const MAIN_PRODUCT_TABS = [
   { key: "ongrid", label: "On-grid Inverter" },
   { key: "hybrid", label: "Hybrid Inverter" },
   { key: "micro", label: "Micro Inverter" },
-  { key: "storage", label: "Energy Storage" },
+  { key: "storage", label: "BESS" },
 ];
 
 export const PHASE_TABS = [

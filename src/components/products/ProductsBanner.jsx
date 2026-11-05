@@ -3,39 +3,26 @@ import "./ProductsBanner.css";
 export default function ProductsBanner({ title, subtitle, tabs, activeTab, onTabChange }) {
   return (
     <section className="pb-banner">
-      {/* Scenic Background & Lighting Layers */}
-      <div className="pb-banner-bg" />
-      <div className="pb-banner-glow" />
-      <div className="pb-banner-overlay" />
-      <div className="pb-banner-noise" />
-
-      {/* Decorative grid lines */}
-      <div className="pb-grid-lines" aria-hidden="true">
-        <span /><span /><span /><span />
-      </div>
+      <div className="pb-banner-bg" aria-hidden="true" />
+      <div className="pb-banner-overlay" aria-hidden="true" />
 
       <div className="pb-banner-inner">
-
-        {/* Left — Main Content */}
         <div className="pb-content">
-
-          {/* Eyebrow */}
           <p className="pb-eyebrow">
             <span className="pb-eyebrow-dot" />
             Solar Inverter Solutions
           </p>
 
-          {/* Title */}
           <h1 className="pb-title">{title}</h1>
-
-          {/* Subtitle */}
           <p className="pb-subtitle">{subtitle}</p>
 
-          {/* Tab Switcher */}
-          <div className="pb-tabs">
+          <div className="pb-tabs" role="tablist" aria-label="Product categories">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
+                type="button"
+                role="tab"
+                aria-selected={activeTab === tab.key}
                 className={`pb-tab ${activeTab === tab.key ? "active" : ""}`}
                 onClick={() => onTabChange(tab.key)}
               >
@@ -44,11 +31,9 @@ export default function ProductsBanner({ title, subtitle, tabs, activeTab, onTab
               </button>
             ))}
           </div>
-
         </div>
 
-        {/* Right — Stats only */}
-        <div className="pb-info-card">
+        <div className="pb-info-card" aria-label="Product highlights">
           <div className="pb-info-stats">
             <div className="pb-info-stat">
               <span className="pb-info-stat-num">30+</span>
@@ -64,7 +49,6 @@ export default function ProductsBanner({ title, subtitle, tabs, activeTab, onTab
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

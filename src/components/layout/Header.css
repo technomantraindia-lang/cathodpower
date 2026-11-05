@@ -150,6 +150,38 @@
   color: var(--text-light);
 }
 
+/* Light hero pages (e.g. /products) — dark nav + color logo */
+.cp-header.cp-header--light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(17, 96, 109, 0.1);
+  box-shadow: 0 8px 24px rgba(17, 96, 109, 0.06);
+}
+
+.cp-header.cp-header--light .cp-header__logo-img--dark {
+  display: none !important;
+}
+
+.cp-header.cp-header--light .cp-header__logo-img--light {
+  display: block !important;
+}
+
+.cp-header.cp-header--light:not(.scrolled) .cp-header__nav .cp-header__link {
+  color: #11606d;
+}
+
+.cp-header.cp-header--light:not(.scrolled) .cp-header__nav .cp-header__link:hover,
+.cp-header.cp-header--light:not(.scrolled) .cp-header__nav .cp-header__link.active,
+.cp-header.cp-header--light:not(.scrolled) .cp-header__navMega[data-open="true"] .cp-header__link--trigger,
+.cp-header.cp-header--light:not(.scrolled) .cp-header__navDropdown[data-open="true"] .cp-header__link--trigger {
+  color: #ff6a00;
+}
+
+.cp-header.cp-header--light:not(.scrolled) .cp-header__hamburger span {
+  background: #11606d;
+}
+
 .cp-header__nav .cp-header__link::after {
   content: "";
   position: absolute;

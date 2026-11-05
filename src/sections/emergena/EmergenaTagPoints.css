@@ -75,17 +75,18 @@
   top: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #ff6a00, #22727f);
+  background: #22727f;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .emergena-home .cp-tags__card:hover {
-  transform: translateY(-10px) scale(1.015);
+  transform: scale(1.06);
   box-shadow: 0 22px 44px rgba(20, 41, 34, 0.14);
   border-color: rgba(34, 114, 127, 0.22);
   background: linear-gradient(180deg, #ffffff 0%, #f7fbfb 100%);
+  z-index: 2;
 }
 
 .emergena-home .cp-tags__card:hover::before {

@@ -59,6 +59,7 @@ const resolvePhaseFromIndex = (index, phaseStartIndex) => {
 };
 
 export default function ProductGridSection({
+  leadTitle,
   title,
   description,
   products,
@@ -77,6 +78,8 @@ export default function ProductGridSection({
   const swiperRef = useRef(null);
   const activePhaseRef = useRef(activePhase);
   const [navReady, setNavReady] = useState(false);
+
+  const useBulletDots = products.length > 0 && products.length <= 7;
 
   useEffect(() => {
     setNavReady(true);
@@ -118,17 +121,13 @@ export default function ProductGridSection({
   const handlePhaseTabClick = (key) => {
     if (!onPhaseChange) return;
     onPhaseChange(key);
-
-    if (continuousScroll && swiperRef.current) {
-      const target = phaseStartIndex?.[key] ?? 0;
-      swiperRef.current.slideTo(target, 550);
-    }
   };
 
   return (
     <section className="pg" ref={sectionRef}>
       <div className="pg__container">
         <div className="pg__header">
+          {leadTitle ? <p className="pg__leadTitle">{leadTitle}</p> : null}
           <h2>{title}</h2>
           <p className="pg__desc">{description}</p>
 
@@ -149,12 +148,6 @@ export default function ProductGridSection({
             </div>
           )}
 
-          {continuousScroll && (
-            <p className="pg__hint">
-              Keep sliding — after Single Phase products finish, Three Phase
-              continues automatically.
-            </p>
-          )}
         </div>
 
         {products.length === 0 ? (
@@ -175,7 +168,11 @@ export default function ProductGridSection({
                 <Swiper
                   key={sliderKey}
                   className="pg__swiper"
-                  modules={[Navigation, Pagination, A11y]}
+                  modules={
+                    useBulletDots
+                      ? [Navigation, Pagination, A11y]
+                      : [Navigation, A11y]
+                  }
                   slidesPerView={1}
                   spaceBetween={20}
                   grabCursor
@@ -189,16 +186,21 @@ export default function ProductGridSection({
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
                   }}
-                  pagination={{
-                    el: paginationRef.current,
-                    clickable: true,
-                    dynamicBullets: true,
-                    dynamicMainBullets: 3,
-                  }}
+                  pagination={
+                    useBulletDots
+                      ? {
+                          el: paginationRef.current,
+                          clickable: true,
+                          dynamicBullets: false,
+                        }
+                      : false
+                  }
                   onBeforeInit={(swiper) => {
                     swiper.params.navigation.prevEl = prevRef.current;
                     swiper.params.navigation.nextEl = nextRef.current;
-                    swiper.params.pagination.el = paginationRef.current;
+                    if (useBulletDots && swiper.params.pagination) {
+                      swiper.params.pagination.el = paginationRef.current;
+                    }
                   }}
                   onSwiper={(swiper) => {
                     swiperRef.current = swiper;
@@ -210,7 +212,7 @@ export default function ProductGridSection({
                         swiper.navigation.init();
                         swiper.navigation.update();
                       }
-                      if (swiper?.params?.pagination) {
+                      if (useBulletDots && swiper?.params?.pagination) {
                         swiper.params.pagination.el = paginationRef.current;
                         swiper.pagination.destroy();
                         swiper.pagination.init();
@@ -218,35 +220,22 @@ export default function ProductGridSection({
                         swiper.pagination.update();
                       }
 
-                      if (continuousScroll) {
-                        const start = phaseStartIndex?.[activePhase] ?? 0;
-                        if (start > 0) swiper.slideTo(start, 0);
-                      }
                     });
                   }}
                   onSlideChange={(swiper) => {
                     syncPhaseFromSlide(swiper.activeIndex);
                   }}
                 >
-                  {products.map((p, index) => {
+                  {products.map((p) => {
                     const powerSpec =
                       p.specs?.find((s) => s.label === "Rated Power")?.value ||
                       p.meta?.split("|")[0]?.trim();
                     const phaseSpec =
                       p.specs?.find((s) => s.label === "Phase")?.value ||
                       p.meta?.split("|")[1]?.trim();
-                    const isPhaseBoundary =
-                      continuousScroll &&
-                      phaseStartIndex?.three > 0 &&
-                      index === phaseStartIndex.three;
 
                     return (
                       <SwiperSlide key={p.id} className="pg__slide">
-                        {isPhaseBoundary && (
-                          <div className="pg__phaseMarker" aria-hidden="true">
-                            Three Phase
-                          </div>
-                        )}
                         <Link to={`/products/${p.slug}`} className="pgCardLink">
                           <article className="pgCard">
                             <div className="pgCard__media">
@@ -297,7 +286,9 @@ export default function ProductGridSection({
               <NavArrow direction="next" />
             </button>
 
-            <div ref={paginationRef} className="pg__pagination" />
+            {useBulletDots ? (
+              <div ref={paginationRef} className="pg__pagination" />
+            ) : null}
           </div>
         )}
       </div>

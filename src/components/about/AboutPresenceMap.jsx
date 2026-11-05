@@ -1,5 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./AboutPresenceMap.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FOUNDING_DATE = new Date(2021, 0, 1);
 
@@ -24,6 +28,7 @@ function formatDays(n) {
 }
 
 export default function AboutPresenceMap() {
+  const rootRef = useRef(null);
   const [activeId, setActiveId] = useState("gujarat");
   const [days, setDays] = useState(0);
 
@@ -37,42 +42,101 @@ export default function AboutPresenceMap() {
     return () => window.clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: root,
+            start: "top 78%",
+            once: true,
+          },
+        })
+        .from(".apm__intro > *", {
+          y: 18,
+          opacity: 0,
+          duration: 0.55,
+          stagger: 0.08,
+          ease: "power2.out",
+        })
+        .from(
+          ".apm__stage > *",
+          {
+            y: 22,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out",
+          },
+          "-=0.25"
+        )
+        .from(
+          ".apm__pin",
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 0.3,
+            stagger: 0.035,
+            ease: "back.out(1.5)",
+          },
+          "-=0.35"
+        )
+        .from(
+          ".apm__chip",
+          {
+            y: 8,
+            opacity: 0,
+            duration: 0.28,
+            stagger: 0.02,
+            ease: "power2.out",
+          },
+          "-=0.2"
+        );
+    }, root);
+
+    return () => ctx.revert();
+  }, []);
+
   const active = useMemo(
     () => STATES.find((s) => s.id === activeId) ?? STATES[0],
     [activeId]
   );
 
   return (
-    <section className="apm" id="presence" aria-label="Nationwide presence">
-      <div className="apm__shell">
-        <div className="apm__glow apm__glow--a" aria-hidden="true" />
-        <div className="apm__glow apm__glow--b" aria-hidden="true" />
-
-        <div className="apm__layout">
-          <div className="apm__cards">
-            <article className="apm__card">
-              <p className="apm__card-label">Milestone Achieved</p>
-              <p className="apm__card-stat">5,00,000 +</p>
-              <p className="apm__card-desc">Inverters Installed Across India</p>
-              <div className="apm__card-rule" aria-hidden="true" />
-            </article>
-
-            <article className="apm__card">
-              <span className="apm__pill">Since 01 Jan 2021</span>
-              <p className="apm__card-stat apm__card-stat--sm">
-                {formatDays(days)} <span>Days</span>
-              </p>
-              <p className="apm__card-desc">
-                Growing through dependable products, partnerships and nationwide service.
-              </p>
-            </article>
+    <section className="apm" id="presence" aria-label="Nationwide presence" ref={rootRef}>
+      <div className="apm__inner">
+        <header className="apm__intro">
+          <div className="apm__intro-left">
+            <p className="apm__kicker">
+              <span className="apm__kicker-line" aria-hidden="true" />
+              Pan-India Presence
+            </p>
+            <h2 className="apm__title">
+              Our Roots Are in Gujarat. Our Vision Reaches Every Corner of India.
+            </h2>
           </div>
+          <p className="apm__lead">
+            With a growing nationwide network of solar EPCs, partners, and sales and service
+            professionals, we are bringing smart solar technology closer to people across India.
+          </p>
+        </header>
 
-          <div className="apm__map-wrap">
+        <div className="apm__stage">
+          <aside className="apm__metric apm__metric--left">
+            <p className="apm__metric-label">Milestone Achieved</p>
+            <p className="apm__metric-stat">1,00,000+</p>
+            <p className="apm__metric-desc">Inverters Installed Across India</p>
+          </aside>
+
+          <div className="apm__map-panel">
             <div className="apm__map" role="img" aria-label="India presence map">
               <img
                 className="apm__map-img"
-                src="/images/about/india-outline.png?v=3"
+                src="/images/about/india-outline-light.png?v=6"
                 alt=""
                 aria-hidden="true"
                 draggable={false}
@@ -91,20 +155,34 @@ export default function AboutPresenceMap() {
                     aria-label={state.label || state.name}
                     aria-pressed={isActive}
                   >
+                    <span className="apm__pin-ring" aria-hidden="true" />
                     <span className="apm__pin-dot" />
                     {isActive && (
-                      <span className="apm__tooltip">
-                        {state.label || state.name}
-                      </span>
+                      <span className="apm__tooltip">{state.label || state.name}</span>
                     )}
                   </button>
                 );
               })}
             </div>
+
+            <p className="apm__active" aria-live="polite">
+              <span className="apm__active-dot" aria-hidden="true" />
+              Exploring <strong>{active.label || active.name}</strong>
+            </p>
           </div>
+
+          <aside className="apm__metric apm__metric--right">
+            <p className="apm__metric-label">Stamp of Quality</p>
+            <p className="apm__metric-stat">
+              {formatDays(days)} <span>Days</span>
+            </p>
+            <p className="apm__metric-desc">
+              Running through dependable products, partnerships and custom-built service.
+            </p>
+          </aside>
         </div>
 
-        <div className="apm__states" role="list">
+        <div className="apm__states" role="list" aria-label="Presence states">
           {STATES.map((state) => (
             <button
               key={state.id}
@@ -113,18 +191,11 @@ export default function AboutPresenceMap() {
               className={`apm__chip${state.id === activeId ? " is-active" : ""}`}
               onClick={() => setActiveId(state.id)}
             >
-              <span className="apm__chip-icon" aria-hidden="true">
-                +
-              </span>
+              <span className="apm__chip-dot" aria-hidden="true" />
               {state.name}
             </button>
           ))}
         </div>
-
-        <p className="apm__footnote" aria-live="polite">
-          Active region: <strong>{active.name}</strong>
-          {active.office ? " — Head Office" : ""}
-        </p>
       </div>
     </section>
   );

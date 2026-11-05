@@ -173,6 +173,8 @@ export default function Header() {
     pathname.startsWith("/products/") ||
     pathname === "/monitoring";
   const showSolidHeader = menuOpen || forceSolidHeader;
+  const isLightHero =
+    pathname === "/products" || pathname === "/products/";
 
   const handleNavClick = () => {
     resetMegaMenu();
@@ -242,7 +244,12 @@ export default function Header() {
 
   return (
     <>
-      <header ref={headerRef} className={`cp-header ${showSolidHeader ? "scrolled" : ""}`}>
+      <header
+        ref={headerRef}
+        className={`cp-header ${showSolidHeader ? "scrolled" : ""} ${
+          isLightHero && !showSolidHeader ? "cp-header--light" : ""
+        }`}
+      >
         <div className="cp-header__container">
           <nav className="cp-header__nav cp-header__nav--left" aria-label="Primary left">
             <NavLink to="/about" className={linkClass} onClick={handleNavClick}>

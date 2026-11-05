@@ -5,10 +5,10 @@
   --were-teal-soft: #2f8f9d;
   --were-ink: #142922;
   --were-muted: #5b6b64;
-  --were-canvas: #f7f7f5;
+  --were-canvas: #f5f6f6;
 
   position: relative;
-  background-color: var(--_colors---core-neutral-color--whitesmoke, #e8ebeb);
+  background-color: #f5f6f6;
   overflow: hidden;
   padding: clamp(56px, 7vw, 88px) 0 clamp(48px, 6vw, 76px);
 }
@@ -23,7 +23,7 @@
 .emergena-home .cp-were__ring {
   position: absolute;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 106, 0, 0.12);
+  border: 1.5px solid rgba(34, 114, 127, 0.12);
   will-change: transform, opacity;
 }
 
@@ -68,7 +68,7 @@
   font-weight: 700 !important;
   letter-spacing: 0.22em !important;
   text-transform: uppercase !important;
-  color: var(--were-orange) !important;
+  color: #22727f !important;
   line-height: 1 !important;
 }
 
@@ -78,7 +78,7 @@
   width: 24px;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--were-orange), var(--were-orange-soft));
+  background: #22727f;
   flex-shrink: 0;
 }
 
@@ -99,7 +99,7 @@
   height: 3px;
   border-radius: 999px;
   margin: 0 0 18px;
-  background: linear-gradient(90deg, var(--were-orange), var(--were-teal));
+  background: #22727f;
   transform-origin: left center;
   will-change: transform, opacity;
 }
@@ -205,26 +205,11 @@
 }
 
 .emergena-home .cp-were__glow {
-  position: absolute;
-  width: min(72%, 360px);
-  height: min(72%, 360px);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, rgba(34, 114, 127, 0.2) 0%, rgba(255, 106, 0, 0.06) 42%, transparent 70%);
-  filter: blur(8px);
-  z-index: 0;
+  display: none;
 }
 
 .emergena-home .cp-were__platform {
-  position: absolute;
-  bottom: 4%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(62%, 300px);
-  height: 22px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(20, 41, 34, 0.14), transparent 70%);
-  z-index: 0;
+  display: none;
 }
 
 .emergena-home .cp-were__mascot {
@@ -234,7 +219,7 @@
   height: auto;
   max-height: 620px;
   object-fit: contain;
-  filter: drop-shadow(0 18px 30px rgba(20, 41, 34, 0.16));
+  filter: none;
   user-select: none;
   -webkit-user-drag: none;
   will-change: transform, opacity;

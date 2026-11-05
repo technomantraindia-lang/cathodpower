@@ -109,7 +109,7 @@ export default function SolarViewSection() {
             Solar View
           </p>
 
-          <h2 className="sv-cta-title text-xl">Smart Energy Monitoring</h2>
+          <h2 className="sv-cta-title text-xl">Monitor Every Watt In Real Time</h2>
           <div className="sv-cta-accent" aria-hidden="true" />
 
           <p className="sv-cta-lead">Control from Anywhere, Anytime</p>

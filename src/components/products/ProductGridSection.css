@@ -3,7 +3,7 @@
 ================================ */
 
 .pg {
-  padding: 96px 0 120px;
+  padding: 56px 0 88px;
   background: var(--bg-canvas, #f7f7f5);
   font-family: var(--font-primary, "Instrument Sans", sans-serif);
   position: relative;
@@ -21,6 +21,16 @@
 .pg__header {
   text-align: center;
   margin-bottom: 56px;
+}
+
+.pg__leadTitle {
+  margin: 0 0 14px;
+  font-family: var(--font-primary, "Instrument Sans", sans-serif);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #11606d;
 }
 
 .pg__header h2 {
@@ -190,51 +200,41 @@
 
 .pg__pagination {
   grid-area: dots;
-  display: flex;
+  position: relative !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  display: flex !important;
   justify-content: center;
   align-items: center;
-  min-height: 18px;
-  width: 100%;
-}
-
-.pg__pagination.swiper-pagination-bullets-dynamic {
-  overflow: hidden;
-  font-size: 0;
-  width: 88px !important;
-  left: 50%;
-  transform: translateX(-50%);
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 20px;
+  margin-top: 4px;
+  transform: none !important;
 }
 
 .pg__pagination .swiper-pagination-bullet {
-  width: 7px;
-  height: 7px;
-  margin: 0 4px !important;
-  background: #cbd5e1;
-  opacity: 0.55;
-  border-radius: 999px;
-  transition: width 0.25s ease, background 0.25s ease, opacity 0.25s ease,
-    transform 0.25s ease;
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 !important;
+  background: #c5d0d2 !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.pg__pagination .swiper-pagination-bullet:hover {
+  background: #8aa8ae !important;
 }
 
 .pg__pagination .swiper-pagination-bullet-active {
-  width: 18px;
-  opacity: 1;
-  background: var(--brand, #ff6a00);
+  width: 8px !important;
+  height: 8px !important;
+  background: #11606d !important;
+  transform: scale(1.25);
 }
 
-.pg__pagination .swiper-pagination-bullet-active-main {
-  opacity: 1;
-}
-
-.pg__pagination .swiper-pagination-bullet-active-prev,
-.pg__pagination .swiper-pagination-bullet-active-next {
-  opacity: 0.7;
-}
-
-.pg__pagination .swiper-pagination-bullet-active-prev-prev,
-.pg__pagination .swiper-pagination-bullet-active-next-next {
-  opacity: 0.4;
-}
 
 /* ===============================
    CARD LINK WRAPPER

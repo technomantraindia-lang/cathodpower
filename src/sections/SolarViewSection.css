@@ -1,18 +1,18 @@
-/* Solar View — dark canvas, teal accents */
+/* Solar View — grey canvas, teal accents */
 
 .emergena-home .sv-section,
 .sv-section {
-  --sv-accent: #5cb8c4;
-  --sv-accent-soft: #7ecdd6;
-  --sv-accent-deep: #22727f;
-  --sv-ink: rgba(255, 255, 255, 0.9);
-  --sv-title: #ffffff;
-  --sv-muted: rgba(255, 255, 255, 0.7);
-  --sv-canvas: #16383c;
+  --sv-accent: #22727f;
+  --sv-accent-soft: #2f8f9d;
+  --sv-accent-deep: #1a5c67;
+  --sv-ink: #1e3d3e;
+  --sv-title: #1e3d3e;
+  --sv-muted: #555555;
+  --sv-canvas: #e8ebeb;
 
   position: relative;
   padding: clamp(12px, 1.8vw, 24px) 0 clamp(8px, 1.2vw, 18px);
-  background-color: #16383c;
+  background-color: #e8ebeb;
   overflow: hidden;
 }
 
@@ -52,7 +52,7 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 22px 40px rgba(20, 41, 34, 0.18));
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -102,7 +102,7 @@
   letter-spacing: var(--_typography---text-xl--xl-text-letter-spacing, -0.15rem) !important;
   color: var(--sv-title) !important;
   text-transform: none !important;
-  max-width: 12ch;
+  max-width: 18ch;
 }
 
 .emergena-home .sv-cta-accent,
@@ -172,7 +172,7 @@
   min-height: auto !important;
   padding: var(--_sizes---gap--super-tiny-gap, 0.6vw) var(--_sizes---gap--xxxs-gap, 1.55vw) !important;
   border-radius: var(--_sizes---radius--sm-radius, 0.5vw) !important;
-  border: 0.1vw solid rgba(255, 255, 255, 0.16) !important;
+  border: 0.1vw solid #22727f !important;
   background-color: #22727f !important;
   color: #ffffff !important;
   box-shadow: none !important;
@@ -201,7 +201,7 @@
   background-color: #2f8f9d !important;
   border-color: #2f8f9d !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: 0 10px 24px rgba(34, 114, 127, 0.28) !important;
 }
 
 .emergena-home a.sv-cta-link,
@@ -210,7 +210,7 @@
   display: inline-flex !important;
   align-items: center !important;
   min-height: 44px !important;
-  color: rgba(255, 255, 255, 0.78) !important;
+  color: #22727f !important;
   text-decoration: none !important;
   font-family: var(--_typography---font--body-font, "Instrument Sans", sans-serif) !important;
   font-size: var(--_typography---text-xs--xs-text-size, 1rem) !important;
@@ -221,8 +221,8 @@
 
 .emergena-home a.sv-cta-link:hover,
 .sv-cta-link:hover {
-  color: var(--sv-accent-soft) !important;
-  border-bottom-color: rgba(92, 184, 196, 0.45) !important;
+  color: #1a5c67 !important;
+  border-bottom-color: rgba(34, 114, 127, 0.45) !important;
 }
 
 @media (max-width: 980px) {

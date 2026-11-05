@@ -7,9 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MILESTONES = [
   {
+    year: "2018",
+    title: "The Idea",
+    text: "It started with a question — why not build better? What began as an idea became a journey of research and determination for India’s unique energy needs.",
+  },
+  {
     year: "2021",
     title: "Foundation",
-    text: "Cathode Power was established with a clear mission — engineer solar inverters built for Indian grid conditions, not adapted from other markets.",
+    text: "Cathode Power was established to engineer solar inverters designed for Indian conditions — not adapted from other markets.",
   },
   {
     year: "2022",
@@ -29,12 +34,12 @@ const MILESTONES = [
   {
     year: "2025",
     title: "Manufacturing Growth",
-    text: "Advanced precision manufacturing capacity and quality systems to deliver consistent, high-efficiency inverters at scale.",
+    text: "Advanced our 26,000 sq. ft. manufacturing capability and quality systems to deliver dependable energy solutions at scale.",
   },
   {
     year: "2026",
-    title: "Next Chapter",
-    text: "Continuing to build future-ready platforms for hybrid, storage, and next-generation solar ecosystems across India.",
+    title: "The Road Ahead",
+    text: "From smarter solar inverters to evolving energy storage, our pursuit of innovation continues beyond today’s possibilities.",
   },
 ];
 
@@ -70,7 +75,6 @@ export default function AboutMilestones() {
     };
 
     const ctx = gsap.context(() => {
-      // Center first node initially
       const getShiftForIndex = (index) => {
         const trackWidth = track.offsetWidth;
         const node = nodes[index];
@@ -99,7 +103,6 @@ export default function AboutMilestones() {
         },
       });
 
-      // Move track so each year centers as you scroll
       for (let i = 1; i <= maxIndex; i += 1) {
         tl.to(
           track,
@@ -111,7 +114,6 @@ export default function AboutMilestones() {
         );
       }
 
-      // Soft parallax on background
       gsap.fromTo(
         section,
         { backgroundPosition: "50% 40%" },
@@ -153,15 +155,20 @@ export default function AboutMilestones() {
       ref={sectionRef}
       className="am"
       id="milestones"
-      aria-label="Our milestones"
+      aria-label="Our story"
       style={{ backgroundImage: "url(/images/mountain.webp)" }}
     >
       <div className="am__overlay" aria-hidden="true" />
 
       <div className="am__inner">
+        <p className="am__kicker">OUR STORY</p>
         <h2 className="am__title">
-          <span>Our</span> Milestones
+          Every Milestone Has a Story. <span>Ours Is Just Getting Started.</span>
         </h2>
+        <p className="am__subtitle">
+          From our first prototype to a growing portfolio of solar technologies and expanded
+          manufacturing capabilities, every step has brought us closer to our vision.
+        </p>
 
         <div className="am__timeline">
           <button

@@ -90,7 +90,7 @@ export default function EmergenaWhyTech() {
           <div className="cp-why__visual">
             <span className="cp-why__circle" aria-hidden="true" />
             <img
-              src="/images/products/18kW - 25kW Three Phase.webp"
+              src="/images/products/2kW - 4kW Single Phase.webp"
               alt="Cathode Power on-grid solar inverter"
               className="cp-why__image"
               loading="lazy"

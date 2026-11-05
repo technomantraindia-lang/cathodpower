@@ -24,7 +24,7 @@ import EmergenaInsideTech from "../sections/emergena/EmergenaInsideTech";
 import SolarViewSection from "../sections/SolarViewSection";
 // import EmergenaProcess from "../sections/emergena/EmergenaProcess"; // hidden for now
 // import EmergenaUsp from "../sections/emergena/EmergenaUsp"; // hidden for now
-import EmergenaFaq from "../sections/emergena/EmergenaFaq";
+import SuccessStories from "../sections/SuccessStories";
 import EmergenaJournal from "../sections/emergena/EmergenaJournal";
 import EmergenaCta from "../sections/emergena/EmergenaCta";
 import EmergenaFooter from "../sections/emergena/EmergenaFooter";
@@ -132,8 +132,8 @@ export default function Home() {
       <EmergenaUsp />
       */}
 
-      {/* 8. FAQ Accordion: Founder badge & questions */}
-      <EmergenaFaq />
+      {/* 8. FAQ — old website two-column accordion layout */}
+      <SuccessStories />
 
       {/* 9. Field Notes: Editorial Journal Cards */}
       <EmergenaJournal />

@@ -109,8 +109,8 @@ export default function EmergenaInsideTech() {
             <span className="cp-inside__circle" aria-hidden="true" />
             <div className="cp-inside__stage">
               <img
-                src="/images/products/3kW - 6kW Hybrid Single Phase.webp"
-                alt="Cathode Power hybrid solar inverter detail"
+                src="/images/products/4.4kW to 6kW Single Phase.webp"
+                alt="Cathode Power 6 kW single phase on-grid inverter"
                 className="cp-inside__image"
                 loading="lazy"
                 decoding="async"

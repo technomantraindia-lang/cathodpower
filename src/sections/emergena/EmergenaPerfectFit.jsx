@@ -7,22 +7,20 @@ import "./EmergenaPerfectFit.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ACCENT = "#22727f";
+const ACCENT = "#11606d";
 
 const getRepProduct = (mainTabKey) =>
   PRODUCTS.find((p) => p.mainTabKey === mainTabKey);
 
-const ongrid = getRepProduct("ongrid");
 const hybrid = getRepProduct("hybrid");
 const micro = getRepProduct("micro");
-const storage = getRepProduct("storage");
 
 const TABS = [
   {
     key: "ongrid",
     label: "Ongrid Inverter",
     badge: "Ongrid Inverter",
-    image: ongrid?.image,
+    image: "/images/products/2kW - 4kW Single Phase.webp",
     description:
       "High-efficiency grid-tied solar inverters for residential and commercial sites — seamless synchronisation, wide MPPT range, and maximum energy yield.",
     powerLabel: "Power Range",
@@ -82,7 +80,8 @@ const TABS = [
     key: "storage",
     label: "BESS",
     badge: "BESS",
-    image: storage?.image,
+    // Client: use white wall-mount battery on homepage Perfect Fit
+    image: "/images/products/Wall Mount Battery.webp",
     description:
       "High-cycle LiFePO4 battery energy storage systems with intelligent BMS — engineered for seamless pairing with Cathode hybrid inverters.",
     powerLabel: "Capacity Range",
