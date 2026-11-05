@@ -7,39 +7,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MILESTONES = [
   {
-    year: "2018",
-    title: "The Idea",
-    text: "It started with a question — why not build better? What began as an idea became a journey of research and determination for India’s unique energy needs.",
-  },
-  {
     year: "2021",
-    title: "Foundation",
-    text: "Cathode Power was established to engineer solar inverters designed for Indian conditions — not adapted from other markets.",
+    title: "Incorporation",
+    text: "Incorporated on 27th October with a bold vision to make clean energy accessible.",
   },
   {
     year: "2022",
-    title: "Product Expansion",
-    text: "Expanded the on-grid portfolio across residential and commercial ranges, strengthening field reliability and EPC partnerships nationwide.",
+    title: "Manufacturing",
+    text: "Established in-house manufacturing facility and launched first product range.",
   },
   {
     year: "2023",
-    title: "Hybrid & Storage",
-    text: "Launched hybrid platforms and LiFePO4 BESS architectures for backup-ready solar systems with intelligent energy management.",
+    title: "Corporate Office",
+    text: "Opened corporate office and strengthened operations and dealer network.",
   },
   {
     year: "2024",
-    title: "Smart Monitoring",
-    text: "Scaled Solar View monitoring and cloud telemetry so EPCs and homeowners can track performance in real time, anywhere.",
+    title: "Team Growth",
+    text: "Expanded workforce to 100+ staff in manufacturing and 30–40 staff in corporate office, and introduced advanced inverter models.",
   },
   {
     year: "2025",
-    title: "Manufacturing Growth",
-    text: "Advanced our 26,000 sq. ft. manufacturing capability and quality systems to deliver dependable energy solutions at scale.",
+    title: "National Trust",
+    text: "Recognized as one of India’s fastest-growing solar inverter brands, trusted by solar EPCs nationwide.",
   },
   {
     year: "2026",
-    title: "The Road Ahead",
-    text: "From smarter solar inverters to evolving energy storage, our pursuit of innovation continues beyond today’s possibilities.",
+    title: "Portfolio Expansion",
+    text: "Expanding product portfolio in the domain of Hybrid Inverters & BESS.",
   },
 ];
 
