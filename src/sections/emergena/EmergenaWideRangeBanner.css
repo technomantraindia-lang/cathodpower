@@ -1,11 +1,12 @@
 .emergena-home .cp-wide-banner {
   position: relative;
   overflow: hidden;
-  min-height: clamp(300px, 38vw, 440px);
+  /* Match 1905×310 source aspect so the video isn’t over-cropped */
+  min-height: clamp(260px, calc(100vw / 6.1), 360px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(72px, 9vw, 110px) clamp(20px, 4vw, 48px);
+  padding: clamp(56px, 7vw, 88px) clamp(20px, 4vw, 48px);
   text-align: center;
   background: #0b1919;
 }

@@ -5,7 +5,8 @@
 .pb-banner {
   position: relative;
   width: 100%;
-  min-height: clamp(460px, 58vh, 680px);
+  /* Tall enough for the wide product shot to fit without cropping */
+  min-height: clamp(580px, 72vh, 820px);
   background-color: #f4f7f8;
   display: flex;
   align-items: center;
@@ -20,8 +21,9 @@
   inset: 0;
   z-index: 1;
   background-image: url("/images/products/products-banner.jpg");
-  background-size: cover;
-  background-position: 68% center;
+  /* contain keeps the full product lineup visible (cover was cutting it) */
+  background-size: contain;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -34,17 +36,17 @@
   background:
     linear-gradient(
       90deg,
-      rgba(244, 247, 248, 0.92) 0%,
-      rgba(244, 247, 248, 0.72) 22%,
-      rgba(244, 247, 248, 0.28) 42%,
-      transparent 62%
+      rgba(244, 247, 248, 0.82) 0%,
+      rgba(244, 247, 248, 0.45) 20%,
+      rgba(244, 247, 248, 0.12) 40%,
+      transparent 58%
     ),
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.55) 0%,
-      transparent 28%,
-      transparent 78%,
-      rgba(244, 247, 248, 0.35) 100%
+      rgba(255, 255, 255, 0.35) 0%,
+      transparent 26%,
+      transparent 80%,
+      rgba(244, 247, 248, 0.22) 100%
     );
 }
 
@@ -208,7 +210,8 @@
 
 @media (max-width: 1200px) {
   .pb-banner-bg {
-    background-position: 60% center;
+    background-size: contain;
+    background-position: center center;
   }
 
   .pb-banner-inner {
@@ -234,8 +237,9 @@
   }
 
   .pb-banner-bg {
-    background-position: 72% 40%;
-    opacity: 0.92;
+    background-size: contain;
+    background-position: center center;
+    opacity: 1;
   }
 
   .pb-banner-overlay {

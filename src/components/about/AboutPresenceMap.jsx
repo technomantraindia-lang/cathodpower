@@ -27,28 +27,47 @@ function formatDays(n) {
   return n.toLocaleString("en-IN");
 }
 
+const INVERTERS_TARGET = 100000;
+
+function calcDaysSinceFounding() {
+  return Math.max(0, Math.floor((Date.now() - FOUNDING_DATE.getTime()) / 86400000));
+}
+
 export default function AboutPresenceMap() {
   const rootRef = useRef(null);
+  const invertersRef = useRef(null);
+  const daysStatRef = useRef(null);
+  const countedRef = useRef(false);
   const [activeId, setActiveId] = useState("gujarat");
-  const [days, setDays] = useState(0);
-
-  useEffect(() => {
-    const calc = () => {
-      const ms = Date.now() - FOUNDING_DATE.getTime();
-      setDays(Math.max(0, Math.floor(ms / 86400000)));
-    };
-    calc();
-    const id = window.setInterval(calc, 60 * 60 * 1000);
-    return () => window.clearInterval(id);
-  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const daysTarget = calcDaysSinceFounding();
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const setFinalValues = () => {
+      if (invertersRef.current) {
+        invertersRef.current.textContent = `${formatDays(INVERTERS_TARGET)}+`;
+      }
+      if (daysStatRef.current) {
+        daysStatRef.current.innerHTML = `${formatDays(daysTarget)} <span>Days</span>`;
+      }
+    };
+
+    if (reduceMotion) {
+      setFinalValues();
+      return;
+    }
+
+    if (invertersRef.current) invertersRef.current.textContent = "0+";
+    if (daysStatRef.current) {
+      daysStatRef.current.innerHTML = `0 <span>Days</span>`;
+    }
 
     const ctx = gsap.context(() => {
-      gsap
+      const tl = gsap
         .timeline({
           scrollTrigger: {
             trigger: root,
@@ -96,9 +115,63 @@ export default function AboutPresenceMap() {
           },
           "-=0.2"
         );
+
+      const invertersObj = { val: 0 };
+      tl.to(
+        invertersObj,
+        {
+          val: INVERTERS_TARGET,
+          duration: 2.4,
+          ease: "power2.out",
+          onUpdate: () => {
+            if (!invertersRef.current) return;
+            invertersRef.current.textContent = `${formatDays(
+              Math.round(invertersObj.val)
+            )}+`;
+          },
+          onComplete: () => {
+            if (!invertersRef.current) return;
+            invertersRef.current.textContent = `${formatDays(INVERTERS_TARGET)}+`;
+            countedRef.current = true;
+          },
+        },
+        "-=0.35"
+      );
+
+      const daysObj = { val: 0 };
+      tl.to(
+        daysObj,
+        {
+          val: daysTarget,
+          duration: 2.4,
+          ease: "power2.out",
+          onUpdate: () => {
+            if (!daysStatRef.current) return;
+            daysStatRef.current.innerHTML = `${formatDays(
+              Math.round(daysObj.val)
+            )} <span>Days</span>`;
+          },
+          onComplete: () => {
+            if (!daysStatRef.current) return;
+            daysStatRef.current.innerHTML = `${formatDays(daysTarget)} <span>Days</span>`;
+          },
+        },
+        "<0.15"
+      );
     }, root);
 
-    return () => ctx.revert();
+    const syncDays = () => {
+      if (!countedRef.current || !daysStatRef.current) return;
+      daysStatRef.current.innerHTML = `${formatDays(
+        calcDaysSinceFounding()
+      )} <span>Days</span>`;
+    };
+    const id = window.setInterval(syncDays, 60 * 60 * 1000);
+
+    return () => {
+      window.clearInterval(id);
+      ctx.revert();
+    };
   }, []);
 
   const active = useMemo(
@@ -128,7 +201,9 @@ export default function AboutPresenceMap() {
         <div className="apm__stage">
           <aside className="apm__metric apm__metric--left">
             <p className="apm__metric-label">Milestone Achieved</p>
-            <p className="apm__metric-stat">1,00,000+</p>
+            <p className="apm__metric-stat" ref={invertersRef}>
+              0+
+            </p>
             <p className="apm__metric-desc">Inverters Installed Across India</p>
           </aside>
 
@@ -173,8 +248,8 @@ export default function AboutPresenceMap() {
 
           <aside className="apm__metric apm__metric--right">
             <p className="apm__metric-label">Stamp of Quality</p>
-            <p className="apm__metric-stat">
-              {formatDays(days)} <span>Days</span>
+            <p className="apm__metric-stat" ref={daysStatRef}>
+              0 <span>Days</span>
             </p>
             <p className="apm__metric-desc">
               Running through dependable products, partnerships and custom-built service.

@@ -4,7 +4,6 @@ import AboutMilestones from "../components/about/AboutMilestones";
 import AboutPresenceMap from "../components/about/AboutPresenceMap";
 import AboutWho from "../components/about/AboutWho";
 import AboutStrengths from "../components/about/AboutStrengths";
-import AboutJourney from "../components/about/AboutJourney";
 import AboutIndiaDesign from "../components/about/AboutIndiaDesign";
 
 export default function About() {
@@ -30,8 +29,6 @@ export default function About() {
       <AboutStrengths />
 
       <AboutIndiaDesign />
-
-      <AboutJourney />
 
       {/* Keep milestones exactly as designed */}
       <AboutMilestones />

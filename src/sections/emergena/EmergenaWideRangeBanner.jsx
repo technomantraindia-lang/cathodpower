@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import factoryBannerVideo from "../../assets/video/factory-banner-web.mp4";
+import wideBannerVideo from "../../assets/video/wide-banner-web.mp4";
 import "./EmergenaWideRangeBanner.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -136,7 +136,7 @@ export default function EmergenaWideRangeBanner() {
         <video
           ref={videoRef}
           className="cp-wide-banner__media"
-          src={factoryBannerVideo}
+          src={wideBannerVideo}
           muted
           loop
           playsInline
