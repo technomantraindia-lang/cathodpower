@@ -278,13 +278,14 @@ const buildProductDownload = ({
 export const ALL_DOWNLOADS = PRODUCT_DOWNLOAD_CONFIG.map(buildProductDownload);
 
 const OND_DOWNLOAD_CONFIG = [
-  { id: 101, fileName: "Cathode CP04HL.OND", size: "1.94KB" },
-  { id: 102, fileName: "Cathode CP05HL.OND", size: "1.89KB" },
-  { id: 103, fileName: "Cathode CP06HL.OND", size: "1.90KB" },
-  { id: 104, fileName: "Cathode CP08HL.OND", size: "1.90KB" },
-  { id: 105, fileName: "Cathode CP10HL.OND", size: "1.91KB" },
-  { id: 106, fileName: "Cathode CP12HL.OND", size: "1.91KB" },
-  { id: 107, fileName: "Cathode CP15HL.OND", size: "1.91KB" },
+  // 4kW - 15kW aligned to current product model IDs (6G-xxHLS)
+  { id: 101, fileName: "Cathode 6G-04HLS.OND", size: "1.94KB" },
+  { id: 102, fileName: "Cathode 6G-05HLS.OND", size: "1.89KB" },
+  { id: 103, fileName: "Cathode 6G-06HLS.OND", size: "1.90KB" },
+  { id: 104, fileName: "Cathode 6G-08HLS.OND", size: "1.90KB" },
+  { id: 105, fileName: "Cathode 6G-10HLS.OND", size: "1.91KB" },
+  { id: 106, fileName: "Cathode 6G-12HLS.OND", size: "1.91KB" },
+  { id: 107, fileName: "Cathode 6G-15HLS.OND", size: "1.91KB" },
   { id: 108, fileName: "Cathode CP20HL.OND", size: "1.93KB" },
   { id: 109, fileName: "Cathode 25HL.OND", size: "1.94KB" },
   { id: 110, fileName: "Cathode CP30HL.OND", size: "1.90KB" },

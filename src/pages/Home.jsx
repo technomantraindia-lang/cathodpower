@@ -9,7 +9,7 @@ import "../sections/emergena/emergena-animations.css";
 // Emergena Replicated Home Sections
 import EmergenaCursor from "../sections/emergena/EmergenaCursor";
 import EmergenaNavFloating from "../sections/emergena/EmergenaNavFloating";
-import EmergenaVideoModal from "../sections/emergena/EmergenaVideoModal";
+// import EmergenaVideoModal from "../sections/emergena/EmergenaVideoModal"; // temporary: process film removed
 import EmergenaHero from "../sections/emergena/EmergenaHero";
 import EmergenaWereSection from "../sections/emergena/EmergenaWereSection";
 import EmergenaWideRangeBanner from "../sections/emergena/EmergenaWideRangeBanner";
@@ -37,12 +37,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const homeRef = useRef(null);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const openQuote = useCallback(() => setIsQuoteOpen(true), []);
   const closeQuote = useCallback(() => setIsQuoteOpen(false), []);
-  const openVideo = useCallback(() => setIsVideoOpen(true), []);
-  const closeVideo = useCallback(() => setIsVideoOpen(false), []);
 
   const handleScrollToSolutions = useCallback(() => {
     const el = document.getElementById("solutions");
@@ -78,8 +75,7 @@ export default function Home() {
       {/* 0. Smooth Trailing Cursor */}
       <EmergenaCursor />
 
-      {/* 0.1 Video Modal Popup (Introduction video) */}
-      <EmergenaVideoModal isOpen={isVideoOpen} onClose={closeVideo} />
+      {/* 0.1 Video Modal — temporary: Watch Our Process film removed until client replacement */}
 
       {/* 0.2 Scroll-triggered Floating Pill & Full Navmenu Flyout */}
       <EmergenaNavFloating onGetStarted={openQuote} />
@@ -139,7 +135,7 @@ export default function Home() {
       <EmergenaJournal />
 
       {/* 10. Call to Action: Full-width curved banner & video trigger */}
-      <EmergenaCta onTalkToEngineer={openQuote} onPlayVideo={openVideo} />
+      <EmergenaCta onTalkToEngineer={openQuote} />
 
       {/* 11. Complete Emergena Footer */}
       <EmergenaFooter />

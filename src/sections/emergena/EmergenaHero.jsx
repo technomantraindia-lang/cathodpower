@@ -388,7 +388,7 @@ export default function EmergenaHero({ onLearnMore, onGetStarted }) {
               loop
               playsInline
               preload="auto"
-              poster="https://cdn.prod.website-files.com/6a5822d57261e1efcb1a65f1/6a6c5457db666cf15d9bc378_Sustainable%20Energy%20Landscape.avif"
+              poster="/video/homepage-banner-poster.jpg"
               className="image top hero-video-bg"
               style={{
                 width: "100%",
@@ -396,15 +396,14 @@ export default function EmergenaHero({ onLearnMore, onGetStarted }) {
                 objectFit: "cover",
                 objectPosition: "center",
                 display: "block",
-                filter: "contrast(1.04) brightness(1.02)",
+                filter: "none",
               }}
             >
-              <source src="/video/video%20banner.mp4" type="video/mp4" />
-              <source src="/video/video banner.mp4" type="video/mp4" />
+              <source src="/video/homepage-banner.mp4" type="video/mp4" />
               <img
-                src="https://cdn.prod.website-files.com/6a5822d57261e1efcb1a65f1/6a6c5457db666cf15d9bc378_Sustainable%20Energy%20Landscape.avif"
+                src="/video/homepage-banner-poster.jpg"
                 loading="eager"
-                alt="Wind turbines spread across green rolling hills under a cloudy sky."
+                alt="Cathode Power manufacturing and solar energy operations."
                 className="image top"
                 style={{
                   width: "100%",

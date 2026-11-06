@@ -5,6 +5,9 @@ import { GrainIcon, PlayIcon } from "./EmergenaIcons";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/** Temporary: process video card hidden until client supplies a replacement. */
+const SHOW_PROCESS_VIDEO = false;
+
 export default function EmergenaCta({ onTalkToEngineer, onPlayVideo }) {
   const sectionRef = useRef(null);
   const leftRef = useRef(null);
@@ -13,8 +16,7 @@ export default function EmergenaCta({ onTalkToEngineer, onPlayVideo }) {
   useEffect(() => {
     const section = sectionRef.current;
     const left = leftRef.current;
-    const right = rightRef.current;
-    if (!section || !left || !right) return;
+    if (!section || !left) return;
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -36,17 +38,20 @@ export default function EmergenaCta({ onTalkToEngineer, onPlayVideo }) {
         }
       );
 
-      tl.fromTo(
-        right,
-        { scale: 0.85, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 0.9,
-          ease: "back.out(1.5)",
-        },
-        "-=0.7"
-      );
+      const right = rightRef.current;
+      if (right) {
+        tl.fromTo(
+          right,
+          { scale: 0.85, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.9,
+            ease: "back.out(1.5)",
+          },
+          "-=0.7"
+        );
+      }
     }, sectionRef);
 
     return () => ctx.revert();
@@ -55,7 +60,7 @@ export default function EmergenaCta({ onTalkToEngineer, onPlayVideo }) {
   return (
     <section ref={sectionRef} data-wf--cta-section--variant="base" className="main-section cta" id="cta">
       <div className="w-layout-blockcontainer main-container cta w-container">
-        <div className="cta-content-wrapper">
+        <div className={`cta-content-wrapper${SHOW_PROCESS_VIDEO ? "" : " cta-content-wrapper--no-video"}`}>
           <div className="cta-image">
             <img
               loading="eager"
@@ -100,42 +105,45 @@ export default function EmergenaCta({ onTalkToEngineer, onPlayVideo }) {
             </div>
           </div>
 
-          <div ref={rightRef} className="right-content-wrap cta">
-            <div
-              className="video-card-wrap"
-              onClick={() => onPlayVideo && onPlayVideo()}
-              style={{ cursor: "pointer" }}
-            >
-              <div className="title-wrap cta-watch">
-                <div className="text-sm">Watch Our Process</div>
-              </div>
-              <div className="video-wrap">
-                <div className="video-bg-wrap">
-                  <img
-                    loading="eager"
-                    src="/images/cta/cta_video_thumb.jpg"
-                    alt="Cathode Power film — Watch Our Process"
-                    className="image"
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = "/images/cta/cta_video_thumb.webp";
-                    }}
-                  />
+          {/* Temporary: Watch Our Process video card — re-enable via SHOW_PROCESS_VIDEO */}
+          {SHOW_PROCESS_VIDEO && (
+            <div ref={rightRef} className="right-content-wrap cta">
+              <div
+                className="video-card-wrap"
+                onClick={() => onPlayVideo && onPlayVideo()}
+                style={{ cursor: "pointer" }}
+              >
+                <div className="title-wrap cta-watch">
+                  <div className="text-sm">Watch Our Process</div>
                 </div>
-                <div
-                  className="play-button-video"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                  }}
-                >
-                  <PlayIcon />
+                <div className="video-wrap">
+                  <div className="video-bg-wrap">
+                    <img
+                      loading="eager"
+                      src="/images/cta/cta_video_thumb.jpg"
+                      alt="Cathode Power film — Watch Our Process"
+                      className="image"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = "/images/cta/cta_video_thumb.webp";
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="play-button-video"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <PlayIcon />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>
