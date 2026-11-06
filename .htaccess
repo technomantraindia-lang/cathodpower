@@ -1,0 +1,43 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+
+  # Never rewrite existing files, directories, or symlinks
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d [OR]
+  RewriteCond %{REQUEST_FILENAME} -l
+  RewriteRule ^ - [L]
+
+  # Never rewrite static assets folders or media files to index.html
+  RewriteCond %{REQUEST_URI} ^/(assets|datasheets|images|NEW\ PRODUCT\ IMAGES|product\ image|fonts|models|video)/ [NC,OR]
+  RewriteCond %{REQUEST_URI} \.(png|webp|jpe?g|svg|avif|gif|ico|pdf|mp4|webm|woff2?|ttf|eot|glb|gltf|css|js|map)$ [NC]
+  RewriteRule ^ - [L]
+
+  # Single Page Application fallback for client-side React routes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Proper MIME types
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/pdf .pdf
+  AddType video/mp4 .mp4
+  AddType font/woff2 .woff2
+</IfModule>
+
+# Browser Caching for Fast Performance & No Lag
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>

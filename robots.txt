@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Direct access to public datasheets and resources
+Allow: /datasheets/
+Allow: /products
+Allow: /downloads
+Allow: /ci
+Allow: /monitoring
+Allow: /about
+Allow: /contact
